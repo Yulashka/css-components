@@ -1,0 +1,24 @@
+{
+  "name": "My bootstrap implementation",
+  "authors": [
+    "iuliia@lepistina.com"
+  ],
+  "description": "My bootstrap implementation",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "popper.js": "^1.11.0",
+    "components-font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

@@ -1,3 +1,35 @@
-body {
-	background-color: $primary-color;
+.wrapper {
+	width: 100%;
+	height: 600px;
+	position: relative;
+}
+
+img {
+
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+.pointers .fa-chevron-left {
+	position: absolute;
+	top: 30%;
+	left: 17%
+}
+
+.pointers .fa-chevron-right {
+	position: absolute;
+	top: 30%;
+	right: 17%
+}
+
+.indicators i {
+	display: inline;
+	padding-right: 1em;
+}
+
+.indicators {
+	position: absolute;
+	top: 70%;
+	left: 20%;
 }

@@ -60,7 +60,6 @@ $(".flex-tab a").on('click', function() {
 	}
 });
 
-
 /*Accordion */
 var accordText = $(".accord-text");
 $(".accordion a").on("click", function() {
@@ -71,3 +70,8 @@ $(".accordion a").on("click", function() {
 	$(attrAccord).removeClass("d-none");
 });
 
+/*Dropdown button*/
+$(".dropdown-btn a").on('click', function() {
+	$(".dropdown-text").toggle();
+
+});

@@ -13,7 +13,29 @@
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
   </head>
   <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="#" class="brand-logo">
+        <img src="img/logo.png" class="responsive">
+      </a>
+      <div class="collapse right">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+      </div>
+      <!-- collapsed nav -->
+      <div class="collapsed right d-none">
+        <a href="#">
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown d-none">
+          <a href="#" class="text-center">Home</a>
+          <a href="#" class="text-center">About</a>
+        </di>
+      </div>
+    </nav>
     <h1>Hello, world!</h1>
+
+    <!-- Carousel -->
     <div class="wrapper">
       <div class="prev">
         <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
@@ -24,6 +46,22 @@
       
       <div class="next">
         <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <!-- Tab panel -->
+    <div class="tab-container">
+      <div class="flex-tab">
+        <a href="#text1" class="active">Text1</a>
+        <a href="#text2" class="">Text2</a>
+        <a href="#text3" class="">Text3</a>
+        <a href="#text4" class="">Text4</a>
+      </div>
+      <div class="tab-text">
+        <p id="text1" class="">First!!!! Lorem Ipsum, here goes some funny text</p>
+        <p id="text2" class="d-none">Second!!!! Lorem Ipsum, here goes some funny text</p>
+        <p id="text3" class="d-none">Third!!!! Lorem Ipsum, here goes some funny text</p>
+        <p id="text4" class="d-none">Forth!!!! Lorem Ipsum, here goes some funny text</p>
       </div>
     </div>
     <!-- JavaScript -->

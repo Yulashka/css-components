@@ -1,3 +1,5 @@
+
+/*Carousel*/
 .wrapper {
 	display: flex;
 	flex-direction: row;
@@ -21,4 +23,81 @@
 	padding-left: 1em;
 }
 
+/*Navigation*/
+.brand-logo img {
+	width: 60px;
+}
 
+.right {
+	float: right;
+}
+
+nav {
+	border-bottom: 1px solid black;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+nav a, 
+nav a:hover {
+	text-decoration: none;
+	color: $primary-color;
+}
+
+nav a:hover{
+	border-bottom: 1px solid black;
+}
+
+.collapse:first-child {
+	margin-right: 2em;
+}
+
+.d-none {
+	display: none;
+}
+
+.dropdown a {
+	display: block;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/*Tab Panel*/
+.tab-container {
+	height: 300px;
+	border: 1px solid black;
+}
+
+.flex-tab {
+	display: flex;
+	border-bottom: 1px solid black;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.flex-tab a,
+.flex-tab a:hover {
+	color: #000;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 1.5em;
+}
+
+.flex-tab a:hover{
+	border-bottom: 1px solid black;
+}
+
+.tab-text {
+	padding: 1em;
+}
+
+.active {
+	border: 1px solid red !important;
+	background-color: red;
+}

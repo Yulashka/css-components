@@ -61,3 +61,13 @@ $(".flex-tab a").on('click', function() {
 });
 
 
+/*Accordion*/
+var accordText = $(".accord-text");
+$(".accordion a").on("click", function() {
+	$(".accord-text").addClass("d-none");
+	$(".accordion a").removeClass("a-acc-tab");
+	$(this).addClass("a-acc-tab");
+	var attrAccord = $(this).attr("href");
+	$(attrAccord).removeClass("d-none");
+});
+

@@ -128,3 +128,35 @@ nav a:hover{
 	color: white;
 }
 
+/*Dropdown button*/
+.dropdown-btn {
+	width: 4em;
+	border: 1px solid black;
+}
+
+.button-drop {
+	text-align: center;
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+.dropdown-text a,
+.button-drop a {
+	text-decoration: none;
+	color: #000;
+}
+
+.dropdown-text p{
+	margin: 0px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+}
+
+.border-b {
+	border-bottom: 1px solid black;
+}
+
+.border-t {
+	border-top: 1px solid black;
+}

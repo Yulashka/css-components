@@ -61,7 +61,7 @@ $(".flex-tab a").on('click', function() {
 });
 
 
-/*Accordion*/
+/*Accordion */
 var accordText = $(".accord-text");
 $(".accordion a").on("click", function() {
 	$(".accord-text").addClass("d-none");

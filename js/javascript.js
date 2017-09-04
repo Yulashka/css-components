@@ -73,5 +73,4 @@ $(".accordion a").on("click", function() {
 /*Dropdown button*/
 $(".dropdown-btn a").on('click', function() {
 	$(".dropdown-text").toggle();
-
 });

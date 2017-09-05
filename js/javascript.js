@@ -137,6 +137,9 @@ $(function() {
 		$(".error").removeClass('d-none');
 	}
 
-	
+	/*Popover*/
+	$(".popover button").on('click', function() {
+		$(".pop-text").toggle();
+	});
 
 });

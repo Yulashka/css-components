@@ -33,7 +33,6 @@
 }
 
 nav {
-	border-bottom: 1px solid black;
 	display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,7 +46,7 @@ nav a:hover {
 }
 
 nav a:hover{
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid $black-color;
 }
 
 .collapse:first-child {
@@ -71,12 +70,11 @@ nav a:hover{
 /*Tab Panel*/
 .tab-container {
 	height: 300px;
-	border: 1px solid black;
+	border: 1px solid $black-color;
 }
 
 .flex-tab {
 	display: flex;
-	border-bottom: 1px solid black;
 	flex-direction: row;
 	justify-content: space-around;
 }
@@ -90,7 +88,7 @@ nav a:hover{
 }
 
 .flex-tab a:hover{
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid $black-color;
 }
 
 .tab-text {
@@ -98,18 +96,17 @@ nav a:hover{
 }
 
 .active {
-	border: 1px solid red !important;
-	background-color: red;
+	border: 1px solid $red-color !important;
+	background-color: $red-color;
 }
 
 /*Accordion*/
 .accordion {
-	border: 1px solid black;
+	border: 1px solid $black-color;
 	
 }
 
 .accord-tab {
-	border-bottom: 1px solid black;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	text-decoration: none;
@@ -120,18 +117,18 @@ nav a:hover{
 
 .accord-tab:hover {
 	text-decoration: none;
-	border: 1px solid red;
+	border: 1px solid $red-color;
 }
 
 .a-acc-tab {
-	background-color: red;
-	color: white;
+	background-color: $red-color;
+	color: $white-color;
 }
 
 /*Dropdown button*/
 .dropdown-btn {
 	width: 4em;
-	border: 1px solid black;
+	border: 1px solid $black-color;
 }
 
 .button-drop {
@@ -154,9 +151,80 @@ nav a:hover{
 }
 
 .border-b {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid $black-color;
 }
 
 .border-t {
-	border-top: 1px solid black;
+	border-top: 1px solid $black-color;
 }
+
+/*Modal*/
+body {
+	position: relative;
+}
+
+.d-inline {
+	display: inline;
+}
+
+.modal {
+	width: 50%;
+    z-index: 2;
+    position: fixed;
+    border: 1px solid #000000;
+    padding: 1em;
+    left: 25%;
+    top: 20%;
+    background-color: white;
+    font-size: 1em;
+}
+
+.modal-bg {
+	opacity: 0.1;
+    filter: alpha(opacity=10); /* For IE8 and earlier */
+    background-color: $black-color;
+}
+
+.modal-header {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.modal-header h1,
+.modal p {
+	margin: 0px;
+}
+
+.d-inline-block {
+	display: inline-block;
+}
+
+.modal-btn {
+	padding: 0.8em;
+	border: 1px solid black;
+	background-color: green;
+}
+
+.modal-body {
+	margin-top: 2em;
+}
+
+.clear-r {
+	clear: right;
+}
+
+form div {
+	margin-bottom: 2em;
+}
+
+.submit-btn {
+	padding: 1em 1.3em 1em 1.3em;
+	background-color: red;
+	text-decoration: none;
+}
+
+.submit-btn:hover {
+	text-decoration: none;
+	text-shadow: 2px 2px #FF0000;
+}
+

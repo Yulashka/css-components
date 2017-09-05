@@ -228,3 +228,23 @@ form div {
 	text-shadow: 2px 2px #FF0000;
 }
 
+/*Popover*/
+.popover {
+	position: relative;
+	margin: 1em;
+}
+
+.popover button {
+	padding: 1em;
+	background-color: red;
+	text-transform: uppercase;
+	border: 1px solid black;
+}
+
+.pop-text {
+	position: absolute;
+	left: 60%;
+	top: 0;
+	padding: 1.5em 1em 1.5em 1em;
+	border: 1px solid black;
+}

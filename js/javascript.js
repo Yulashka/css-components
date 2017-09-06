@@ -145,22 +145,39 @@ $(function() {
 	/*Scrollspy*/
 	//scroll on click
 	$(".scroll-nav a").on('click', function(e) {
-		 e.preventDefault();
-		//remove active class from all a
-		$(".scroll-nav a").removeClass("active-scroll");
-		//add an active class to the clicked a
-		$(this).addClass("active-scroll");
-		var attr = $(this).attr("href");
 
-		/*$(attr).animate({
-	      scrollTop:0
-	    }, 500 );
-	    */
+		var attr = $(this).attr("data-href");
+		var pos = $(attr).offset().top;
+		var navHeight = $(".scroll-nav").innerHeight();
+		var sum = pos - navHeight;
+		//animate onclick
+		$("html, body").animate({
+	      scrollTop: sum
+	    }, 1000, "swing" );
+	    e.preventDefault();
 	});
 
-	/*$( window ).scroll(function() {
-	  $( "span" ).css( "display", "inline" ).fadeOut( "slow" );
-	});*/
+	$(window).on('scroll', function() {
+		var scrollie = $(window).scrollTop();
+		var rows = $(".scroll-body .row");
+		
+		for(var i = 0; i < rows.length;  i++){
+			console.log(i);
+			var startPos = $(rows[i]).offset().top;
+			var rowHeight = $(rows[i]).innerHeight();
+			var endPos = startPos + rowHeight;
+			if( (endPos >= scrollie) && (scrollie >= startPos) ) {
+				var currentAttr = $(rows[i]).attr("id");
+				currentAttr = "#" + currentAttr; 
+				$(".scroll-nav a").removeClass("active-scroll");
+				$("a[data-href =" + "'" + currentAttr + "'" + "]").addClass("active-scroll");
+			}
+		}	
+	});
 	
- 
-});
+ // highlight the current a 
+ // 1) find current row location
+//2) get its id
+//3) find nav a with this id, 
+//4) add class active
+});   

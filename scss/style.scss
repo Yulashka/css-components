@@ -32,20 +32,20 @@
 	float: right;
 }
 
-nav {
+.css-compon nav {
 	display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
 
-nav a, 
-nav a:hover {
+.css-compon nav a, 
+.css-compon nav a:hover {
 	text-decoration: none;
 	color: $primary-color;
 }
 
-nav a:hover{
+.css-compon nav a:hover{
 	border-bottom: 1px solid $black-color;
 }
 
@@ -247,4 +247,44 @@ form div {
 	top: 0;
 	padding: 1.5em 1em 1.5em 1em;
 	border: 1px solid black;
+}
+
+/*Scrollspy*/
+
+.scroll-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 1em;
+	padding-bottom: 1.5em;
+	padding-top: 1.5em;
+	background-color: pink;
+  	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.scroll-nav a {
+	font-size: 2em;
+	font-weight: bold;
+	padding-bottom: 2px;
+	color: black;
+	text-decoration: none;
+}
+
+.scroll-nav a:hover{
+	color: red;
+}
+
+.margin-top {
+	margin-top: 7em;
+}
+
+.active-scroll {
+	background-color: white;
+}
+
+.red {
+	background-color: red;
 }

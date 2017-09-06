@@ -142,4 +142,25 @@ $(function() {
 		$(".pop-text").toggle();
 	});
 
+	/*Scrollspy*/
+	//scroll on click
+	$(".scroll-nav a").on('click', function(e) {
+		 e.preventDefault();
+		//remove active class from all a
+		$(".scroll-nav a").removeClass("active-scroll");
+		//add an active class to the clicked a
+		$(this).addClass("active-scroll");
+		var attr = $(this).attr("href");
+
+		/*$(attr).animate({
+	      scrollTop:0
+	    }, 500 );
+	    */
+	});
+
+	/*$( window ).scroll(function() {
+	  $( "span" ).css( "display", "inline" ).fadeOut( "slow" );
+	});*/
+	
+ 
 });

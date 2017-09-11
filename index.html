@@ -155,8 +155,23 @@
       <span class="d-none pop-text">I'm a popover</span>
     </div>
 
-
-
+      <div id="bar" class="foo" style="background-color:yellow;"> world
+        <div id="blah">Hello</div>
+      </div>
+      <style>
+      .foo {
+        background-color: red;
+      }
+      #bar {
+        background-color: blue;
+      }
+      #bar.foo {
+        background-color: gray !important;
+      }
+      #blah {
+        background-color: pink;
+      }
+      </style>
     <!-- JavaScript -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/javascript.js"></script>

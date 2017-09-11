@@ -145,7 +145,6 @@ $(function() {
 	/*Scrollspy*/
 	//scroll on click
 	$(".scroll-nav a").on('click', function(e) {
-
 		var attr = $(this).attr("data-href");
 		var pos = $(attr).offset().top;
 		var navHeight = $(".scroll-nav").innerHeight();
@@ -158,9 +157,9 @@ $(function() {
 	});
 
 	$(window).on('scroll', function() {
-		var scrollie = $(window).scrollTop();
+		var navHeight = $(".scroll-nav").outerHeight();
+		var scrollie = $(window).scrollTop() + navHeight + 1;
 		var rows = $(".scroll-body .row");
-		
 		for(var i = 0; i < rows.length;  i++){
 			console.log(i);
 			var startPos = $(rows[i]).offset().top;
@@ -174,10 +173,4 @@ $(function() {
 			}
 		}	
 	});
-	
- // highlight the current a 
- // 1) find current row location
-//2) get its id
-//3) find nav a with this id, 
-//4) add class active
 });   

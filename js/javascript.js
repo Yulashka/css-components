@@ -173,4 +173,50 @@ $(function() {
 			}
 		}	
 	});
+
+	/*Pagination*/
+	var paginationData = ["Text1", "Text2", "Text3", "Text4", "Text5", "Text6"];
+	var currentPag = 0;
+	$("#demo").text(paginationData[currentPag]);
+	$(".pagination li").on("click", function() {
+		$(".pagination li").removeClass("active-pg");
+		$(this).addClass("active-pg");
+		var textPag = $(this).text();
+		if(typeof textPag == "number") {
+			alert("number");
+			checkNumber(textPag);
+		}else if(typeof textPag == "string"){
+			alert("string");
+			checkString(textPag);
+		}
+		//checking number
+		function checkNumber(x) {
+			if(x == 0){
+				//do nothing
+			}else if(x > 0 && x < paginationData.length) {
+				currentPag = x - 1;
+				return currentPag;
+			}
+		}
+
+		//checking string
+		function checkString(x) {
+			if(x == "Previous") {
+				if(currentPag == 0) {
+					//do nothing
+				}else {
+					currentPag = currentPag - 1;
+					return currentPag;
+				}
+			}else if(x == "Next") {
+				if(currentPag >= paginationData.length){
+					//do nothing
+				} else{
+					currentPag = currentPag + 1;
+					return currentPag;
+				}
+			}
+		}
+	});
+
 });   

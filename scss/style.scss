@@ -202,7 +202,7 @@ body {
 
 .modal-btn {
 	padding: 0.8em;
-	border: 1px solid black;
+	border: 1px solid $black-color;
 	background-color: green;
 }
 
@@ -239,7 +239,7 @@ form div {
 	padding: 1em;
 	background-color: red;
 	text-transform: uppercase;
-	border: 1px solid black;
+	border: 1px solid $black-color;
 }
 
 .pop-text {
@@ -247,7 +247,7 @@ form div {
 	left: 60%;
 	top: 0;
 	padding: 1.5em 1em 1.5em 1em;
-	border: 1px solid black;
+	border: 1px solid $black-color;
 }
 
 /*Scrollspy*/
@@ -289,3 +289,21 @@ form div {
 .red {
 	background-color: red;
 }
+
+ /*Pagination*/
+  .pagination li {
+    list-style: none;
+    border: 1px solid $black-color;
+    display: inline-block;
+    padding: 1em;
+    margin-right: 1em;
+    text-align: center;
+  }
+
+  .pagination a {
+  	text-decoration: none;
+  }
+
+  .active-pg {
+  	background-color: orange;
+  }

@@ -175,48 +175,176 @@ $(function() {
 	});
 
 	/*Pagination*/
-	var paginationData = ["Text1", "Text2", "Text3", "Text4", "Text5", "Text6"];
+	/*var paginationData = ["Text1", "Text2", "Text3", "Text4", "Text5", "Text6"];
 	var currentPag = 0;
 	$("#demo").text(paginationData[currentPag]);
-	$(".pagination li").on("click", function() {
-		$(".pagination li").removeClass("active-pg");
-		$(this).addClass("active-pg");
+	$(".pagination li a").on("click", function() {
 		var textPag = $(this).text();
-		if(typeof textPag == "number") {
-			alert("number");
+		if( $.isNumeric( textPag ) ) {
+			$(".pagination li a").removeClass("active-pg");
+			$(this).addClass("active-pg");
 			checkNumber(textPag);
-		}else if(typeof textPag == "string"){
-			alert("string");
+		}else{
 			checkString(textPag);
-		}
+		}*/
+
 		//checking number
-		function checkNumber(x) {
-			if(x == 0){
-				//do nothing
-			}else if(x > 0 && x < paginationData.length) {
-				currentPag = x - 1;
-				return currentPag;
+		/*function checkNumber(x) {
+			var iNum = parseInt(x);
+			if(iNum == 0){
+				alert("nothin");
+			}else if(iNum > 0 && iNum < paginationData.length) {
+				currentPag = iNum - 1;
+				$("#demo").text(paginationData[currentPag]);
+				console.log(currentPag);
 			}
 		}
-
+*/
 		//checking string
-		function checkString(x) {
+		/*function checkString(x) {
 			if(x == "Previous") {
+				
 				if(currentPag == 0) {
 					//do nothing
+					$("#demo").text("No info!");
+					console.log("We do nothing!");
 				}else {
 					currentPag = currentPag - 1;
-					return currentPag;
+					$("#demo").text(paginationData[currentPag]);
+					
+					console.log(currentPag);
 				}
 			}else if(x == "Next") {
+				//console.log(x + " is next");
 				if(currentPag >= paginationData.length){
-					//do nothing
+					$("#demo").text("No info!");
+					console.log("We do nothing!");
 				} else{
 					currentPag = currentPag + 1;
-					return currentPag;
+					$("#demo").text(paginationData[currentPag]);
+					console.log(currentPag);
 				}
 			}
 		}
-	});
+	});*/
+
+	/*Pagination*/
+	var pagesData = [];
+	pagesData.length = 10;
+	var currentPage = 1;
+	//display current number
+	$("#current").text(currentPage);
+
+	//display current text
+	$("#demo").text("foo #" + currentPage);
+
+	if(currentPage < pagesData.length){
+		//display next button 
+		$("#nextNumber").removeClass("d-none");
+
+		//display maximum number
+		$("#max").text(pagesData.length);
+		$("#max").removeClass("d-none");
+
+		//display next page number
+		$("#next").text(currentPage + 1);
+		$("#next").removeClass("d-none");
+
+		//click next
+		$("#next").on("click", function() {
+			$(".pagination a").removeClass("active-pg");
+			$(this).addClass("active-pg");
+			var nextText = $(this).text();
+			$("#demo").text("foo #" + nextText);
+			if( $("#next").text() < pagesData.length) {
+				$("#max").removeClass("d-none");
+			}
+			
+		});
+
+		//click current
+		$("#current").on("click", function() {
+			$(".pagination a").removeClass("active-pg");
+			$(this).addClass("active-pg");
+			$("#demo").text("foo #" + currentPage);
+		});
+
+		//click max
+		$("#max").on("click", function() {
+			currentPage = $(this).text();
+			$("#current").text(currentPage);
+			$("#next").addClass("d-none");
+			$("#max").addClass("d-none");
+			$("#demo").text("foo #" + currentPage);
+			$(".pagination a").removeClass("active-pg");
+			$("#current").addClass("active-pg");
+			$("#prevNumber").removeClass("d-none");
+			$("#nextNumber").addClass("d-none");
+			$("#min").removeClass("d-none");
+		});
+
+		//click min button
+		$("#min").on("click", function() {
+			currentPage = 1;
+			//display current number
+			$("#current").text(currentPage);
+			//display current text
+			$("#demo").text("foo #" + currentPage);
+			$("#prevNumber").addClass("d-none");
+			//hide min
+			$("#min").addClass("d-none");
+			//display next number
+			$("#next").text(currentPage + 1);
+			$("#next").removeClass("d-none");
+			//display next number btn
+			$("#nextNumber").removeClass("d-none");
+		});
+
+
+		//click next number button
+		$("#nextNumber").on("click", function() {
+			currentPage = currentPage + 1;
+			//check if current page number is greater then 1
+			if(currentPage > 1){
+				//display the previous button
+				$("#prevNumber").removeClass("d-none");
+				$("#min").removeClass("d-none");
+				
+			}
+			$("#current").text(currentPage);
+			$("#demo").text("foo #" + currentPage);
+			$("#next").text(currentPage + 1);
+			$(".pagination a").removeClass("active-pg");
+			$("#current").addClass("active-pg");
+			if( $("#next").text() == pagesData.length) {
+				$("#max").addClass("d-none");
+			}else if( $("#current").text() == pagesData.length){
+				$("#next").addClass("d-none");
+				$("#nextNumber").addClass("d-none");
+			}
+
+		});
+
+		//click previous number button
+		$("#prevNumber").on("click", function() {
+			currentPage = currentPage - 1;
+			$("#current").text(currentPage);
+			$("#demo").text("foo #" + currentPage);
+			$("#next").text(currentPage + 1);
+			$(".pagination a").removeClass("active-pg");
+			$("#current").addClass("active-pg");
+			if(currentPage == 1){
+				$("#prevNumber").addClass("d-none");
+				$("#min").addClass("d-none");
+			}
+			if(currentPage < pagesData.length){
+				$("#nextNumber").removeClass("d-none");
+				$("#next").removeClass("d-none");
+				$("#max").removeClass("d-none");
+
+			}
+		});
+	}
+	
 
 });   

@@ -163,7 +163,7 @@ $(function() {
 		var scrollie = $(window).scrollTop() + navHeight + 1;
 		var rows = $(".scroll-body .row");
 		for(var i = 0; i < rows.length;  i++){
-			console.log(i);
+			//console.log(i);
 			var startPos = $(rows[i]).offset().top;
 			var rowHeight = $(rows[i]).innerHeight();
 			var endPos = startPos + rowHeight;
@@ -298,5 +298,26 @@ $(function() {
 			Pages[i] = Pages[i] + action;
 		}
 	}
+
+
+	/*scroll-top button*/
+	var scrollTopButton = $(".scroll-top");
+
+	$(window).scroll(function() {
+		var scrollTopPosition = $(this).scrollTop();
+		if(scrollTopPosition > 400){
+			$(scrollTopButton).removeClass("d-none");
+		} else {
+			$(scrollTopButton).addClass("d-none");
+		}
+	}); 
+
+	//scroll up on click
+	$(scrollTopButton).on('click', function() {
+		//animate onclick
+		$("html, body").animate({
+	      scrollTop: 0
+	    }, 1000, "swing" );
+	});
 
 });   

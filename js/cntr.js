@@ -21,7 +21,8 @@ app.controller('myCtrl', function($scope) {
 	$scope.downClick = function(parentI) {
 		//var parentI = $(this).parent().attr("id");
 		swap(1, parentI);
-	}
+	};
+	
 	function swap(operation, id) {
 		var new_Pos_Index = id + operation;
 		var temp_Value = $scope.myData[new_Pos_Index];

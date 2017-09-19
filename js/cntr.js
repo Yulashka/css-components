@@ -1,18 +1,18 @@
-app.controller('myCtrl', function($scope) {
-    $scope.myData = requestData();
-
-	//requestData();
+app.controller('myCtrl', function($scope, $http,) {
+     requestData();
+   
 	function requestData() {
-		//$http.hfjf instead
-		return [
-	    	{ title : "Reading a book",
-	    	  check: false },
-	    	{ title : "Riding a bike",
-	    	  check: true },
-	    	{ title : "Baking a pie",
-	    	  check: false }
-		];
+		$http({
+		method: "GET",
+		url: "http://localhost:800/data.json"
+		}).then(function mySuccess(response){
+			console.log("Sucess" + " " + response.statusText);
+			$scope.myData = response.data;
+		}, function myError(response) {
+			console.log("error" + " " + response.statusText);
+		});
 	}
+
 	$scope.upClick = function(parentI) {
 		//var parentI = $(this).parent().attr("id");
 		if(parentI == 0){

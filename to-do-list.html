@@ -59,14 +59,12 @@
                 </div>
                 <h4 class="d-inline-block">{{ x.title }}</h4>
             </td>
-            <td>{{ x.check }}</td>
+            <td><input type="checkbox" class="checkbox" ng-model="x.check" ng-change="onCheck($index)"></input></td>
           </tr>
         </table>
     </div>
 
-    <!-- 1.draw the checkboxes
-    2. make them work
-    3. Last and first elements onClick -->
+    <!-- 3. Last and first elements onClick -->
 
 
     <!-- JavaScript -->

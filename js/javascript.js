@@ -176,148 +176,124 @@ $(function() {
 		}	
 	});
 
+	
 	/*Pagination*/
-	/*var paginationData = ["Text1", "Text2", "Text3", "Text4", "Text5", "Text6"];
-	var currentPag = 0;
-	$("#demo").text(paginationData[currentPag]);
-	$(".pagination li a").on("click", function() {
-		var textPag = $(this).text();
-		if( $.isNumeric( textPag ) ) {
-			$(".pagination li a").removeClass("active-pg");
+	var pagesData = [];
+	pagesData.length = 10;
+	var currentPage = 1;
+	//display current number
+	$("#current").text(currentPage);
+
+	//display current text
+	$("#demo").text("foo #" + currentPage);
+
+	if(currentPage < pagesData.length){
+		//display next button 
+		$("#nextNumber").removeClass("d-none");
+
+		//display maximum number
+		$("#max").text(pagesData.length);
+		$("#max").removeClass("d-none");
+
+		//display next page number
+		$("#next").text(currentPage + 1);
+		$("#next").removeClass("d-none");
+
+		//click next
+		$("#next").on("click", function() {
+			$(".pagination a").removeClass("active-pg");
 			$(this).addClass("active-pg");
-			checkNumber(textPag);
-		}else{
-			checkString(textPag);
-		}*/
-
-		//checking number
-		/*function checkNumber(x) {
-			var iNum = parseInt(x);
-			if(iNum == 0){
-				alert("nothin");
-			}else if(iNum > 0 && iNum < paginationData.length) {
-				currentPag = iNum - 1;
-				$("#demo").text(paginationData[currentPag]);
-				console.log(currentPag);
+			var nextText = $(this).text();
+			$("#demo").text("foo #" + nextText);
+			if( $("#next").text() < pagesData.length) {
+				$("#max").removeClass("d-none");
 			}
-		}
-*/
-		//checking string
-		/*function checkString(x) {
-			if(x == "Previous") {
+			
+		});
+
+		//click current
+		$("#current").on("click", function() {
+			$(".pagination a").removeClass("active-pg");
+			$(this).addClass("active-pg");
+			$("#demo").text("foo #" + currentPage);
+		});
+
+		//click max
+		$("#max").on("click", function() {
+			currentPage = $(this).text();
+			$("#current").text(currentPage);
+			$("#next").addClass("d-none");
+			$("#max").addClass("d-none");
+			$("#demo").text("foo #" + currentPage);
+			$(".pagination a").removeClass("active-pg");
+			$("#current").addClass("active-pg");
+			$("#prevNumber").removeClass("d-none");
+			$("#nextNumber").addClass("d-none");
+			$("#min").removeClass("d-none");
+		});
+
+		//click min button
+		$("#min").on("click", function() {
+			currentPage = 1;
+			//display current number
+			$("#current").text(currentPage);
+			//display current text
+			$("#demo").text("foo #" + currentPage);
+			$("#prevNumber").addClass("d-none");
+			//hide min
+			$("#min").addClass("d-none");
+			//display next number
+			$("#next").text(currentPage + 1);
+			$("#next").removeClass("d-none");
+			//display next number btn
+			$("#nextNumber").removeClass("d-none");
+		});
+
+
+		//click next number button
+		$("#nextNumber").on("click", function() {
+			currentPage = currentPage + 1;
+			//check if current page number is greater then 1
+			if(currentPage > 1){
+				//display the previous button
+				$("#prevNumber").removeClass("d-none");
+				$("#min").removeClass("d-none");
 				
-				if(currentPag == 0) {
-					//do nothing
-					$("#demo").text("No info!");
-					console.log("We do nothing!");
-				}else {
-					currentPag = currentPag - 1;
-					$("#demo").text(paginationData[currentPag]);
-					
-					console.log(currentPag);
-				}
-			}else if(x == "Next") {
-				//console.log(x + " is next");
-				if(currentPag >= paginationData.length){
-					$("#demo").text("No info!");
-					console.log("We do nothing!");
-				} else{
-					currentPag = currentPag + 1;
-					$("#demo").text(paginationData[currentPag]);
-					console.log(currentPag);
-				}
 			}
-		}
-	});*/
-
-	/*Another aproach to building a pagination*/
-	var offsetMap = {
-		"back": -1, 
-		"prevprev": -2, 
-		"prev": -1, 
-		"cur": 0, 
-		"next": 1, 
-		"nextnext": 2, 
-		"forward": 1
-	}
-
-	var min = 0;
-	var Ids = ["#prevprev", "#prev", "#cur", "#next", "#nextnext"];
-	var currentPage = 2;
-	var max = getMaxPages();
-
-	displayPages();
-
-	function getMaxPages() {
-		return 10;
-	}
-
-	$(".pg").on('click', function() {
-		var id = $(this).attr("id");
-		var action = offsetMap[id];
-		applyAction(action);
-		displayPages(action);
-	});
-
-	function displayPages(action) {
-		fixDomElements();
-		for(var i = 0; i < Ids.length; i++) {
-			if(Pages[i] > 0 && Pages[i] <= max) {
-				$(Ids[i]).text(Pages[i]);
-				$(Ids[i]).show();
-			} else {
-				$(Ids[i]).hide();
-				if(i == currentPage) {
-					// Update current
-					currentPage = currentPage + action;
-				}
+			$("#current").text(currentPage);
+			$("#demo").text("foo #" + currentPage);
+			$("#next").text(currentPage + 1);
+			$(".pagination a").removeClass("active-pg");
+			$("#current").addClass("active-pg");
+			if( $("#next").text() == pagesData.length) {
+				$("#max").addClass("d-none");
+			}else if( $("#current").text() == pagesData.length){
+				$("#next").addClass("d-none");
+				$("#nextNumber").addClass("d-none");
 			}
-		}
+
+		});
+
+		//click previous number button
+		$("#prevNumber").on("click", function() {
+			currentPage = currentPage - 1;
+			$("#current").text(currentPage);
+			$("#demo").text("foo #" + currentPage);
+			$("#next").text(currentPage + 1);
+			$(".pagination a").removeClass("active-pg");
+			$("#current").addClass("active-pg");
+			if(currentPage == 1){
+				$("#prevNumber").addClass("d-none");
+				$("#min").addClass("d-none");
+			}
+			if(currentPage < pagesData.length){
+				$("#nextNumber").removeClass("d-none");
+				$("#next").removeClass("d-none");
+				$("#max").removeClass("d-none");
+
+			}
+		});
 	}
-
-	function fixDomElements(){
-		if(Pages[min] === -1) {
-			$("#back").hide();
-		} else {
-			$("#back").show();
-		}
-
-		if(Pages[2] === max) {
-			$("#forward").hide();
-		} else {
-			$("#forward").show();
-		}
-
-		$(".pg").removeClass("active-pg2");
-		$(Ids[currentPage]).addClass("active-pg2");
-	}
-
-	function applyAction(action) {
-		// check if action is valid
-		for(var i = 0; i < Pages.length; i++) {
-			Pages[i] = Pages[i] + action;
-		}
-	}
-
-
-	/*scroll-top button*/
-	var scrollTopButton = $(".scroll-top");
-
-	$(window).scroll(function() {
-		var scrollTopPosition = $(this).scrollTop();
-		if(scrollTopPosition > 400){
-			$(scrollTopButton).removeClass("d-none");
-		} else {
-			$(scrollTopButton).addClass("d-none");
-		}
-	}); 
-
-	//scroll up on click
-	$(scrollTopButton).on('click', function() {
-		//animate onclick
-		$("html, body").animate({
-	      scrollTop: 0
-	    }, 1000, "swing" );
-	});
+	
 
 });   

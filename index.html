@@ -13,206 +13,32 @@
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="css-compon">
-      <!-- Navigation -->
-      <nav class="border-b">
-        <a href="#" class="brand-logo">
-          <img src="img/logo.png" class="responsive">
-        </a>
-        <div class="collapse right">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-        </div>
-        <!-- collapsed nav -->
-        <div class="collapsed right d-none">
-          <a href="#">
-            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-          </a>
-          <div class="dropdown d-none">
-            <a href="#" class="text-center">Home</a>
-            <a href="#" class="text-center">About</a>
-          </di>
-        </div>
-      </nav>
-      <!-- Pagination -->
-      <!-- <ul class="pagination text-center">
-        <li>
-          <a href="#">Previous</a>
-        </li>
-        <li>
-          <a href="#" class="active-pg">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-        <li>
-          <a href="#">Next</a>
-        </li>
-      </ul> -->
-
-       <ul class="pagination text-center">
-        <li>
-          <a href="#" id="min" class="d-none">1</a>
-        </li>
-        <li>
-          <a href="#" id="prevNumber" class="d-none">Click previous</a>
-        </li>
-        <li>
-          <a href="#" id="current" class="active-pg">Current number</a>
-        </li>
-        <li>
-          <a href="#" id="next" class="d-none">Next number</a>
-        </li>
-        <li>
-          <a href="#" id="nextNumber" class="d-none">Click next</a>
-        </li>
-        <li>
-          <a href="#" id="max" class="d-none">Maximum number</a>
-        </li>
-        
-      </ul>
-      <p id="demo" class="text-center">Something goes here</p>
-      <h1>Hello, world!</h1>
-       <!-- Dropdown button -->
-      <div class="dropdown-btn">
-        <div class="button-drop">
-          <a href="#">Click me</a>
-        </div>
-        <div class="d-none dropdown-text">
-          <p class="border-b border-t">
-            <a href="#">1</a>
-          </p>
-          <p class="border-b">
-            <a href="#">2</a>
-          </p>
-          <p>
-            <a href="#">3</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Carousel -->
-      <div class="wrapper">
-        <div class="prev">
-          <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-        </div>
-        <div>
-          <img src="" class="img-responsive d-block center">
-        </div>
-        
-        <div class="next">
-          <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-        </div>
-      </div>
-
-      <!-- Tab panel -->
-      <div class="tab-container">
-        <div class="flex-tab border-b">
-          <a href="#text1" class="active">Text1</a>
-          <a href="#text2" class="">Text2</a>
-          <a href="#text3" class="">Text3</a>
-          <a href="#text4" class="">Text4</a>
-        </div>
-        <div class="tab-text">
-          <p id="text1" class="">First!!!! Lorem Ipsum, here goes some funny text</p>
-          <p id="text2" class="d-none">Second!!!! Lorem Ipsum, here goes some funny text</p>
-          <p id="text3" class="d-none">Third!!!! Lorem Ipsum, here goes some funny text</p>
-          <p id="text4" class="d-none">Forth!!!! Lorem Ipsum, here goes some funny text</p>
-        </div>
-      </div>
-
-      <!-- Accordion -->
-      <div class="accordion">
-        <div>
-          <a href="#accord-1" class="accord-tab a-acc-tab border-b">Accord 1</a>
-          <div id="accord-1" class="accord-text">
-            <p>Lorem Ipsum - Accord -1</p>
-            <p>Running the above command, however, will likely send you into spiral of doom because every single error, warning, or notice will be outputted into your terminal. But don't fret, because there are a few simple options you can pass to ease you into the process.</p>
-          </div>
-        </div>
-        <div>
-          <a href="#accord-2" class="accord-tab border-b">Accord 2</a>
-          <div id="accord-2" class="d-none accord-text">
-            <p>Lorem Ipsum - Accord -2</p>
-            <p>Running the above command, however, will likely send you into spiral of doom because every single error, warning, or notice will be outputted into your terminal. But don't fret, because there are a few simple options you can pass to ease you into the process.</p>
-          </div>
-        </div>
-        <div>
-          <a href="#accord-3" class="accord-tab border-b">Accord 3</a>
-          <div id="accord-3" class="d-none accord-text">
-            <p>Lorem Ipsum - Accord -3</p>
-            <p>Running the above command, however, will likely send you into spiral of doom because every single error, warning, or notice will be outputted into your terminal. But don't fret, because there are a few simple options you can pass to ease you into the process.</p>
-          </div>
-        </div>
-      </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Accordion</a>
+      <a href="#">Carousel</a>
+      <a href="#">Collapse</a>
+      <a href="#">Dropdown</a>
+      <a href="#">Form</a>
+      <a href="#">Modal</a>
+      <a href="#">Scroll</a>
+      <a href="#">Pagination</a>
+      <a href="#">Popovers</a>
+      <a href="#">Progress</a>
+      <a href="#">Modal</a>
+      <a href="#">Tabs</a>
+      <a href="#">Top</a>
+      <a href="#">About</a>
     </div>
 
-    <!-- Modal -->
-    <div class="modal d-none">
-      <div class="d-none success">
-        <h1 class="d-inline">Your form is successfully submitted!</h1>
-        <a href="#" class="inline-block right modal-btn">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="d-none error">
-        <h1 class="d-inline">Something went wrong! We appologize for a such inconvenience. Please try again!</h1>
-        <a href="#" class="inline-block right modal-btn">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="modal-header">
-        <h1 class="d-inline text-center">Do you want to know more?</h1>
-        <a href="#" class="inline-block right modal-btn">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </a>
-        <p class="text-center">Lorem Ipsum lorem ipsum lorem ipsum lorem ipsum.<p>
-      </div>
-      <div class="modal-body">
-        <form onSubmit="return false">
-          <div>
-            <div class="d-inline-block">
-              <p id="name-message">Write your name</p>
-              <input placeholder="Name" name="name" id="name" type="text">
-            </div>
-            <div class="d-inline-block right">
-              <p id="email-message">Write your email</p>
-              <input placeholder="Email" name="email" id="email" type="email">
-            </div>
-          </div>
-          <div class="right">
-            <input type="submit" value="Submit" class="submit-btn"> 
-          </div>
-        </form>
-      </div>
-    </div>
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-    <!-- Popover -->
-    <div class="popover">
-      <button type="button" class="d-inline">Click me!</button>
-      <span class="d-none pop-text">I'm a popover</span>
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+      <h1 class="text-center">My Front End Tool-Kit</h1>
+      <p class="text-center">As a demonstration, for each component I have built a page based on a mockup provided by some awesome web designer.</p>
     </div>
-
-      <div id="bar" class="foo" style="background-color:yellow;"> world
-        <div id="blah">Hello</div>
-      </div>
-      <style>
-      .foo {
-        background-color: red;
-      }
-      #bar {
-        background-color: blue;
-      }
-      #bar.foo {
-        background-color: gray !important;
-      }
-      #blah {
-        background-color: pink;
-      }
-      </style>
     <!-- JavaScript -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/javascript.js"></script>

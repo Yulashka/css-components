@@ -13,6 +13,18 @@ app.config(function($routeProvider) {
         controller: "carCtrl"
     })
     .when("/collapse", {
-        templateUrl : "collapse.html"
+        templateUrl : "collapse.html",
+        controller: "collapseCtrl"
+    })
+    .when("/dropdown", {
+        templateUrl : "dropdown.html",
+        controller: "dropdownCtrl"
+    })
+    .when("/form", {
+        templateUrl : "form.html"
+    })
+    .when("/modal", {
+        templateUrl : "modal.html",
+        controller: "modalCtrl"
     });
 });

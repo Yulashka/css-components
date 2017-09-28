@@ -9,7 +9,6 @@
 	justify-content: center;
 }
 
-
 .wrapper div {
 	align-self: center;
 }
@@ -108,7 +107,9 @@
 	border: 1px solid $black-color;
 }
 
-.accordion .accord-tab:hover {
+.accordion .accord-tab:hover,
+.collapsed p,
+.button-drop:hover {
 	cursor: pointer;
 }
 
@@ -187,7 +188,7 @@ body {
 }
 
 .modal-bg {
-	opacity: 0.1;
+	/*opacity: 0.1;*/
     filter: alpha(opacity=10); /* For IE8 and earlier */
     background-color: $black-color;
 }

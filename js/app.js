@@ -1,1 +1,17 @@
-var app = angular.module('myApp', []);
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.html"
+    })
+    .when("/accordion", {
+        templateUrl : "accordion.html",
+        controller: "accordCtrl"
+    })
+    .when("/carousel", {
+        templateUrl : "carousel.html"
+    })
+    .when("/collapse", {
+        templateUrl : "collapse.html"
+    });
+});

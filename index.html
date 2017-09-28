@@ -11,36 +11,38 @@
     <link rel="stylesheet" href="css/site.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <!-- angular route -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
   </head>
-  <body>
+  <body ng-app="myApp">
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">Accordion</a>
-      <a href="#">Carousel</a>
-      <a href="#">Collapse</a>
-      <a href="#">Dropdown</a>
-      <a href="#">Form</a>
-      <a href="#">Modal</a>
-      <a href="#">Scroll</a>
-      <a href="#">Pagination</a>
-      <a href="#">Popovers</a>
-      <a href="#">Progress</a>
-      <a href="#">Modal</a>
-      <a href="#">Tabs</a>
-      <a href="#">Top</a>
-      <a href="#">About</a>
+      <a href="#/!">Home</a>
+      <a href="#!accordion">Accordion</a>
+      <a href="#!carousel">Carousel</a>
+      <a href="#!collapse">Collapse</a>
+      <a href="#/!dropdown">Dropdown</a>
+      <a href="#/!form">Form</a>
+      <a href="#/!modal">Modal</a>
+      <a href="#/!scroll">Scroll</a>
+      <a href="#/!pagination">Pagination</a>
+      <a href="#/!popovers">Popovers</a>
+      <a href="#/!progress">Progress</a>
+      <a href="#/!modal">Modal</a>
+      <a href="#/!tabs">Tabs</a>
+      <a href="#/!top">Top</a>
+      <a href="#/!about">About</a>
     </div>
 
     <!-- Use any element to open the sidenav -->
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-    <div id="main">
-      <h1 class="text-center">My Front End Tool-Kit</h1>
-      <p class="text-center">As a demonstration, for each component I have built a page based on a mockup provided by some awesome web designer.</p>
-    </div>
+    <div ng-view></div>
     <!-- JavaScript -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/cntr.js"></script>
     <script src="js/javascript.js"></script>
   </body>
 </html>

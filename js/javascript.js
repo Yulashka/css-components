@@ -1,13 +1,3 @@
-/*Home Page - SIDE NAV*/
-	/* Set the width of the side navigation to 250px */
-	function openNav() {
-	    document.getElementById("mySidenav").style.width = "250px";
-	}
-
-	/* Set the width of the side navigation to 0 */
-	function closeNav() {
-	    document.getElementById("mySidenav").style.width = "0";
-	}
 
 var Pages = [-1, 0, 1, 2, 3];
 
@@ -74,15 +64,7 @@ $(function() {
 		}
 	});
 
-	/*Accordion */
-	var accordText = $(".accord-text");
-	$(".accordion a").on("click", function() {
-		$(".accord-text").addClass("d-none");
-		$(".accordion a").removeClass("a-acc-tab");
-		$(this).addClass("a-acc-tab");
-		var attrAccord = $(this).attr("href");
-		$(attrAccord).removeClass("d-none");
-	});
+
 
 	/*Dropdown button*/
 	$(".dropdown-btn a").on('click', function() {
@@ -329,3 +311,17 @@ $(function() {
 
 
 });   
+
+
+/*Home Page - SIDE NAV*/
+	/* Set the width of the side navigation to 250px */
+	function openNav() {
+	    document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	/* Set the width of the side navigation to 0 */
+	function closeNav() {
+	    document.getElementById("mySidenav").style.width = "0";
+	}
+
+	

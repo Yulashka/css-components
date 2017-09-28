@@ -9,7 +9,8 @@ app.config(function($routeProvider) {
         controller: "accordCtrl"
     })
     .when("/carousel", {
-        templateUrl : "carousel.html"
+        templateUrl : "carousel.html",
+        controller: "carCtrl"
     })
     .when("/collapse", {
         templateUrl : "collapse.html"

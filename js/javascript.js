@@ -6,30 +6,7 @@ $(function() {
 
 	
 
-	/*Tab panels*/
-	var text = $(".tab-text p");
-
-	$(".flex-tab a").on('click', function() {
-		$(".flex-tab a").removeClass('active');
-		$(".tab-text p").addClass('d-none');
-
-		for(var i = 0; i < text.length; i++){
-			if( $(this).attr('href') == ( "#" + $(text[i]).attr('id')) ) {
-				$(this).addClass('active');
-				$(text[i]).removeClass("d-none");
-			}
-		}
-	});
-
-
-
 	
-	
-
-	/*Popover*/
-	$(".popover button").on('click', function() {
-		$(".pop-text").toggle();
-	});
 
 	/*Scrollspy*/
 	//scroll on click
@@ -182,25 +159,7 @@ $(function() {
 		});
 	}
 
-	/*scroll-top button*/
-	var scrollTopButton = $(".scroll-top");
-
-	$(window).scroll(function() {
-		var scrollTopPosition = $(this).scrollTop();
-		if(scrollTopPosition > 400){
-			$(scrollTopButton).removeClass("d-none");
-		} else {
-			$(scrollTopButton).addClass("d-none");
-		}
-	}); 
-
-	//scroll up on click
-	$(scrollTopButton).on('click', function() {
-		//animate onclick
-		$("html, body").animate({
-	      scrollTop: 0
-	    }, 1000, "swing" );
-	});
+	
 
 
 

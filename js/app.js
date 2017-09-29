@@ -26,5 +26,29 @@ app.config(function($routeProvider) {
     .when("/modal", {
         templateUrl : "modal.html",
         controller: "modalCtrl"
+    })
+    .when("/scroll", {
+        templateUrl : "scroll.html",
+        controller: "scrollCtrl"
+    })
+    .when("/pagination", {
+        templateUrl : "pagination.html",
+        controller: "paginationCtrl"
+    })
+    .when("/popover", {
+        templateUrl : "popover.html",
+        controller: "popoverCtrl"
+    })
+    .when("/progress", {
+        templateUrl : "progress.html",
+        controller: "progressCtrl"
+    })
+    .when("/tabs", {
+        templateUrl : "tabs.html",
+        controller: "tabsCtrl"
+    })
+    .when("/top", {
+        templateUrl : "top.html",
+        controller: "topCtrl"
     });
 });

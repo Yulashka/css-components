@@ -10,7 +10,29 @@ app.controller('accordCtrl', function($scope, ) {
 });
 	
 /*Carousel*/
-app.controller('carCtrl', function($scope, ) {
+app.controller('carCtrl', function($scope, $http) {
+	  $http({
+		method: "GET",
+		url: "test.json"
+	}).then(function mySuccess(response){
+		console.log("Success");
+		$scope.foo = response.data;
+		$scope.statuscode = response.status;
+		$scope.statustext = response.statusText;
+	});
+
+	//   $http({
+	// 	method: "GET",
+	// 	url: "http://localhost:9000/carouselData.json"
+	// }).then(function mySuccess(response){
+	// 	console.log("Success");
+	// 	$scope.content = response.data.records;
+	// 	$scope.statuscode = response.status;
+	// 	$scope.statustext = response.statusText;
+	// }, function myError(response) {
+	// 	console.log("Error");
+	// 	$scope.myWelcome = response.statusText;
+	// });
 	var images = [ "surf-board-1.png", "surf-board-2.png", "surf-board-3.png", "surf-board-4.png"];
 	var length = images.length - 1;
 	var current = 0;

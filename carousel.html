@@ -1,5 +1,5 @@
- <link rel="stylesheet" href="css/bla.css">
-<div id="surf-web">
+<link rel="stylesheet" href="css/bla.css">
+<div id="surf-web" ng-controller="carCtrl">
   
   <div class="relative">
     <!-- Hero Image Section -->
@@ -99,12 +99,20 @@
     </div>
   </div>
   
+ 
   <!-- About Us Section -->
-
-  <div class="clearfix max-width-4 mx-auto">
+  <div class="clearfix max-width-4 mx-auto about">
     <img src="img/surfersCo/about_us.png" class="fit mx-auto">
   </div>
 
+   <ul>
+    <li>{{ foo.Title }}</li>
+<!--     <li ng-repeat="x in content">
+      {{ x.Title }}
+    </li> -->
+  </ul>
+  <p>Status number: {{statuscode}}</p>
+  <p>Status data: {{statustext}}</p>
   <!-- Our Team Section -->
   <div>Our Team Section</div>
 

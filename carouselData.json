@@ -1,0 +1,48 @@
+{
+	"records": [
+		{
+			"Image": "surf-board-1.png",
+			"Title": "JR Surfboards The Donny Stoker Yellow/Green Rail Fade",
+			"Thumbnails": ["thumbnail-1.png" "thumbnail-1.png", "thumbnail-1.png", "thumbnail-1.png"],
+			"Rating": "59",
+			"Description": "Lorem Ipsum",
+			"Features": "Lorem Ipsum some features",
+			"Dimensions": "Lorem Ipsum some Dimensions",
+			"Price": "499.99"
+		},
+		{
+			"Image": "surf-board-2.png",
+			"Title": "Surfboards The Big Heart Red/Brown Rail Fade",
+			"Thumbnails": ["thumbnail-1.png" "thumbnail-1.png", "thumbnail-1.png", "thumbnail-1.png"],
+			"Rating": "63",
+			"Description": "Lorem Ipsum Bacon ipsum",
+			"Features": "Bacon ipsum dolor amet 
+			pork belly tenderloin salami capicola pancetta porchetta picanha burgdoggen 
+			strip steak pig ham.",
+			"Dimensions": "Lorem Ipsum some Dimensions Bacon ipsum",
+			"Price": "499.99"
+		},
+		{
+			"Image": "surf-board-1.png",
+			"Title": "Surfboards The Big Bang Theory Green/Pink Rail Blade",
+			"Thumbnails": ["thumbnail-1.png" "thumbnail-1.png", "thumbnail-1.png", "thumbnail-1.png"],
+			"Rating": "59",
+			"Description": "Cupcake ipsum dolor. 
+			Sit amet jelly-o marshmallow liquorice chocolate bar gummies dragée.",
+			"Features": "Cupcake ipsum dolor Lorem Ipsum some features",
+			"Dimensions": "Lorem Ipsum some Dimensions Cupcake ipsum dolor",
+			"Price": "499.99"
+		},
+		{
+			"Image": "surf-board-1.png",
+			"Title": "Surfboards The Banana Bread Yellow Rail",
+			"Thumbnails": ["thumbnail-1.png" "thumbnail-1.png", "thumbnail-1.png", "thumbnail-1.png"],
+			"Rating": "59",
+			"Description": "Coffee sorbet orange apple. 
+			Cake cake cake sundae froyo cherry, popsicle popsicle chocolate chip",
+			"Features": "Lorem Ipsum some features Coffee sorbet",
+			"Dimensions": "Lorem Ipsum some Dimensions cake cake sundae",
+			"Price": "499.99"
+		}
+	]
+}

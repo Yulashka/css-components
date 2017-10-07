@@ -11,78 +11,186 @@ app.controller('accordCtrl', function($scope, ) {
 	
 /*Carousel*/
 app.controller('carCtrl', function($scope, $http) {
-	  $http({
-		method: "GET",
-		url: "test.json"
-	}).then(function mySuccess(response){
-		console.log("Success");
-		$scope.foo = response.data;
-		$scope.statuscode = response.status;
-		$scope.statustext = response.statusText;
-	});
+	$http.get("carouselData.json").then(mySuccess, myError);
 
-	//   $http({
-	// 	method: "GET",
-	// 	url: "http://localhost:9000/carouselData.json"
-	// }).then(function mySuccess(response){
-	// 	console.log("Success");
-	// 	$scope.content = response.data.records;
-	// 	$scope.statuscode = response.status;
-	// 	$scope.statustext = response.statusText;
-	// }, function myError(response) {
-	// 	console.log("Error");
-	// 	$scope.myWelcome = response.statusText;
-	// });
-	var images = [ "surf-board-1.png", "surf-board-2.png", "surf-board-3.png", "surf-board-4.png"];
-	var length = images.length - 1;
-	var current = 0;
-	$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-	$(".fa-chevron-right").on("click", function() {
-		current = current + 1;
+	function mySuccess(response){
+		console.log("Success: " + response.status);
+		$scope.content = response.data;
+		var images = makeImages(response.data); //new Array(response.data[0].Image);
+		var titles = makeTitles(response.data);
+		var ratings = makeRatings(response.data);
+		var prices = makePrices(response.data);
+		var description = makeDescription(response.data);
+		var features = makeFeatures(response.data);
+		var dimensions = makeDimensions(response.data);
+		var stars = makeStars(response.data);
+		makeCarousel(images, titles, ratings, prices, description, features, dimensions, stars);
+	}
+
+	function myError(response) {
+		console.log("Error: " + response);
+	}
+	
+	function makeImages(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Image);
+			console.log(someJson[i].Image);
+		}
+		return arr;//[ "surf-board-1.png", "surf-board-2.png", "surf-board-3.png", "surf-board-4.png"];
+	}
+
+	function makeTitles(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Title);
+			console.log(someJson[i].Title);
+		}
+		
+		return arr;
+	}
+
+	function makePrices(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Price);
+			console.log(someJson[i].Price);
+		}
+		
+		return arr;
+	}
+
+	function makeRatings(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Rating);
+			console.log(someJson[i].Rating);
+		}
+		return arr;
+	}
+
+	function makeDescription(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Description);
+			console.log(someJson[i].Description);
+		}
+		return arr;
+	}
+
+	function makeFeatures(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Features);
+			console.log(someJson[i].Features);
+		}
+		return arr;
+	}
+
+	function makeDimensions(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Dimensions);
+			console.log(someJson[i].Dimensions);
+		}
+		return arr;
+	}
+
+	function makeStars(someJson) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i].Stars);
+			console.log(someJson[i].Stars);
+		}
+		return arr;
+	}
+	
+	function makeCarousel(images, titles, ratings, prices, description, features, dimensions, stars){
+		var length = images.length - 1;
+		var current = 0;
 		$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-
-		if( current > length){
-			current = 0;
+		$("#surf-web h4").text(titles[current]);
+		$("#surf-web .rating .num").text(ratings[current]);
+		$("#surf-web .price").text(prices[current]);
+		$("#surf-web #text1").text(description[current]);
+		$("#surf-web #text2").text(features[current]);
+		$("#surf-web #text3").text(dimensions[current]);
+		$("#surf-web .stars").append($(stars[current]));
+		$(".fa-chevron-right").on("click", function() {
+			current = current + 1;
 			$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-		} 
-	});
+			$("#surf-web h4").text(titles[current]);
+			$("#surf-web .rating .num").text(ratings[current]);
+			$("#surf-web .price").text(prices[current]);
+			$("#surf-web #text1").text(description[current]);
+			$("#surf-web #text2").text(features[current]);
+			$("#surf-web #text3").text(dimensions[current]);
+			$("#surf-web .stars").append($(stars[current]));
 
-	$(".fa-chevron-left").on("click", function() {
-		if( current == 0 ){
-			current = length;
-			$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-		} else {
-			current = current - 1;
-			$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-		}
-	});
-	/*Navigation*/
-	$("#iconBar").on("click", function() {
-		$(".dropdown").toggle(".d-none");
-	});
+			if( current > length){
+				current = 0;
+				$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
+				$("#surf-web h4").text(titles[current]);
+				$("#surf-web .rating .num").text(ratings[current]);
+				$("#surf-web .price").text(prices[current]);
+				$("#surf-web #text1").text(description[current]);
+				$("#surf-web #text2").text(features[current]);
+				$("#surf-web #text3").text(dimensions[current]);
+				$("#surf-web .stars").append($(stars[current]));
+			} 
+		});
 
-	$(window).resize(function() {
-	  	if($(window).width() < 650){
-			$(".collapse").addClass("d-none");
-			$(".collapsed").removeClass("d-none");
-		}else {
-			$(".collapse").removeClass("d-none");
-			$(".collapsed").addClass("d-none");
-		}
-	});
-	//tabs
-	var text = $(".tab-text p");
-	$(".flex-tab a").on('click', function() {
-		$(".flex-tab a").removeClass('active');
-		$(".tab-text p").addClass('d-none');
-
-		for(var i = 0; i < text.length; i++){
-			if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
-				$(this).addClass('active');
-				$(text[i]).removeClass("d-none");
+		$(".fa-chevron-left").on("click", function() {
+			if( current == 0 ){
+				current = length;
+				$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
+				$("#surf-web h4").text(titles[current]);
+				$("#surf-web .rating .num").text(ratings[current]);
+				$("#surf-web .price").text(prices[current]);
+				$("#surf-web #text1").text(description[current]);
+				$("#surf-web #text2").text(features[current]);
+				$("#surf-web #text3").text(dimensions[current]);
+				$("#surf-web .stars").append($(stars[current]));
+			} else {
+				current = current - 1;
+				$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
+				$("#surf-web h4").text(titles[current]);
+				$("#surf-web .rating .num").text(ratings[current]);
+				$("#surf-web .price").text(prices[current]);
+				$("#surf-web #text1").text(description[current]);
+				$("#surf-web #text2").text(features[current]);
+				$("#surf-web #text3").text(dimensions[current]);
+				$("#surf-web .stars").append($(stars[current]));
 			}
-		}
-	});
+		});
+		/*Navigation*/
+		$("#iconBar").on("click", function() {
+			$(".dropdown").toggle(".d-none");
+		});
+
+		$(window).resize(function() {
+		  	if($(window).width() < 650){
+				$(".collapse").addClass("d-none");
+				$(".collapsed").removeClass("d-none");
+			}else {
+				$(".collapse").removeClass("d-none");
+				$(".collapsed").addClass("d-none");
+			}
+		});
+		//tabs
+		var text = $(".tab-text p");
+		$(".flex-tab a").on('click', function() {
+			$(".flex-tab a").removeClass('active');
+			$(".tab-text p").addClass('d-none');
+
+			for(var i = 0; i < text.length; i++){
+				if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
+					$(this).addClass('active');
+					$(text[i]).removeClass("d-none");
+				}
+			}
+		});
+	}
 });
 
 /* Navigation */

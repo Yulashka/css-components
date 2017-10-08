@@ -8,7 +8,7 @@
 		"Features": "Lorem Ipsum some features",
 		"Dimensions": "Lorem Ipsum some Dimensions",
 		"Price": "499.99",
-		"Stars": "<i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star-o' aria-hidden='true'></i>"
+		"Stars": "2"
 	},
 	{
 		"Image": "surf-board-2.png",
@@ -19,8 +19,7 @@
 		"Features": "Bacon ipsum dolor amet pork belly tenderloin salami capicola pancetta porchetta picanha burgdoggen strip steak pig ham.",
 		"Dimensions": "Lorem Ipsum some Dimensions Bacon ipsum",
 		"Price": "699.99",
-		"Stars": "<i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star-o dark-yellow' aria-hidden='true'></i><i class='fa fa-star-o dark-yellow' aria-hidden='true'></i><i class='fa fa-star-o' aria-hidden='true'></i>"
-
+		"Stars": "3"
 	},
 	{
 		"Image": "surf-board-3.png",
@@ -31,8 +30,7 @@
 		"Features": "Cupcake ipsum dolor Lorem Ipsum some features",
 		"Dimensions": "Lorem Ipsum some Dimensions Cupcake ipsum dolor",
 		"Price": "799.99",
-		"Stars": "<i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star-o dark-yellow' aria-hidden='true'></i><i class='fa fa-star-o' aria-hidden='true'></i>"
-
+		"Stars": "5"
 	},
 	{
 		"Image": "surf-board-4.png",
@@ -43,7 +41,6 @@
 		"Features": "Lorem Ipsum some features Coffee sorbet",
 		"Dimensions": "Lorem Ipsum some Dimensions cake cake sundae",
 		"Price": "599.99",
-		"Stars": "<i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star dark-yellow' aria-hidden='true'></i><i class='fa fa-star dark-yellow' aria-hidden='true'></i>"
-
+		"Stars": "4"
 	}
 ]

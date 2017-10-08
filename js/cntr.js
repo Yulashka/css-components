@@ -9,6 +9,17 @@ app.controller('accordCtrl', function($scope, ) {
 	});
 });
 	
+function ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars) {
+	this.images= images;
+	this.titles=titles;
+	this.ratings=ratings; 
+	this.prices=prices; 
+	this.description= description;
+	this.features= features; 
+	this.dimensions = dimensions; 
+	this.stars =stars;
+}
+
 /*Carousel*/
 app.controller('carCtrl', function($scope, $http) {
 	$http.get("carouselData.json").then(mySuccess, myError);
@@ -16,151 +27,78 @@ app.controller('carCtrl', function($scope, $http) {
 	function mySuccess(response){
 		console.log("Success: " + response.status);
 		$scope.content = response.data;
-		var images = makeImages(response.data); //new Array(response.data[0].Image);
-		var titles = makeTitles(response.data);
-		var ratings = makeRatings(response.data);
-		var prices = makePrices(response.data);
-		var description = makeDescription(response.data);
-		var features = makeFeatures(response.data);
-		var dimensions = makeDimensions(response.data);
-		var stars = makeStars(response.data);
-		makeCarousel(images, titles, ratings, prices, description, features, dimensions, stars);
+		var images = makeContent(response.data, "Image"); //new Array(response.data[0].Image);
+		var titles = makeContent(response.data, "Title");
+		var ratings = makeContent(response.data, "Rating");
+		var prices = makeContent(response.data, "Price");
+		var description = makeContent(response.data, "Description");
+		var features = makeContent(response.data, "Features");
+		var dimensions = makeContent(response.data, "Dimensions");
+		var stars = makeContent(response.data, "Stars");
+		//console.log(stars);
+		var contentDto = new ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars);
+		makeCarousel(contentDto);
+	}
+
+	//translate number to ratings stars
+	//takes a number and shows that many stars rating to the client
+	// @param num - number to translate 
+	function translateRating(num) {
+		$(".star-rate").removeClass("dark-yellow");
+		var starArray = $(".star-rate");
+		for(var i = 0; i < num; i++) {
+			$(starArray[i]).addClass("dark-yellow");
+		}
+
 	}
 
 	function myError(response) {
 		console.log("Error: " + response);
 	}
 	
-	function makeImages(someJson) {
+	function makeContent(someJson, property) {
 		var arr = [];
 		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Image);
-			console.log(someJson[i].Image);
+			arr.push(someJson[i][property]);
+			//console.log(someJson[i][property]);		
 		}
 		return arr;//[ "surf-board-1.png", "surf-board-2.png", "surf-board-3.png", "surf-board-4.png"];
 	}
 
-	function makeTitles(someJson) {
-		var arr = [];
-		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Title);
-			console.log(someJson[i].Title);
-		}
-		
-		return arr;
+	function addContent(content, current) {
+		$(".wrapper .main-img").attr('src', "img/surfersCo/" + content.images[current]);
+		$("#surf-web h4").text(content.titles[current]);
+		$("#surf-web .rating .num").text(content.ratings[current]);
+		$("#surf-web .price").text(content.prices[current]);
+		$("#surf-web #text1").text(content.description[current]);
+		$("#surf-web #text2").text(content.features[current]);
+		$("#surf-web #text3").text(content.dimensions[current]);
+		//$("#surf-web .stars").text(content.stars[current]);
+		translateRating(content.stars[current]);
+		console.log(content.stars[current]);
 	}
 
-	function makePrices(someJson) {
-		var arr = [];
-		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Price);
-			console.log(someJson[i].Price);
-		}
-		
-		return arr;
-	}
-
-	function makeRatings(someJson) {
-		var arr = [];
-		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Rating);
-			console.log(someJson[i].Rating);
-		}
-		return arr;
-	}
-
-	function makeDescription(someJson) {
-		var arr = [];
-		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Description);
-			console.log(someJson[i].Description);
-		}
-		return arr;
-	}
-
-	function makeFeatures(someJson) {
-		var arr = [];
-		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Features);
-			console.log(someJson[i].Features);
-		}
-		return arr;
-	}
-
-	function makeDimensions(someJson) {
-		var arr = [];
-		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Dimensions);
-			console.log(someJson[i].Dimensions);
-		}
-		return arr;
-	}
-
-	function makeStars(someJson) {
-		var arr = [];
-		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i].Stars);
-			console.log(someJson[i].Stars);
-		}
-		return arr;
-	}
-	
-	function makeCarousel(images, titles, ratings, prices, description, features, dimensions, stars){
-		var length = images.length - 1;
+	function makeCarousel(content){
+		var length = content.images.length - 1;
 		var current = 0;
-		$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-		$("#surf-web h4").text(titles[current]);
-		$("#surf-web .rating .num").text(ratings[current]);
-		$("#surf-web .price").text(prices[current]);
-		$("#surf-web #text1").text(description[current]);
-		$("#surf-web #text2").text(features[current]);
-		$("#surf-web #text3").text(dimensions[current]);
-		$("#surf-web .stars").append($(stars[current]));
+		addContent(content, current);
 		$(".fa-chevron-right").on("click", function() {
 			current = current + 1;
-			$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-			$("#surf-web h4").text(titles[current]);
-			$("#surf-web .rating .num").text(ratings[current]);
-			$("#surf-web .price").text(prices[current]);
-			$("#surf-web #text1").text(description[current]);
-			$("#surf-web #text2").text(features[current]);
-			$("#surf-web #text3").text(dimensions[current]);
-			$("#surf-web .stars").append($(stars[current]));
+			addContent(content, current);
 
 			if( current > length){
 				current = 0;
-				$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-				$("#surf-web h4").text(titles[current]);
-				$("#surf-web .rating .num").text(ratings[current]);
-				$("#surf-web .price").text(prices[current]);
-				$("#surf-web #text1").text(description[current]);
-				$("#surf-web #text2").text(features[current]);
-				$("#surf-web #text3").text(dimensions[current]);
-				$("#surf-web .stars").append($(stars[current]));
+				addContent(content, current);
 			} 
 		});
 
 		$(".fa-chevron-left").on("click", function() {
 			if( current == 0 ){
 				current = length;
-				$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-				$("#surf-web h4").text(titles[current]);
-				$("#surf-web .rating .num").text(ratings[current]);
-				$("#surf-web .price").text(prices[current]);
-				$("#surf-web #text1").text(description[current]);
-				$("#surf-web #text2").text(features[current]);
-				$("#surf-web #text3").text(dimensions[current]);
-				$("#surf-web .stars").append($(stars[current]));
+				addContent(content, current);
 			} else {
 				current = current - 1;
-				$(".wrapper .main-img").attr('src', "img/surfersCo/" + images[current]);
-				$("#surf-web h4").text(titles[current]);
-				$("#surf-web .rating .num").text(ratings[current]);
-				$("#surf-web .price").text(prices[current]);
-				$("#surf-web #text1").text(description[current]);
-				$("#surf-web #text2").text(features[current]);
-				$("#surf-web #text3").text(dimensions[current]);
-				$("#surf-web .stars").append($(stars[current]));
+				addContent(content, current);
 			}
 		});
 		/*Navigation*/

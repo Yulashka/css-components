@@ -35,8 +35,10 @@ app.controller('carCtrl', function($scope, $http) {
 		var features = makeContent(response.data, "Features");
 		var dimensions = makeContent(response.data, "Dimensions");
 		var stars = makeContent(response.data, "Stars");
+		var thumbnails = makeContent(response.data, "Thumbnails");
+		makeThumbnails(thumbnails);
 		//console.log(stars);
-		var contentDto = new ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars);
+		var contentDto = new ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars, thumbnails);
 		makeCarousel(contentDto);
 	}
 
@@ -62,9 +64,23 @@ app.controller('carCtrl', function($scope, $http) {
 			arr.push(someJson[i][property]);
 			//console.log(someJson[i][property]);		
 		}
-		return arr;//[ "surf-board-1.png", "surf-board-2.png", "surf-board-3.png", "surf-board-4.png"];
+		return arr;
 	}
 
+	function makeThumbnails(foo) {
+		var stuf = $(".thumbnails img");
+		for(var x = 0; x < foo.length; x++) {
+			$(stuf[x]).attr("src", foo[x][x] );
+		}
+	}
+
+
+	/**
+	 * Adds two numbers
+	 * @param {Number} a 
+	 * @param {Number} b
+	 * @return {Number} sum
+	 */
 	function addContent(content, current) {
 		$(".wrapper .main-img").attr('src', "img/surfersCo/" + content.images[current]);
 		$("#surf-web h4").text(content.titles[current]);
@@ -73,9 +89,7 @@ app.controller('carCtrl', function($scope, $http) {
 		$("#surf-web #text1").text(content.description[current]);
 		$("#surf-web #text2").text(content.features[current]);
 		$("#surf-web #text3").text(content.dimensions[current]);
-		//$("#surf-web .stars").text(content.stars[current]);
 		translateRating(content.stars[current]);
-		console.log(content.stars[current]);
 	}
 
 	function makeCarousel(content){

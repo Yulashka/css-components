@@ -14,6 +14,14 @@
 .white {
 	background-color: $white-color;
 }
+
+.pb14 {
+    padding-bottom: 14rem;
+}
+
+.pt10 {
+	padding-top: 10em;
+}
 /*Carousel*/
 .wrapper {
 	display: flex;
@@ -407,10 +415,32 @@ form div {
     background-size: cover;
 }
 
-#surf-web .about {
+#surf-web .about,
+#surf-web .team{
 	margin-top: 18em;
 }
 
+#surf-web .about-bg {
+	background-image: url(../img/surfersCo/photo.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+    background-size: cover;
+    height: 500px;
+}
+
+#surf-web .about-bg .clearfix {
+	/*-webkit-transform: translateX(-9%);
+    transform: translateX(9%);*/
+    top: 18em;
+}
+
+#surf-web .about-bg h4, 
+#surf-web .about-bg p{
+	width: 60%;
+    float: right;
+    clear: both;
+}
+    
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}

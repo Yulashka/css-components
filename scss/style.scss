@@ -2,6 +2,18 @@
 .text-center { 
 	text-align: center;
 }
+
+.clear {
+	clear: both;
+}
+
+.dark-yellow {
+	color: #F1D700;
+}
+
+.white {
+	background-color: $white-color;
+}
 /*Carousel*/
 .wrapper {
 	display: flex;
@@ -11,10 +23,6 @@
 
 .wrapper div {
 	align-self: center;
-}
-
-.wrapper img {
-	width: 100%;
 }
 
 .fa-chevron-left {
@@ -63,10 +71,6 @@
 	display: block;
 	padding-top: 2em;
 	padding-bottom: 2em;
-}
-
-.text-center {
-	text-align: center;
 }
 
 /*Tab Panel*/
@@ -171,7 +175,7 @@
 
 /*Modal*/
 body {
-	position: relative;
+	margin: 0px;
 }
 
 .d-inline {
@@ -381,6 +385,30 @@ form div {
 #main {
     transition: margin-left .5s;
     padding: 20px;
+}
+
+/*Surfing page*/
+#surf-web .hero-img {
+	background-image: url(../img/surfersCo/Surfing.png);
+	background-repeat: no-repeat;
+	height: 400px;
+    background-size: cover;
+}
+
+#surf-web .carousel {
+	width: 53em;
+	top: 40%;
+    left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-image: url(../img/surfersCo/blue.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+    background-size: cover;
+}
+
+#surf-web .about {
+	margin-top: 18em;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

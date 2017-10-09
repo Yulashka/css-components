@@ -9,31 +9,140 @@ app.controller('accordCtrl', function($scope, ) {
 	});
 });
 	
+function ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars) {
+	this.images= images;
+	this.titles=titles;
+	this.ratings=ratings; 
+	this.prices=prices; 
+	this.description= description;
+	this.features= features; 
+	this.dimensions = dimensions; 
+	this.stars =stars;
+}
+
 /*Carousel*/
-app.controller('carCtrl', function($scope, ) {
-	var images = [ "img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
-	var length = images.length - 1;
-	var current = 0;
-	$(".wrapper img").attr('src', "img/" + images[current]);
-	$(".fa-chevron-right").on("click", function() {
-		current = current + 1;
-		$(".wrapper img").attr('src', "img/" + images[current]);
+app.controller('carCtrl', function($scope, $http) {
+	$http.get("carouselData.json").then(mySuccess, myError);
 
-		if( current > length){
-			current = 0;
-			$(".wrapper img").attr('src', "img/" + images[current]);
-		} 
-	});
+	function mySuccess(response){
+		console.log("Success: " + response.status);
+		$scope.content = response.data;
+		var images = makeContent(response.data, "Image"); //new Array(response.data[0].Image);
+		var titles = makeContent(response.data, "Title");
+		var ratings = makeContent(response.data, "Rating");
+		var prices = makeContent(response.data, "Price");
+		var description = makeContent(response.data, "Description");
+		var features = makeContent(response.data, "Features");
+		var dimensions = makeContent(response.data, "Dimensions");
+		var stars = makeContent(response.data, "Stars");
+		var thumbnails = makeContent(response.data, "Thumbnails");
+		makeThumbnails(thumbnails);
+		//console.log(stars);
+		var contentDto = new ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars, thumbnails);
+		makeCarousel(contentDto);
+	}
 
-	$(".fa-chevron-left").on("click", function() {
-		if( current == 0 ){
-			current = length;
-			$(".wrapper img").attr('src', "img/" + images[current]);
-		} else {
-			current = current - 1;
-			$(".wrapper img").attr('src', "img/" + images[current]);
+	//translate number to ratings stars
+	//takes a number and shows that many stars rating to the client
+	// @param num - number to translate 
+	function translateRating(num) {
+		$(".star-rate").removeClass("dark-yellow");
+		var starArray = $(".star-rate");
+		for(var i = 0; i < num; i++) {
+			$(starArray[i]).addClass("dark-yellow");
 		}
-	});
+
+	}
+
+	function myError(response) {
+		console.log("Error: " + response);
+	}
+	
+	function makeContent(someJson, property) {
+		var arr = [];
+		for(var i = 0; i < someJson.length; i++) {
+			arr.push(someJson[i][property]);
+			//console.log(someJson[i][property]);		
+		}
+		return arr;
+	}
+
+	function makeThumbnails(foo) {
+		var stuf = $(".thumbnails img");
+		for(var x = 0; x < foo.length; x++) {
+			$(stuf[x]).attr("src", foo[x][x] );
+		}
+	}
+
+
+	/**
+	 * Adds two numbers
+	 * @param {Number} a 
+	 * @param {Number} b
+	 * @return {Number} sum
+	 */
+	function addContent(content, current) {
+		$(".wrapper .main-img").attr('src', "img/surfersCo/" + content.images[current]);
+		$("#surf-web h4").text(content.titles[current]);
+		$("#surf-web .rating .num").text(content.ratings[current]);
+		$("#surf-web .price").text(content.prices[current]);
+		$("#surf-web #text1").text(content.description[current]);
+		$("#surf-web #text2").text(content.features[current]);
+		$("#surf-web #text3").text(content.dimensions[current]);
+		translateRating(content.stars[current]);
+	}
+
+	function makeCarousel(content){
+		var length = content.images.length - 1;
+		var current = 0;
+		addContent(content, current);
+		$(".fa-chevron-right").on("click", function() {
+			current = current + 1;
+			addContent(content, current);
+
+			if( current > length){
+				current = 0;
+				addContent(content, current);
+			} 
+		});
+
+		$(".fa-chevron-left").on("click", function() {
+			if( current == 0 ){
+				current = length;
+				addContent(content, current);
+			} else {
+				current = current - 1;
+				addContent(content, current);
+			}
+		});
+		/*Navigation*/
+		$("#iconBar").on("click", function() {
+			$(".dropdown").toggle(".d-none");
+		});
+
+		$(window).resize(function() {
+		  	if($(window).width() < 650){
+				$(".collapse").addClass("d-none");
+				$(".collapsed").removeClass("d-none");
+			}else {
+				$(".collapse").removeClass("d-none");
+				$(".collapsed").addClass("d-none");
+			}
+		});
+		//tabs
+		var text = $(".tab-text p");
+		$(".flex-tab a").on('click', function() {
+			$(".flex-tab a").removeClass('active');
+			$(".tab-text p").addClass('d-none');
+
+			for(var i = 0; i < text.length; i++){
+				if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
+					$(this).addClass('active');
+					$(text[i]).removeClass("d-none");
+				}
+			}
+		});
+	}
 });
 
 /* Navigation */

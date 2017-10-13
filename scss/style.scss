@@ -403,7 +403,7 @@ form div {
     background-size: cover;
 }
 
-#surf-web .carousel {
+#surf-web #carousel-surf {
 	width: 53em;
 	top: 40%;
     left: 50%;
@@ -428,18 +428,35 @@ form div {
     height: 500px;
 }
 
-#surf-web .about-bg .clearfix {
-	/*-webkit-transform: translateX(-9%);
-    transform: translateX(9%);*/
-    top: 18em;
+.team-card {
+	/*box-shadow*/
+	-webkit-box-shadow: 17px 22px 101px -6px rgba(179,177,179,1);
+	-moz-box-shadow: 17px 22px 101px -6px rgba(179,177,179,1);
+	box-shadow: 17px 22px 101px -6px rgba(179,177,179,1);
 }
 
-#surf-web .about-bg h4, 
+.team-card:hover {
+	background-color: #00AFFF;
+	color: white;
+}
+
+.round-border{
+	border: 1px solid white;
+    border-radius: 50px;
+}
+   
+/*#surf-web .about-bg .clearfix {*/
+	/*-webkit-transform: translateX(-9%);
+    transform: translateX(9%);*/
+    /*top: 18em;
+}*/
+
+/*#surf-web .about-bg h4, 
 #surf-web .about-bg p{
 	width: 60%;
     float: right;
     clear: both;
-}
+}*/
     
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

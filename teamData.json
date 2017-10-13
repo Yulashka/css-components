@@ -1,0 +1,50 @@
+[
+	{
+		"Image": "img/surfersCo/teamPic1.png",
+		"Title": "Taj Burrow",
+		"Nickname": "@tajamos",
+		"Location": "Yallingup, Australia"
+	},
+	{
+		"Image": "img/surfersCo/teamPic2.png",
+		"Title": "Malia Manuel",
+		"Nickname": "@maliamanuel",
+		"Location": "Wailua, Hi"
+	},
+	{
+		"Image": "img/surfersCo/teamPic3.png",
+		"Title": "Ian Walsh",
+		"Nickname": "@ian.walsh",
+		"Location": "Maui, Hi"
+	},
+	{
+		"Image": "img/surfersCo/teamPic4.png",
+		"Title": "Macy Callaghan",
+		"Nickname": "@macyjanecallaghan",
+		"Location": "San Clemente, CA"
+	},
+	{
+		"Image": "img/surfersCo/teamPic2.png",
+		"Title": "Hanna Montana",
+		"Nickname": "@hannamontana",
+		"Location": "Denver, CO"
+	},
+	{
+		"Image": "img/surfersCo/teamPic1.png",
+		"Title": "David Leto",
+		"Nickname": "@davidleto",
+		"Location": "Portland, OR"
+	},
+	{
+		"Image": "img/surfersCo/teamPic4.png",
+		"Title": "Natalie Portman",
+		"Nickname": "@natport",
+		"Location": "Seattle, WA"
+	},
+	{
+		"Image": "img/surfersCo/teamPic3.png",
+		"Title": "Steven Brown",
+		"Nickname": "@stevebrown",
+		"Location": "Moscow, Russia"
+	}
+]

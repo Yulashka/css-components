@@ -172,7 +172,7 @@ app.controller('carCtrl', function($scope, $http) {
 
 	function addTeamContent(obj, current, max) {
 		/*console.log(obj.teamImages[current]);*/
-		var imgs = $(".team-card img");
+		var imgs = $(".team-card .team-pic");
 		var titles = $(".team-card h4");
 		var nicknames = $(".team-card .nickname");
 		var locations = $(".team-card .location");
@@ -209,7 +209,6 @@ app.controller('carCtrl', function($scope, $http) {
 			console.log("Clicked left");
 		});
 	}
-
 
 
 	function myError2(response) {

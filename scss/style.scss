@@ -11,6 +11,22 @@
 	color: #F1D700;
 }
 
+.gray {
+	color: #4D4D4D;
+}
+
+.gray-bg {
+	background-color: #4D4D4D;
+}
+
+.black {
+	color: $black-color;
+}
+
+.black-bg {
+	background-color: $black-color;
+}
+
 .white-bg {
 	background-color: $white-color;
 }
@@ -35,6 +51,10 @@
 	background-color: #C9C9C9;
 }
 
+.dark-gray {
+	color: #4d4d4d;
+}
+
 .blue {
 	color: #00AFFF;
 }
@@ -54,6 +74,17 @@
 	text-transform: uppercase;
 }
 
+.none-border {
+	border: none;
+}
+
+.border-bottom-gray { 
+	border-bottom: 1px solid #4D4D4D;
+}
+
+.width-85 {
+	width: 85%;
+}
 /*Carousel*/
 .wrapper {
 	display: flex;
@@ -488,6 +519,7 @@ form div {
 	box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
 }
    
+
 /*#surf-web .about-bg .clearfix {*/
 	/*-webkit-transform: translateX(-9%);
     transform: translateX(9%);*/

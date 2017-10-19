@@ -1,0 +1,448 @@
+/*Colors*/
+/* Styles that apply to all pages */
+/*Main Styles*/
+@import url(../bower_components/basscss/css/basscss.min.css);
+.text-center {
+  text-align: center; }
+
+.clear {
+  clear: both; }
+
+.dark-yellow {
+  color: #F1D700; }
+
+.dark-gray {
+  color: #4D4D4D; }
+
+.dark-gray-bg {
+  background-color: #4D4D4D; }
+
+.black {
+  color: #000000; }
+
+.black-bg {
+  background-color: #000000; }
+
+.white-bg {
+  background-color: #FFFFFF; }
+
+.white {
+  color: #FFFFFF; }
+
+.pb14 {
+  padding-bottom: 14rem; }
+
+.pt10 {
+  padding-top: 10em; }
+
+.gray {
+  color: #C9C9C9; }
+
+.gray-bg {
+  background-color: #C9C9C9; }
+
+.blue {
+  color: #00AFFF; }
+
+.blue-bg {
+  background-color: #00AFFF; }
+
+.mt6 {
+  margin-top: 6em; }
+
+.w-70 {
+  width: 70%; }
+
+.font-uppercase {
+  text-transform: uppercase; }
+
+.none-border {
+  border: none; }
+
+.border-bottom-gray {
+  border-bottom: 1px solid #4D4D4D; }
+
+.width-85 {
+  width: 85%; }
+
+/* Styles that apply to the overall site*/
+/*Surfing page*/
+#surf-web nav a:hover {
+  color: #FFFFFF;
+  background-color: #00AFFF; }
+
+#surf-web .hero-img {
+  background-image: url(../img/surfersCo/Surfing.png);
+  background-repeat: no-repeat;
+  height: 400px;
+  background-size: cover; }
+
+#surf-web .background-blue {
+  background-image: url(../img/surfersCo/blue.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 2em; }
+
+#surf-web .about,
+#surf-web .team {
+  margin-top: 18em; }
+
+#surf-web .about-bg {
+  background-image: url(../img/surfersCo/photo.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 500px; }
+
+#surf-web .team-card {
+  /*box-shadow*/
+  -webkit-box-shadow: 17px 22px 101px -6px #b3b1b3;
+  -moz-box-shadow: 17px 22px 101px -6px #b3b1b3;
+  box-shadow: 17px 22px 101px -6px #b3b1b3; }
+
+#surf-web .team-card:hover {
+  background-color: #00AFFF; }
+
+#surf-web .team-card:hover > p,
+#surf-web .team-card:hover > h4,
+#surf-web .team-card:hover > p span {
+  color: #FFFFFF !important; }
+
+#surf-web .round-border {
+  border: 1px solid #FFFFFF;
+  border-radius: 50px; }
+
+#surf-web .updates .sm-col-4:hover {
+  -webkit-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
+  -moz-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
+  box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53); }
+
+/*#surf-web .about-bg .clearfix {*/
+/*-webkit-transform: translateX(-9%);
+    transform: translateX(9%);*/
+/*top: 18em;
+}*/
+/*#surf-web .about-bg h4, 
+#surf-web .about-bg p{
+	width: 60%;
+    float: right;
+    clear: both;
+}*/
+/*Carousel*/
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.wrapper div {
+  align-self: center; }
+
+/*Navigation*/
+.brand-logo img {
+  width: 60px; }
+
+.right {
+  float: right; }
+
+.css-compon nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.css-compon nav a,
+.css-compon nav a:hover {
+  text-decoration: none;
+  color: #42f483; }
+
+.css-compon nav a:hover {
+  border-bottom: 1px solid #000000; }
+
+.collapse:first-child {
+  margin-right: 2em; }
+
+.d-none {
+  display: none; }
+
+.dropdown a {
+  display: block;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
+/*Tab Panel*/
+.tab-container {
+  height: 300px;
+  border: 1px solid #000000; }
+
+.flex-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.flex-tab a,
+.flex-tab a:hover {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1.5em; }
+
+.flex-tab a:hover {
+  border-bottom: 1px solid #000000; }
+
+.tab-text {
+  padding: 1em; }
+
+.active {
+  border: 1px solid #FF0000 !important;
+  background-color: #FF0000; }
+
+/*Accordion*/
+.accordion {
+  border: 1px solid #000000; }
+
+.accordion .accord-tab:hover,
+.collapsed p,
+.button-drop:hover,
+.modal-btn,
+.pagination a,
+.tab-container a,
+.scroll-top {
+  cursor: pointer; }
+
+.accord-tab {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  display: block; }
+
+.accord-tab:hover {
+  text-decoration: none;
+  border: 1px solid #FF0000; }
+
+.a-acc-tab {
+  background-color: #FF0000;
+  color: #FFFFFF; }
+
+/*Dropdown button*/
+.dropdown-btn {
+  width: 4em;
+  border: 1px solid #000000; }
+
+.button-drop {
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 1em; }
+
+.dropdown-text a,
+.button-drop a {
+  text-decoration: none;
+  color: #000; }
+
+.dropdown-text p {
+  margin: 0px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center; }
+
+.border-b {
+  border-bottom: 1px solid #000000; }
+
+.border-t {
+  border-top: 1px solid #000000; }
+
+/*Modal*/
+body {
+  margin: 0px; }
+
+.d-inline {
+  display: inline; }
+
+.modal {
+  width: 50%;
+  z-index: 2;
+  position: fixed;
+  border: 1px solid #000000;
+  padding: 1em;
+  left: 25%;
+  top: 20%;
+  background-color: #FFFFFF;
+  font-size: 1em; }
+
+.modal-bg {
+  /*opacity: 0.1;*/
+  filter: alpha(opacity=10);
+  /* For IE8 and earlier */
+  background-color: #000000; }
+
+.modal-header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+.modal-header h1,
+.modal p {
+  margin: 0px; }
+
+.d-inline-block {
+  display: inline-block; }
+
+.modal-btn {
+  padding: 0.8em;
+  border: 1px solid #000000;
+  background-color: green; }
+
+.modal-body {
+  margin-top: 2em; }
+
+.clear-r {
+  clear: right; }
+
+form div {
+  margin-bottom: 2em; }
+
+.submit-btn {
+  padding: 1em 1.3em 1em 1.3em;
+  background-color: red;
+  text-decoration: none; }
+
+.submit-btn:hover {
+  text-decoration: none;
+  text-shadow: 2px 2px #FF0000; }
+
+/*Popover*/
+.popover {
+  position: relative;
+  margin: 1em; }
+
+.popover button {
+  padding: 1em;
+  background-color: red;
+  text-transform: uppercase;
+  border: 1px solid #000000; }
+
+.pop-text {
+  position: absolute;
+  left: 60%;
+  top: 0;
+  padding: 1.5em 1em 1.5em 1em;
+  border: 1px solid #000000; }
+
+/*Scrollspy*/
+.scroll-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1em;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  background-color: pink;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.scroll-nav a {
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 2px;
+  color: black;
+  text-decoration: none; }
+
+.scroll-nav a:hover {
+  color: red; }
+
+.margin-top {
+  margin-top: 7em; }
+
+.active-scroll {
+  background-color: #FFFFFF; }
+
+.red {
+  background-color: red; }
+
+/*Pagination*/
+.pagination li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+.pagination li a {
+  border: 1px solid #000000;
+  padding: 1em;
+  margin-right: 1em; }
+
+.pagination a {
+  text-decoration: none; }
+
+.active-pg {
+  background-color: orange; }
+
+/*scroll-top button*/
+.container {
+  position: relative; }
+
+.scroll-top {
+  position: fixed;
+  right: 0px;
+  bottom: 10px;
+  padding: 1em;
+  background-color: green;
+  color: #FFFFFF; }
+
+/*Home page - SIDE NAV*/
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */ }
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1; }
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+  .sidenav a {
+    font-size: 18px; } }

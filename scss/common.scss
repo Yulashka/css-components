@@ -1,0 +1,85 @@
+/* Styles that apply to all pages */
+/*Main Styles*/
+.text-center { 
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.dark-yellow {
+	color: #F1D700;
+}
+
+.dark-gray {
+	color: $dark-gray-color;
+}
+
+.dark-gray-bg {
+	background-color: $dark-gray-color;
+}
+
+.black {
+	color: $black-color;
+}
+
+.black-bg {
+	background-color: $black-color;
+}
+
+.white-bg {
+	background-color: $white-color;
+}
+
+.white {
+	color: $white-color;
+}
+
+.pb14 {
+    padding-bottom: 14rem;
+}
+
+.pt10 {
+	padding-top: 10em;
+}
+
+.gray { 
+	color: $gray-color;
+}
+
+.gray-bg { 
+	background-color: $gray-color;
+}
+
+.blue {
+	color: $blue-color;
+}
+
+.blue-bg {
+	background-color: $blue-color;
+}
+.mt6 {
+	margin-top: 6em;
+}
+
+.w-70 {
+	width: 70%;
+}
+
+.font-uppercase {
+	text-transform: uppercase;
+}
+
+.none-border {
+	border: none;
+}
+
+.border-bottom-gray { 
+	border-bottom: 1px solid #4D4D4D;
+}
+
+.width-85 {
+	width: 85%;
+}
+

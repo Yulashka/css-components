@@ -1,9 +1,8 @@
-<link rel="stylesheet" href="css/bla.css">
 <div id="surf-web" ng-controller="carCtrl">
   
-  <div class="relative">
+  <div class="hero-img">
     <!-- Hero Image Section -->
-    <div class="hero-img">
+    <div>
       <!-- Navigation Section -->
       <nav>
         <img src="img/surfersCo/logo.png" class="fit">
@@ -41,16 +40,16 @@
     </div>
 
     <!-- Carousel -->
-    <div class="carousel absolute" id="carousel-surf">
-      <div class="wrapper">
-        <div class="prev">
-          <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-        </div>
-        <div class="clearfix">
+    <div class="carousel max-width-4 mx-auto clearfix" id="carousel-surf">
+      <div class="prev col col-1 center">
+        <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+      </div>
+      <div class="col col-10">
+        <div class="clearfix background-blue">
           <div class="sm-col sm-col-10 md-col-5">
-            <img src="" class="fit d-block center main-img">
+            <img src="" class="fit block mx-auto main-img">
           </div>
-          <div class="col col-2 thumbnails">
+          <div class="sm-col sm-col-12 md-col-2 thumbnails">
             <img src="" class="fit d-block center">
             <img src="" class="fit d-block center">
             <img src="" class="fit d-block center">
@@ -69,13 +68,13 @@
               <span class="num"></span>
             </div>
             <!-- Tab panel -->
-            <div class="tab-container">
-              <div class="flex-tab border-b">
+            <div class="surf-tab-container">
+              <div class="surf-tab border-b">
                 <a data-href="#text1" class="active">Description</a>
                 <a data-href="#text2" class="">Features</a>
                 <a data-href="#text3" class="">Dimensions</a>
               </div>
-              <div class="tab-text">
+              <div class="surf-tab-text">
                 <p id="text1" class=""></p>
                 <p id="text2" class="d-none"></p>
                 <p id="text3" class="d-none"></p>
@@ -92,9 +91,9 @@
             <a href="#">View all the boards</a>
           </div>
         </div>
-        <div class="next">
-          <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-        </div>
+      </div>
+      <div class="next col col-1 center">
+        <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
       </div>
     </div>
   </div>
@@ -203,110 +202,110 @@
     <a href="#" class="caps white text-decoration-none blue-bg p1">View all posts</a>
   </div>
 
-    <!-- Social Media Section -->
-    <div class="my4 media clearfix max-width-4 mx-auto">
-      <img src="img/surfersCo/instagram.png" class="fit mx-auto block">
-      <div class="sm-col sm-col-12 md-col-6">
-        <div class="clearfix">
-          <div class="sm-col sm-col-12 md-col-6">
-            <img src="img/surfersCo/insta1.png" class="fit mx-auto block">
-          </div>
-          <div class="sm-col sm-col-12 md-col-6">
-            <img src="img/surfersCo/insta2.png" class="fit mx-auto block">
-          </div>
+  <!-- Social Media Section -->
+  <div class="my4 media clearfix max-width-4 mx-auto">
+    <img src="img/surfersCo/instagram.png" class="fit mx-auto block">
+    <div class="sm-col sm-col-12 md-col-6">
+      <div class="clearfix">
+        <div class="sm-col sm-col-12 md-col-6">
+          <img src="img/surfersCo/insta1.png" class="fit mx-auto block">
         </div>
-        <div class="clearfix">
-          <div class="sm-col sm-col-12 md-col-6">
-            <img src="img/surfersCo/insta3.png" class="fit mx-auto block">
-          </div>
-          <div class="sm-col sm-col-12 md-col-6">
-            <img src="img/surfersCo/insta4.png" class="fit mx-auto block">
-          </div>
-        </div>
-        <div class="white-bg">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          <span class="caps blue bold">Follow us</span>
-          <span>@surfersco</span>
+        <div class="sm-col sm-col-12 md-col-6">
+          <img src="img/surfersCo/insta2.png" class="fit mx-auto block">
         </div>
       </div>
-      <div class="sm-col sm-col-12 md-col-6">
-        <img src="img/surfersCo/facebook.png" class="fit mx-auto block">
+      <div class="clearfix">
+        <div class="sm-col sm-col-12 md-col-6">
+          <img src="img/surfersCo/insta3.png" class="fit mx-auto block">
+        </div>
+        <div class="sm-col sm-col-12 md-col-6">
+          <img src="img/surfersCo/insta4.png" class="fit mx-auto block">
+        </div>
+      </div>
+      <div class="white-bg">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <span class="caps blue bold">Follow us</span>
+        <span>@surfersco</span>
       </div>
     </div>
+    <div class="sm-col sm-col-12 md-col-6">
+      <img src="img/surfersCo/facebook.png" class="fit mx-auto block">
+    </div>
+  </div>
 
-   <!-- footer -->
-    <footer class="black-bg">
-      <div class="clearfix max-width-4 mx-auto py3">
-        <div class="sm-col sm-col-12 md-col-6">
-          <div>
-            <p class="dark-gray">@ 2017 Surfers Co.<p>
-          </div>
+  <!-- footer -->
+  <footer class="black-bg">
+    <div class="clearfix max-width-4 mx-auto py3">
+      <div class="sm-col sm-col-12 md-col-6">
+        <div>
+          <p class="dark-gray">@ 2017 Surfers Co.<p>
         </div>
-        <div class="sm-col sm-col-12 md-col-6">
-          <div class="clearfix">
-            <div class="sm-col sm-col-12 md-col-6">
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  About
-                </p>
-              </a>
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  Boards
-                </p>
-              </a>
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  Accessories
-                </p>
-              </a>
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  Blog
-                </p>
-              </a>
-            </div>
-            <div class="sm-col sm-col-12 md-col-6">
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  Technology
-                </p>
-              </a>
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  Team
-                </p>
-              </a>
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  Dealers
-                </p>
-              </a>
-              <a href="#" class="text-decoration-none">
-                <p class="white">
-                  <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
-                  Contact us
-                </p>
-              </a>
-              <h4 class="white bold pt4">Subscribe to our newsletter</h4>
-              <form class="border-bottom-gray width-85 ">
-                <i class="fa fa-envelope dark-gray pr1" aria-hidden="true"></i>
-                <input type="email" name="email" required placeholder="Your e-mail" class="black-bg none-border">
-                <i class="fa fa-arrow-circle-right blue" aria-hidden="true"></i>
-              </form>
-            </div>
+      </div>
+      <div class="sm-col sm-col-12 md-col-6">
+        <div class="clearfix">
+          <div class="sm-col sm-col-12 md-col-6">
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                About
+              </p>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                Boards
+              </p>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                Accessories
+              </p>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                Blog
+              </p>
+            </a>
+          </div>
+          <div class="sm-col sm-col-12 md-col-6">
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                Technology
+              </p>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                Team
+              </p>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                Dealers
+              </p>
+            </a>
+            <a href="#" class="text-decoration-none">
+              <p class="white">
+                <img src="img/surfersCo/wave-yellow.png" class="fit mx-auto pr1">
+                Contact us
+              </p>
+            </a>
+            <h4 class="white bold pt4">Subscribe to our newsletter</h4>
+            <form class="border-bottom-gray width-85 ">
+              <i class="fa fa-envelope dark-gray pr1" aria-hidden="true"></i>
+              <input type="email" name="email" required placeholder="Your e-mail" class="black-bg none-border">
+              <i class="fa fa-arrow-circle-right blue" aria-hidden="true"></i>
+            </form>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
+</div>
 
 
 

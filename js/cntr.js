@@ -82,7 +82,7 @@ app.controller('carCtrl', function($scope, $http) {
 	 * @return {Number} sum
 	 */
 	function addContent(content, current) {
-		$(".wrapper .main-img").attr('src', "img/surfersCo/" + content.images[current]);
+		$(".main-img").attr('src', "img/surfersCo/" + content.images[current]);
 		$("#surf-web #carousel-surf h4").text(content.titles[current]);
 		$("#surf-web .rating .num").text(content.ratings[current]);
 		$("#surf-web .price").text(content.prices[current]);
@@ -130,10 +130,10 @@ app.controller('carCtrl', function($scope, $http) {
 			}
 		});
 		//tabs
-		var text = $(".tab-text p");
-		$(".flex-tab a").on('click', function() {
-			$(".flex-tab a").removeClass('active');
-			$(".tab-text p").addClass('d-none');
+		var text = $(".surf-tab-text p");
+		$(".surf-tab a").on('click', function() {
+			$(".surf-tab a").removeClass('active');
+			$(".surf-tab-text p").addClass('d-none');
 
 			for(var i = 0; i < text.length; i++){
 				if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {

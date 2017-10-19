@@ -1,0 +1,70 @@
+/*Surfing page*/
+#surf-web .hero-img {
+	background-image: url(../img/surfersCo/Surfing.png);
+	background-repeat: no-repeat;
+	height: 400px;
+    background-size: cover;
+}
+
+#surf-web .background-blue {
+	background-image: url(../img/surfersCo/blue.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+    background-size: cover;
+    padding: 2em;
+}
+
+#surf-web .about,
+#surf-web .team{
+	margin-top: 18em;
+}
+
+#surf-web .about-bg {
+	background-image: url(../img/surfersCo/photo.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+    background-size: cover;
+    height: 500px;
+}
+
+#surf-web .team-card {
+	/*box-shadow*/
+	-webkit-box-shadow: 17px 22px 101px -6px rgba(179,177,179,1);
+	-moz-box-shadow: 17px 22px 101px -6px rgba(179,177,179,1);
+	box-shadow: 17px 22px 101px -6px rgba(179,177,179,1);
+}
+
+#surf-web .team-card:hover {
+	background-color: $blue-color;
+}
+
+#surf-web .team-card:hover > p,
+#surf-web .team-card:hover > h4,
+#surf-web .team-card:hover > p span {
+	color: $white-color !important;
+}
+
+#surf-web .round-border{
+	border: 1px solid $white-color;
+    border-radius: 50px;
+}
+
+#surf-web .updates .sm-col-4:hover {
+	-webkit-box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
+	-moz-box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
+	box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
+}
+   
+
+/*#surf-web .about-bg .clearfix {*/
+	/*-webkit-transform: translateX(-9%);
+    transform: translateX(9%);*/
+    /*top: 18em;
+}*/
+
+/*#surf-web .about-bg h4, 
+#surf-web .about-bg p{
+	width: 60%;
+    float: right;
+    clear: both;
+}*/

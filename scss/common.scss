@@ -12,6 +12,9 @@
 	color: #F1D700;
 }
 
+.dark-yellow-bg {
+	background-color: #F1D700;
+}
 .dark-gray {
 	color: $dark-gray-color;
 }
@@ -42,6 +45,10 @@
 
 .pt10 {
 	padding-top: 10em;
+}
+
+.pt6 {
+	padding-top: 6em;
 }
 
 .gray { 
@@ -83,3 +90,6 @@
 	width: 85%;
 }
 
+.p-xs {
+	padding-bottom: 2px;
+}

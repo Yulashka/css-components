@@ -60,7 +60,7 @@ app.controller('carCtrl', function($scope, $http) {
 	 */
 	function addContent(content, current) {
 		$(".main-img").attr('src', "img/surfersCo/" + content.images[current]);
-		$("#surf-web #carousel-surf h4").text(content.titles[current]);
+		$("#surf-web #carousel-surf h3").text(content.titles[current]);
 		$("#surf-web .rating .num").text(content.ratings[current]);
 		$("#surf-web .price").text(content.prices[current]);
 		$("#surf-web #text1").text(content.description[current]);
@@ -73,7 +73,7 @@ app.controller('carCtrl', function($scope, $http) {
 		var length = content.images.length - 1;
 		var current = 0;
 		addContent(content, current);
-		$("#carousel-surf .fa-chevron-right").on("click", function() {
+		$("#carousel-surf .fa-long-arrow-right").on("click", function() {
 			current = current + 1;
 			addContent(content, current);
 
@@ -83,7 +83,7 @@ app.controller('carCtrl', function($scope, $http) {
 			} 
 		});
 
-		$("#carousel-surf .fa-chevron-left").on("click", function() {
+		$("#carousel-surf .fa-long-arrow-left").on("click", function() {
 			if( current == 0 ){
 				current = length;
 				addContent(content, current);
@@ -109,12 +109,12 @@ app.controller('carCtrl', function($scope, $http) {
 		//tabs
 		var text = $(".surf-tab-text p");
 		$(".surf-tab a").on('click', function() {
-			$(".surf-tab a").removeClass('active');
+			$(".surf-tab a").removeClass('tab-active');
 			$(".surf-tab-text p").addClass('d-none');
 
 			for(var i = 0; i < text.length; i++){
 				if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
-					$(this).addClass('active');
+					$(this).addClass('tab-active');
 					$(text[i]).removeClass("d-none");
 				}
 			}

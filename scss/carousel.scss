@@ -8,7 +8,7 @@
 #surf-web .hero-img {
 	background-image: url(../img/surfersCo/Surfing.png);
 	background-repeat: no-repeat;
-	height: 400px;
+	height: 500px;
     background-size: cover;
 }
 
@@ -60,9 +60,51 @@
 	-moz-box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
 	box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
 }
-  
+ 
+#surf-web h1,
+#surf-web .hero-img .hero-text {
+	font-family: 'Lobster Two', cursive;
+	font-weight: 100;
+	letter-spacing: 1px;
+}  
 
+#surf-web h1 {
+	font-size: 3rem;
+}
 
+#surf-web {
+	font-family: 'Roboto', sans-serif;
+}
+
+#surf-web .tab-active {
+	border-bottom: 3px solid $blue-color;
+	color: $black-color;
+}
+
+#surf-web #carousel-surf h3 {
+	height: 3em; 
+}
+
+#surf-web .thumbnails img:hover {
+	border: 2px solid $blue-color;
+	background-color: #00AFFF;
+}
+
+#surf-web .thumbnails img {
+	border: 2px solid $white-color;
+}
+
+#surf-web .surf-tab {
+	border-bottom: 1px solid $gray-color;
+}
+
+#surf-web .surf-tab a:hover{
+	cursor: pointer;
+}
+
+#surf-web .view-all {
+	border-bottom: 2px solid $blue-color;
+}
 /*#surf-web .about-bg .clearfix {*/
 	/*-webkit-transform: translateX(-9%);
     transform: translateX(9%);*/

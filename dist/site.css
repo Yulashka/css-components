@@ -32,14 +32,14 @@
 .white {
   color: #FFFFFF; }
 
-.pb14 {
-  padding-bottom: 14rem; }
-
 .pt10 {
   padding-top: 10em; }
 
 .pt6 {
   padding-top: 6em; }
+
+.pt8 {
+  padding-top: 8em; }
 
 .gray {
   color: #C9C9C9; }
@@ -55,6 +55,18 @@
 
 .mt6 {
   margin-top: 6em; }
+
+.mt10 {
+  margin-top: 10em; }
+
+.mt18 {
+  margin-top: 18em; }
+
+.pl13 {
+  padding-left: 13em; }
+
+.pb12 {
+  padding-bottom: 12em; }
 
 .w-70 {
   width: 70%; }
@@ -92,10 +104,6 @@
   background-position: bottom;
   background-size: cover;
   padding: 2em; }
-
-#surf-web .about,
-#surf-web .team {
-  margin-top: 18em; }
 
 #surf-web .about-bg {
   background-image: url(../img/surfersCo/photo.png);

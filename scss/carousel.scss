@@ -20,11 +20,6 @@
     padding: 2em;
 }
 
-#surf-web .about,
-#surf-web .team{
-	margin-top: 18em;
-}
-
 #surf-web .about-bg {
 	background-image: url(../img/surfersCo/photo.png);
 	background-repeat: no-repeat;
@@ -105,6 +100,8 @@
 #surf-web .view-all {
 	border-bottom: 2px solid $blue-color;
 }
+
+   
 /*#surf-web .about-bg .clearfix {*/
 	/*-webkit-transform: translateX(-9%);
     transform: translateX(9%);*/

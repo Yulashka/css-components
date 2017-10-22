@@ -39,16 +39,16 @@
 	color: $white-color;
 }
 
-.pb14 {
-    padding-bottom: 14rem;
-}
-
 .pt10 {
 	padding-top: 10em;
 }
 
 .pt6 {
 	padding-top: 6em;
+}
+
+.pt8 {
+	padding-top: 8em;
 }
 
 .gray { 
@@ -66,10 +66,27 @@
 .blue-bg {
 	background-color: $blue-color;
 }
+
 .mt6 {
 	margin-top: 6em;
 }
 
+.mt10 {
+	margin-top: 10em;
+}
+
+.mt18 {
+	margin-top: 18em;
+}
+
+.pl13 {
+	padding-left: 13em;
+}
+ 
+.pb12 {
+	padding-bottom: 12em;
+}
+    
 .w-70 {
 	width: 70%;
 }

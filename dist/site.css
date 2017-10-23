@@ -48,7 +48,7 @@
   background-color: #C9C9C9; }
 
 .blue {
-  color: #00AFFF; }
+  color: #00AFFF !important; }
 
 .blue-bg {
   background-color: #00AFFF; }
@@ -85,6 +85,9 @@
 
 .p-xs {
   padding-bottom: 2px; }
+
+.round-border {
+  border-radius: 50px; }
 
 /* Styles that apply to the overall site*/
 /*Surfing page*/
@@ -169,6 +172,13 @@
 
 #surf-web .view-all {
   border-bottom: 2px solid #00AFFF; }
+
+#surf-web .team .carousel .fa-stack {
+  border: 1px solid #00AFFF !important;
+  border-radius: 50px; }
+
+.border-blue {
+  border: 1px solid #00AFFF; }
 
 /*#surf-web .about-bg .clearfix {*/
 /*-webkit-transform: translateX(-9%);

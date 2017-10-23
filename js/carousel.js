@@ -170,7 +170,7 @@ app.controller('carCtrl', function($scope, $http) {
 		addTeamContent(obj, current, max);
 
 		//click right
-		$(".team .fa-chevron-right").on("click", function() {
+		$(".team .fa-arrow-right").on("click", function() {
 			current = 4;
 			max = 8;
 			addTeamContent(obj, current, max);
@@ -179,7 +179,7 @@ app.controller('carCtrl', function($scope, $http) {
 		});
 
 		//click left
-		$(".team .fa-chevron-left").on("click", function() {
+		$(".team .fa-arrow-left").on("click", function() {
 			current = 0;
 			max = 4;
 			addTeamContent(obj, current, max);

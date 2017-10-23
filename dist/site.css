@@ -133,13 +133,15 @@
   border: 1px solid #FFFFFF;
   border-radius: 50px; }
 
-#surf-web .updates .sm-col-4:hover {
+#surf-web .updates .sm-col-4 .w-70:hover {
   -webkit-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
   -moz-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
-  box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53); }
+  box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
+  color: #00AFFF; }
 
 #surf-web h1,
-#surf-web .hero-img .hero-text {
+#surf-web .hero-img .hero-text,
+#surf-web .about p {
   font-family: 'Lobster Two', cursive;
   font-weight: 100;
   letter-spacing: 1px; }

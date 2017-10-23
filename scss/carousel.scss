@@ -101,7 +101,15 @@
 	border-bottom: 2px solid $blue-color;
 }
 
-   
+#surf-web .team .carousel .fa-stack {
+
+    border: 1px solid #00AFFF !important;
+    border-radius: 50px;
+}
+
+.border-blue {
+	border: 1px solid #00AFFF;
+}
 /*#surf-web .about-bg .clearfix {*/
 	/*-webkit-transform: translateX(-9%);
     transform: translateX(9%);*/

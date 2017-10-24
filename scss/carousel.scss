@@ -1,10 +1,23 @@
 /*Surfing page*/
+
+/*Navigation*/
+.expanded-nav {
+    width: 100%;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+#surf-web .collapsed .dropdown a {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
 #surf-web nav a:hover {
 	color: $white-color;
 	background-color: $blue-color;
 }
 
-
+/*Hero image section*/
 #surf-web .hero-img {
 	background-image: url(../img/surfersCo/Surfing.png);
 	background-repeat: no-repeat;
@@ -20,6 +33,8 @@
     padding: 2em;
 }
 
+
+/*About section*/
 #surf-web .about-bg {
 	background-image: url(../img/surfersCo/photo.png);
 	background-repeat: no-repeat;
@@ -28,6 +43,7 @@
     height: 500px;
 }
 
+/*Team section*/
 #surf-web .team-card {
 	/*box-shadow*/
 	-webkit-box-shadow: 17px 22px 101px -6px rgba(179,177,179,1);
@@ -45,6 +61,7 @@
 	color: $white-color !important;
 }
 
+/*Updates*/
 #surf-web .round-border{
 	border: 1px solid $white-color;
     border-radius: 50px;
@@ -115,20 +132,24 @@
 }
 
 
-.expanded-nav {
-    width: 100%;
-    margin-left: -16px;
-    margin-right: -16px;
-}
 
-#surf-web .collapsed .dropdown a {
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
-
+/*media queries*/
 @media (max-width: 900px) {
     #surf-web .hero-img .fa-lg {
     	font-size: 1em;
+	}
+}
+
+@media (max-width: 768px) {
+	#surf-web .thumbnails img {
+		display: inline-block;
+		margin-bottom: .5rem;
+	}
+	#surf-web .thumbnails {
+		padding-top: 0em; 
+	}
+	#surf-web .view-all {
+		margin-top: 1em;
 	}
 }
 
@@ -136,4 +157,11 @@
     #surf-web .hero-img h1 {
     	padding-top: 1em;
 	}
+}
+
+
+@media (max-width:365px) {
+    .surf-tab a {
+    	display: block;
+    }
 }

@@ -112,15 +112,10 @@
 .border-blue {
 	border: 1px solid #00AFFF;
 }
-/*#surf-web .about-bg .clearfix {*/
-	/*-webkit-transform: translateX(-9%);
-    transform: translateX(9%);*/
-    /*top: 18em;
-}*/
 
-/*#surf-web .about-bg h4, 
-#surf-web .about-bg p{
-	width: 60%;
-    float: right;
-    clear: both;
-}*/
+@media (max-width: 900px) {
+    #surf-web .hero-img .fa-lg {
+    	font-size: 1em;
+	}
+}
+

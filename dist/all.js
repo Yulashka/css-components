@@ -245,7 +245,35 @@ app.controller('carCtrl', function($scope, $http) {
 
 	function myError2(response) {
 		console.log("Error: " + response);
-	}	
+	}
+
+	/* Navigation */
+	// $("#surf-web #iconBar-surf").on("click", function(e) {
+	// 	if( $("#surf-web .dropdown").hasClass("display-none") ) {
+	// 		$("#surf-web .dropdown").removeClass("display-none");
+	// 	} else {
+	// 		$("#surf-web .dropdown").addClass("display-none");
+	// 	}
+		
+
+	// });
+
+	$("#iconBar-surf").unbind().click(function() {
+		$("#surf-web .dropdown").toggle();
+	});
+
+	$(window).resize(function() {
+	  	if($(window).width() < 650){
+			$("#surf-web .collapse").addClass("display-none");
+			$("#surf-web .collapsed").removeClass("display-none");
+			$("#surf-web nav").addClass("display-none");
+		}else {
+			$("#surf-web .collapse ").removeClass("display-none");
+			$("#surf-web .collapsed").addClass("display-none");
+			$("#surf-web nav").removeClass("display-none");
+		}
+	});
+
 });
 
 /*Accordion */
@@ -274,7 +302,7 @@ function ContentDTO(images, titles, ratings, prices, description, features, dime
 /* Navigation */
 app.controller('collapseCtrl', function($scope, ) {
 	$("#iconBar").on("click", function() {
-		$(".dropdown").toggle(".d-none");
+		$(".dropdown").toggle();
 	});
 
 	$(window).resize(function() {
@@ -676,15 +704,15 @@ $(function() {
 
 
 /*Home Page - SIDE NAV*/
-	/* Set the width of the side navigation to 250px */
-	function openNav() {
-	    document.getElementById("mySidenav").style.width = "250px";
-	}
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
 
-	/* Set the width of the side navigation to 0 */
-	function closeNav() {
-	    document.getElementById("mySidenav").style.width = "0";
-	}
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 
 	
 var Pages = [-1, 0, 1, 2, 3];

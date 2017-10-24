@@ -24,7 +24,7 @@ function ContentDTO(images, titles, ratings, prices, description, features, dime
 /* Navigation */
 app.controller('collapseCtrl', function($scope, ) {
 	$("#iconBar").on("click", function() {
-		$(".dropdown").toggle(".d-none");
+		$(".dropdown").toggle();
 	});
 
 	$(window).resize(function() {

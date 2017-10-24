@@ -190,5 +190,33 @@ app.controller('carCtrl', function($scope, $http) {
 
 	function myError2(response) {
 		console.log("Error: " + response);
-	}	
+	}
+
+	/* Navigation */
+	// $("#surf-web #iconBar-surf").on("click", function(e) {
+	// 	if( $("#surf-web .dropdown").hasClass("display-none") ) {
+	// 		$("#surf-web .dropdown").removeClass("display-none");
+	// 	} else {
+	// 		$("#surf-web .dropdown").addClass("display-none");
+	// 	}
+		
+
+	// });
+
+	$("#iconBar-surf").unbind().click(function() {
+		$("#surf-web .dropdown").toggle();
+	});
+
+	$(window).resize(function() {
+	  	if($(window).width() < 650){
+			$("#surf-web .collapse").addClass("display-none");
+			$("#surf-web .collapsed").removeClass("display-none");
+			$("#surf-web nav").addClass("display-none");
+		}else {
+			$("#surf-web .collapse ").removeClass("display-none");
+			$("#surf-web .collapsed").addClass("display-none");
+			$("#surf-web nav").removeClass("display-none");
+		}
+	});
+
 });

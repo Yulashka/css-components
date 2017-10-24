@@ -4,7 +4,7 @@
 
 <div id="surf-web" ng-controller="carCtrl">
   
-  <div class="mb3">
+  <div class="mb3 relative">
     <div class="hero-img">
       <!-- Hero Image Section -->
       <div class="max-width-4 mx-auto pt2 px2">
@@ -41,23 +41,26 @@
             </div>
           </div>
         </nav>
-        <div class="clearfix">
-          <div class="col col-12">
+        <div class="clearfix expanded-nav absolute">
             <!-- collapsed nav -->
             <div class="collapsed d-none">
-              <span class="inline-block">
-                <i class="fa fa-bars fa-2x" id="iconBar-surf" aria-hidden="true"></i>
-              </span>
-              <div class="dropdown d-none">
-                <a href="#" class="text-center">Boards</a>
-                <a href="#" class="text-center">Accessories</a>
-                <a href="#" class="text-center">Blog</a>
-                <a href="#" class="text-center">Technology</a>
-                <a href="#" class="text-center">Team</a>
-                <a href="#" class="text-center">Dealers</a>
+              <div class="col col-6">
+                <img src="img/surfersCo/logo.png" class="fit pl1">
+              </div>
+              <div class="col col-6 right-align">
+                <span class="inline-block pr1">
+                  <i class="fa fa-bars fa-2x" id="iconBar-surf" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div class="dropdown d-none white-bg col col-12">
+                <a href="#" class="text-center text-decoration-none">Boards</a>
+                <a href="#" class="text-center text-decoration-none">Accessories</a>
+                <a href="#" class="text-center text-decoration-none">Blog</a>
+                <a href="#" class="text-center text-decoration-none">Technology</a>
+                <a href="#" class="text-center text-decoration-none">Team</a>
+                <a href="#" class="text-center text-decoration-none">Dealers</a>
               </div>
             </div>
-          </div>
         </div>
         <h1 class="text-center mb0 italic">Ride every wawe as if it's your last</h1>
         <p class="text-center white h2 mt1 hero-text italic">We love the motion of the ocean</p>

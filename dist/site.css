@@ -83,6 +83,9 @@
 .width-85 {
   width: 85%; }
 
+.w-50 {
+  width: 50%; }
+
 .p-xs {
   padding-bottom: 2px; }
 
@@ -193,7 +196,8 @@
 #surf-web .view-all {
   border-bottom: 2px solid #00AFFF; }
 
-#surf-web .team .carousel .fa-stack {
+#surf-web .team .carousel .fa-stack,
+#surf-web .team .carousel-mobile .fa-stack {
   border: 1px solid #00AFFF !important;
   border-radius: 50px; }
 
@@ -220,13 +224,19 @@
   #surf-web .thumbnails {
     padding-top: 0em; }
   #surf-web .view-all {
-    margin-top: 1em; } }
+    margin-top: 1em; }
+  #surf-web .team .carousel {
+    display: none; }
+  #surf-web .team .carousel-mobile {
+    display: block; } }
 
 @media (max-width: 650px) {
   #surf-web .hero-img h1 {
     padding-top: 1em; }
   #surf-web .about .white-bg {
-    padding-left: 16px; } }
+    padding-left: 16px; }
+  #surf-web .team {
+    margin-top: 9em; } }
 
 @media (max-width: 365px) {
   .surf-tab a {

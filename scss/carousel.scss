@@ -140,11 +140,22 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+	#surf-web .about-bg .clearfix .sm-col:first-child {
+		padding-bottom: 3em;
+		margin-top: 3em;
+	}
+	#surf-web .about img,
+	#surf-web .team .max-width-3 img {
+		margin-top: 3em;
+	}
 	#surf-web .thumbnails img {
 		display: inline-block;
 		margin-bottom: .5rem;
 	}
+}
+
+@media (max-width: 768px) {
 	#surf-web .thumbnails {
 		padding-top: 0em; 
 	}
@@ -157,6 +168,9 @@
     #surf-web .hero-img h1 {
     	padding-top: 1em;
 	}
+	#surf-web .about .white-bg {
+		padding-left: 16px
+	}
 }
 
 
@@ -165,3 +179,5 @@
     	display: block;
     }
 }
+
+

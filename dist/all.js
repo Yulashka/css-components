@@ -199,6 +199,7 @@ app.controller('carCtrl', function($scope, $http) {
 		var teamCarouselContent = new TeamCarouselContent(teamImages, teamTitles, teamNickname, teamLocation);
 		//console.log(teamCarouselContent);
 		makeTeamCarousel(teamCarouselContent);
+		makeTeamCarouselMobile(teamCarouselContent);
 	}
 
 
@@ -242,6 +243,68 @@ app.controller('carCtrl', function($scope, $http) {
 		});
 	}
 
+	/*mobile carousel*/
+	function addTeamContentMobile(obj, current, max) {
+		var imgs = $("#surf-web .team .carousel-mobile .team-card .team-pic");
+		var titles = $("#surf-web .team .carousel-mobile .team-card h4");
+		var nicknames = $("#surf-web .team .carousel-mobile .team-card .nickname");
+		var locations = $("#surf-web .team .carousel-mobile .team-card .location");
+
+		for(var i = 0; i < max; i++) {
+			$(imgs[i]).attr("src", obj.teamImages[current]);
+			$(titles[i]).text(obj.teamTitles[current]);
+			$(nicknames[i]).text(obj.teamNickname[current]);
+			$(locations[i]).text(obj.teamLocation[current]);
+			current++;
+		}
+	}
+	
+	function makeTeamCarouselMobile(obj) {
+
+		var max = 7;
+		var current = 0;
+		addTeamContentMobile(obj, current, max);
+		$("#surf-web .team .carousel-mobile .fa-arrow-right").on("click", function() {
+			current = current + 1;
+			addTeamContentMobile(obj, current, max);
+
+			if( current > max){
+				current = 0;
+				addTeamContentMobile(obj, current, max);
+			} 
+		});
+
+		$("#surf-web .team .carousel-mobile .fa-arrow-left").on("click", function() {
+			if( current == 0 ){
+				current = max;
+				addTeamContentMobile(obj, current, max);
+			} else {
+				current = current - 1;
+				addTeamContentMobile(obj, current, max);
+			}
+		});
+		/*alert("Work");
+		var current = 0;
+		var max = 8;
+		addTeamContentMobile(obj, current, max);
+
+		//click right
+		$(".team .fa-arrow-right").on("click", function() {
+			current++;
+			max = 8;
+			addTeamContentMobile(obj, current, max);
+			console.log("Clicked right");
+			
+		});*/
+
+		//click left
+		/*$(".team .fa-arrow-left").on("click", function() {
+			current = 0;
+			max = 8;
+			addTeamContentMobile(obj, current, max);
+			console.log("Clicked left");
+		});*/
+	}
 
 	function myError2(response) {
 		console.log("Error: " + response);

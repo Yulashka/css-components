@@ -121,8 +121,8 @@
 	border-bottom: 2px solid $blue-color;
 }
 
-#surf-web .team .carousel .fa-stack {
-
+#surf-web .team .carousel .fa-stack,
+#surf-web .team .carousel-mobile .fa-stack {
     border: 1px solid #00AFFF !important;
     border-radius: 50px;
 }
@@ -162,6 +162,12 @@
 	#surf-web .view-all {
 		margin-top: 1em;
 	}
+	#surf-web .team .carousel {
+		display: none;
+	}
+	#surf-web .team .carousel-mobile {
+		display: block;
+	}
 }
 
 @media (max-width: 650px) {
@@ -169,8 +175,11 @@
     	padding-top: 1em;
 	}
 	#surf-web .about .white-bg {
-		padding-left: 16px
+		padding-left: 16px;
 	}
+	 #surf-web .team {
+		 margin-top: 9em;
+	}  
 }
 
 

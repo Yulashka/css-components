@@ -175,7 +175,7 @@ app.controller('carCtrl', function($scope, $http) {
 			current = 4;
 			max = 8;
 			addTeamContent(obj, current, max);
-			console.log("Clicked right");
+			//console.log("Clicked right");
 			
 		});
 
@@ -184,7 +184,7 @@ app.controller('carCtrl', function($scope, $http) {
 			current = 0;
 			max = 4;
 			addTeamContent(obj, current, max);
-			console.log("Clicked left");
+			//console.log("Clicked left");
 		});
 	}
 
@@ -205,14 +205,12 @@ app.controller('carCtrl', function($scope, $http) {
 	}
 	
 	function makeTeamCarouselMobile(obj) {
-
 		var max = 7;
 		var current = 0;
 		addTeamContentMobile(obj, current, max);
 		$("#surf-web .team .carousel-mobile .fa-arrow-right").on("click", function() {
 			current = current + 1;
 			addTeamContentMobile(obj, current, max);
-
 			if( current > max){
 				current = 0;
 				addTeamContentMobile(obj, current, max);
@@ -228,38 +226,18 @@ app.controller('carCtrl', function($scope, $http) {
 				addTeamContentMobile(obj, current, max);
 			}
 		});
-		/*alert("Work");
-		var current = 0;
-		var max = 8;
-		addTeamContentMobile(obj, current, max);
-
-		//click right
-		$(".team .fa-arrow-right").on("click", function() {
-			current++;
-			max = 8;
-			addTeamContentMobile(obj, current, max);
-			console.log("Clicked right");
-			
-		});*/
-
-		//click left
-		/*$(".team .fa-arrow-left").on("click", function() {
-			current = 0;
-			max = 8;
-			addTeamContentMobile(obj, current, max);
-			console.log("Clicked left");
-		});*/
 	}
 
 	function myError2(response) {
 		console.log("Error: " + response);
 	}
 
-	
+	//navigation dropdown toggle
 	$("#iconBar-surf").unbind().click(function() {
 		$("#surf-web .dropdown").toggle();
 	});
 
+	//on resize hide/show collapsed nav
 	$(window).resize(function() {
 	  	if($(window).width() < 650){
 			$("#surf-web .collapse").addClass("display-none");
@@ -271,5 +249,4 @@ app.controller('carCtrl', function($scope, $http) {
 			$("#surf-web nav").removeClass("display-none");
 		}
 	});
-
 });

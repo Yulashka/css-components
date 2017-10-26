@@ -236,7 +236,9 @@
   #surf-web .about .white-bg {
     padding-left: 16px; }
   #surf-web .team {
-    margin-top: 9em; } }
+    margin-top: 9em; }
+  #surf-web .updates {
+    margin-top: 3em !important; } }
 
 @media (max-width: 365px) {
   .surf-tab a {

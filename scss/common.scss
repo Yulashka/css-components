@@ -1,13 +1,44 @@
 /* Styles that apply to all pages */
-/*Main Styles*/
-.text-center { 
-	text-align: center;
+
+/*Padding*/
+.pt6 {
+	padding-top: 6em;
 }
 
-.clear {
-	clear: both;
+.pt8 {
+	padding-top: 8em;
 }
 
+.pt10 {
+	padding-top: 10em;
+}
+
+.pb12 {
+	padding-bottom: 12em;
+}
+
+.pl13 {
+	padding-left: 13em;
+}
+ 
+.p-xs {
+	padding-bottom: 2px;
+}
+
+/*Margin*/
+.mt6 {
+	margin-top: 6em;
+}
+
+.mt10 {
+	margin-top: 10em;
+}
+
+.mt18 {
+	margin-top: 18em;
+}
+
+/*Colors*/
 .dark-yellow {
 	color: #F1D700;
 }
@@ -15,6 +46,7 @@
 .dark-yellow-bg {
 	background-color: #F1D700;
 }
+
 .dark-gray {
 	color: $dark-gray-color;
 }
@@ -39,18 +71,6 @@
 	color: $white-color;
 }
 
-.pt10 {
-	padding-top: 10em;
-}
-
-.pt6 {
-	padding-top: 6em;
-}
-
-.pt8 {
-	padding-top: 8em;
-}
-
 .gray { 
 	color: $gray-color;
 }
@@ -67,34 +87,7 @@
 	background-color: $blue-color;
 }
 
-.mt6 {
-	margin-top: 6em;
-}
-
-.mt10 {
-	margin-top: 10em;
-}
-
-.mt18 {
-	margin-top: 18em;
-}
-
-.pl13 {
-	padding-left: 13em;
-}
- 
-.pb12 {
-	padding-bottom: 12em;
-}
-    
-.w-70 {
-	width: 70%;
-}
-
-.font-uppercase {
-	text-transform: uppercase;
-}
-
+/*Borders*/
 .none-border {
 	border: none;
 }
@@ -103,22 +96,33 @@
 	border-bottom: 1px solid #4D4D4D;
 }
 
+.round-border{
+    border-radius: 50px;
+}
+
+/*Text*/
+.text-center { 
+	text-align: center;
+}
+
+.font-uppercase {
+	text-transform: uppercase;
+}
+
+/*Display*/
+.clear {
+	clear: both;
+}
+
+/*Width/Height*/
+.w-70 {
+	width: 70%;
+}
+
 .width-85 {
 	width: 85%;
 }
 
 .w-50 {
 	width: 50%;
-}
-
-.p-xs {
-	padding-bottom: 2px;
-}
-
-.round-border{
-    border-radius: 50px;
-}
-
-.foo {
-	height: 100%;
 }

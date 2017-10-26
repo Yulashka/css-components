@@ -1,13 +1,36 @@
 /*Colors*/
 /* Styles that apply to all pages */
-/*Main Styles*/
+/*Padding*/
 @import url(../bower_components/basscss/css/basscss.min.css);
-.text-center {
-  text-align: center; }
+.pt6 {
+  padding-top: 6em; }
 
-.clear {
-  clear: both; }
+.pt8 {
+  padding-top: 8em; }
 
+.pt10 {
+  padding-top: 10em; }
+
+.pb12 {
+  padding-bottom: 12em; }
+
+.pl13 {
+  padding-left: 13em; }
+
+.p-xs {
+  padding-bottom: 2px; }
+
+/*Margin*/
+.mt6 {
+  margin-top: 6em; }
+
+.mt10 {
+  margin-top: 10em; }
+
+.mt18 {
+  margin-top: 18em; }
+
+/*Colors*/
 .dark-yellow {
   color: #F1D700; }
 
@@ -32,15 +55,6 @@
 .white {
   color: #FFFFFF; }
 
-.pt10 {
-  padding-top: 10em; }
-
-.pt6 {
-  padding-top: 6em; }
-
-.pt8 {
-  padding-top: 8em; }
-
 .gray {
   color: #C9C9C9; }
 
@@ -53,47 +67,36 @@
 .blue-bg {
   background-color: #00AFFF; }
 
-.mt6 {
-  margin-top: 6em; }
-
-.mt10 {
-  margin-top: 10em; }
-
-.mt18 {
-  margin-top: 18em; }
-
-.pl13 {
-  padding-left: 13em; }
-
-.pb12 {
-  padding-bottom: 12em; }
-
-.w-70 {
-  width: 70%; }
-
-.font-uppercase {
-  text-transform: uppercase; }
-
+/*Borders*/
 .none-border {
   border: none; }
 
 .border-bottom-gray {
   border-bottom: 1px solid #4D4D4D; }
 
+.round-border {
+  border-radius: 50px; }
+
+/*Text*/
+.text-center {
+  text-align: center; }
+
+.font-uppercase {
+  text-transform: uppercase; }
+
+/*Display*/
+.clear {
+  clear: both; }
+
+/*Width/Height*/
+.w-70 {
+  width: 70%; }
+
 .width-85 {
   width: 85%; }
 
 .w-50 {
   width: 50%; }
-
-.p-xs {
-  padding-bottom: 2px; }
-
-.round-border {
-  border-radius: 50px; }
-
-.foo {
-  height: 100%; }
 
 /* Styles that apply to the overall site*/
 /*Surfing page*/
@@ -125,53 +128,6 @@
   background-size: cover;
   padding: 2em; }
 
-/*About section*/
-#surf-web .about-bg {
-  background-image: url(../img/surfersCo/photo.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  height: 500px; }
-
-/*Team section*/
-#surf-web .team-card {
-  /*box-shadow*/
-  -webkit-box-shadow: 17px 22px 101px -6px #b3b1b3;
-  -moz-box-shadow: 17px 22px 101px -6px #b3b1b3;
-  box-shadow: 17px 22px 101px -6px #b3b1b3; }
-
-#surf-web .team-card:hover {
-  background-color: #00AFFF; }
-
-#surf-web .team-card:hover > p,
-#surf-web .team-card:hover > h4,
-#surf-web .team-card:hover > p span {
-  color: #FFFFFF !important; }
-
-/*Updates*/
-#surf-web .round-border {
-  border: 1px solid #FFFFFF;
-  border-radius: 50px; }
-
-#surf-web .updates .sm-col-4 .w-70:hover {
-  -webkit-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
-  -moz-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
-  box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
-  color: #00AFFF; }
-
-#surf-web h1,
-#surf-web .hero-img .hero-text,
-#surf-web .about p {
-  font-family: 'Lobster Two', cursive;
-  font-weight: 100;
-  letter-spacing: 1px; }
-
-#surf-web h1 {
-  font-size: 3rem; }
-
-#surf-web {
-  font-family: 'Roboto', sans-serif; }
-
 #surf-web .tab-active {
   border-bottom: 3px solid #00AFFF;
   color: #000000; }
@@ -196,6 +152,42 @@
 #surf-web .view-all {
   border-bottom: 2px solid #00AFFF; }
 
+#surf-web h1,
+#surf-web .hero-img .hero-text,
+#surf-web .about p {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 100;
+  letter-spacing: 1px; }
+
+#surf-web h1 {
+  font-size: 3rem; }
+
+#surf-web {
+  font-family: 'Roboto', sans-serif; }
+
+/*About section*/
+#surf-web .about-bg {
+  background-image: url(../img/surfersCo/photo.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 500px; }
+
+/*Team section*/
+#surf-web .team-card {
+  /*box-shadow*/
+  -webkit-box-shadow: 17px 22px 101px -6px #b3b1b3;
+  -moz-box-shadow: 17px 22px 101px -6px #b3b1b3;
+  box-shadow: 17px 22px 101px -6px #b3b1b3; }
+
+#surf-web .team-card:hover {
+  background-color: #00AFFF; }
+
+#surf-web .team-card:hover > p,
+#surf-web .team-card:hover > h4,
+#surf-web .team-card:hover > p span {
+  color: #FFFFFF !important; }
+
 #surf-web .team .carousel .fa-stack,
 #surf-web .team .carousel-mobile .fa-stack {
   border: 1px solid #00AFFF !important;
@@ -203,6 +195,17 @@
 
 .border-blue {
   border: 1px solid #00AFFF; }
+
+/*Updates*/
+#surf-web .round-border {
+  border: 1px solid #FFFFFF;
+  border-radius: 50px; }
+
+#surf-web .updates .sm-col-4 .w-70:hover {
+  -webkit-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
+  -moz-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
+  box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
+  color: #00AFFF; }
 
 /*footer*/
 .mailList {

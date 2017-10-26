@@ -259,6 +259,16 @@
     display: block; } }
 
 /*Bakery page*/
+#bakery-web {
+  background-color: lightgrey; }
+
+/*Navigation*/
+/*Hero Image*/
+/*Media Queries*/
+@media (max-width: 650px) {
+  #bakery-web nav {
+    display: none; } }
+
 /*Carousel*/
 .wrapper {
   display: flex;

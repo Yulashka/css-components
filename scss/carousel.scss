@@ -140,18 +140,27 @@
 	}
 }
 
-@media (max-width: 820px) {
+@media (max-width: 829px) {
 	#surf-web .about-bg .clearfix .sm-col:first-child {
 		padding-bottom: 3em;
 		margin-top: 3em;
 	}
 	#surf-web .about img,
-	#surf-web .team .max-width-3 img {
+	#surf-web .team .max-width-3 img,
+	#surf-web .media .mt6{
 		margin-top: 3em;
 	}
 	#surf-web .thumbnails img {
 		display: inline-block;
 		margin-bottom: .5rem;
+	}
+	#surf-web .media .insta-pic {
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 0em;
+	}
+	#surf-web .media .white-bg {
+		text-align: center;
 	}
 }
 

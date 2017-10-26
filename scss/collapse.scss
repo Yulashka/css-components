@@ -1,4 +1,15 @@
 /*Bakery page*/
-#bakery-web{
-	
+#bakery-web {
+	background-color: lightgrey;
+}
+
+/*Navigation*/
+
+/*Hero Image*/ 
+
+/*Media Queries*/
+@media (max-width: 650px) {
+   #bakery-web nav {
+   		display: none;
+   }
 }

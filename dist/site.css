@@ -204,6 +204,10 @@
 .border-blue {
   border: 1px solid #00AFFF; }
 
+/*footer*/
+.mailList {
+  width: 14em; }
+
 /*media queries*/
 @media (max-width: 900px) {
   #surf-web .hero-img .fa-lg {

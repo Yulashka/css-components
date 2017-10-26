@@ -1,20 +1,25 @@
+<!-- Collapse component -->
+<!-- Bakery page -->
 <!-- Navigation -->
-<nav class="border-b">
-  <a href="#" class="brand-logo">
-    <img src="img/logo.png" class="responsive">
-  </a>
-  <div class="collapse right">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-  </div>
-  <!-- collapsed nav -->
-  <div class="collapsed right d-none">
-    <span>
-      <i class="fa fa-bars fa-2x" id="iconBar" aria-hidden="true"></i>
-    </span>
-    <div class="dropdown d-none">
-      <a href="#" class="text-center">Home</a>
-      <a href="#" class="text-center">About</a>
+<div id="bakery-web" ng-controller="collapseCtrl">
+  <nav class="border-b">
+    <a href="#" class="brand-logo">
+      <img src="img/logo.png" class="responsive">
+    </a>
+    <div class="collapse right">
+      <a href="#">Home</a>
+      <a href="#">About</a>
     </div>
-  </div>
-</nav>
+    <!-- collapsed nav -->
+    <div class="collapsed right d-none">
+      <span>
+        <i class="fa fa-bars fa-2x" id="iconBar" aria-hidden="true"></i>
+      </span>
+      <div class="dropdown d-none">
+        <a href="#" class="text-center">Home</a>
+        <a href="#" class="text-center">About</a>
+      </div>
+    </div>
+  </nav>
+  <p id="bakery">Bakery</p>
+</div>

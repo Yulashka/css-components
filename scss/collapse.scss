@@ -1,7 +1,4 @@
 /*Bakery page*/
-#bakery-web {
-	background-color: lightgrey;
-}
 
 /*Navigation*/
 
@@ -11,8 +8,15 @@
 	background-repeat: no-repeat;
 	height: 500px;
     background-size: cover;
+    background-color: lightgrey;
 }
 
+/*About Chef*/
+#bakery-web .about-chef {
+	background-image: url(../img/bakery/gradient-bg.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*Media Queries*/
 @media (max-width: 650px) {

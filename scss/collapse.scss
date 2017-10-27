@@ -6,6 +6,13 @@
 /*Navigation*/
 
 /*Hero Image*/ 
+#bakery-web .hero-image {
+	background-image: url(../img/bakery/hero.png);
+	background-repeat: no-repeat;
+	height: 500px;
+    background-size: cover;
+}
+
 
 /*Media Queries*/
 @media (max-width: 650px) {

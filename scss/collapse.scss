@@ -18,6 +18,20 @@
     background-size: cover;
 }
 
+/*About food*/
+#bakery-web .about-food {
+	background-image: url(../img/bakery/about-food-bg.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bakery-web .menu-page-bg {
+	background-image: url(../img/bakery/menu-page.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 542px;
+} 
+
 /*Media Queries*/
 @media (max-width: 650px) {
    #bakery-web nav {

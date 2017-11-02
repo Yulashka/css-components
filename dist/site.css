@@ -286,6 +286,18 @@
   background-size: cover;
   height: 542px; }
 
+/* Menu promo*/
+.menu-promo {
+  background-image: url(../img/bakery/menu-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#bakery-web .menus-bg {
+  background-image: url(../img/bakery/menus.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 653px; }
+
 /*Media Queries*/
 @media (max-width: 650px) {
   #bakery-web nav {

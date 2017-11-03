@@ -1,7 +1,15 @@
 /*Bakery page*/
 
 /*Navigation*/
+#bakery-web .hero-image h1 {
+	font-size: 5rem;
+}
 
+#bakery-web .hero-image .main-btn{
+	/*background-color: #55534C;*/
+	background: rgba(85, 83, 76, 0.6);
+} 
+  
 /*Hero Image*/ 
 #bakery-web .hero-image {
 	background-image: url(../img/bakery/hero.png);
@@ -58,8 +66,18 @@
 }
 
 /*Media Queries*/
-@media (max-width: 650px) {
-   #bakery-web nav {
-   		display: none;
-   }
+@media (max-width: 820px) {
+    #bakery-web nav .sm-col-10 {
+    	text-align: left !important;
+    }
 }
+
+@media (max-width: 600px) {
+    #bakery-web .hero-image h1 {
+    	font-size: 3em;
+    }
+    #bakery-web .hero-image p {
+    	font-size: 1em;
+    }
+}
+    

@@ -87,6 +87,10 @@
 	background-color: $blue-color;
 }
 
+.brown {
+	color: $brown-color;
+}
+
 /*Borders*/
 .none-border {
 	border: none;
@@ -107,6 +111,10 @@
 
 .font-uppercase {
 	text-transform: uppercase;
+}
+
+.font-2 {
+	font-size: 2em;
 }
 
 /*Display*/

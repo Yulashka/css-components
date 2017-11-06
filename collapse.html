@@ -2,7 +2,8 @@
 
 <!-- Bakery page -->
 <div id="bakery-web" ng-controller="collapseCtrl">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   <!-- Hero Image -->
   <section class="hero-image center">
     <!-- Navigation -->
@@ -67,7 +68,7 @@
     <div class="clearfix max-width-4 px2 mx-auto">
       <div class="sm-col sm-col-12 md-col-6">
         <h3 class="center font-2 mb0 xs-mt0">Art of cakes</h3>
-        <p class="font-uppercase center mt1 brown">We create delicious memories</p>
+        <p class="font-uppercase center mt1 brown bold">We create delicious memories</p>
         <p class="center my3">Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.</p>
         <h3 class="center">Chef Cook</h3>
         <div class="clearfix mb2">
@@ -99,38 +100,57 @@
 
   <!-- About food -->
   <section class="about-food py4">
-    <div class="menu-page-bg max-width-4 mx-auto carousel px2">
-      <div class="clearfix">
-        <div class="sm-col sm-col-12 md-col-6">
-          <img src="img/bakery/pancakes.png" class="fit">
-        </div>
-        <div class="sm-col sm-col-12 md-col-6">
-          <div class="clearfix">
-            <div class="col col-8">
-              <h4>Tasty pancakes</h4>
-              <p class="font-uppercase">Season favourite</p>
-              <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
-            </div>
-            <div class="col col-4">
-              <img src="img/bakery/cookTime.png" class="fit">
-            </div>
+    <div class="px2">
+      <div class="menu-page-bg max-width-4 mx-auto carousel">
+        <div class="clearfix">
+          <div class="sm-col sm-col-12 md-col-6">
+            <img src="img/bakery/pancakes.png" class="fit mx-auto block">
           </div>
-          <div class="clearfix mini-carousel mt4">
-            <div class="col col-2">
-              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          <div class="sm-col sm-col-12 md-col-6">
+            <div class="clearfix">
+              <div class="col col-8">
+                <h1 class="pt3 pl2 font-2 mb0 sm-mt0">Tasty pancakes</h1>
+                <p class="font-uppercase pl2 mt1 brown bold">Season favourite</p>
+                <p class="pl2 mt3">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
+              </div>
+              <div class="col col-4">
+                <img src="img/bakery/cookTime.png" class="fit pt2 pr2 right sm-pt2">
+              </div>
             </div>
-            <div class="col col-8">
-              <img src="img/bakery/carousel-pic1.png" class="fit inline-block">
-              <img src="img/bakery/carousel-pic2.png" class="fit inline-block">
-              <img src="img/bakery/carousel-pic3.png" class="fit inline-block">
+            <!-- Desktop/Tablet carousel -->
+            <div class="clearfix mini-carousel mt4 pb3">
+              <div class="col col-1">
+                <i class="fa fa-chevron-left pt2 right" aria-hidden="true"></i>
+              </div>
+              <div class="col col-10 center">
+                <img src="img/bakery/carousel-pic1.png" class="fit inline-block">
+                <img src="img/bakery/carousel-pic2.png" class="fit inline-block px1">
+                <img src="img/bakery/carousel-pic3.png" class="fit inline-block">
+              </div>
+              <div class="col col-1">
+                <i class="fa fa-chevron-right pt2" aria-hidden="true"></i>
+              </div>
             </div>
-            <div class="col col-2">
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <!-- End -->
+
+            <!-- Mobile carousel -->
+            <div class="clearfix carousel-mobile mt4 pb3 d-none">
+              <div class="col col-1">
+                <i class="fa fa-chevron-left pt2 right" aria-hidden="true"></i>
+              </div>
+              <div class="col col-10 center">
+                <img src="img/bakery/carousel-pic1.png" class="fit inline-block">
+              </div>
+              <div class="col col-1">
+                <i class="fa fa-chevron-right pt2" aria-hidden="true"></i>
+              </div>
             </div>
+            <!-- end of mobile carousel -->
           </div>
         </div>
       </div>
     </div>
+    
   </section>
 
   <!-- Menu promo -->

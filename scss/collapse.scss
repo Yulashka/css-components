@@ -104,6 +104,9 @@
     #bakery-web .about-food .carousel{
     	padding-bottom: 4em;
     }
+    #bakery-web .menu-promo img{
+        width: 70%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -113,6 +116,15 @@
     #bakery-web .about-food .carousel-mobile{
     	display: block;
     	margin-top: 2em;
+    }
+    #bakery-web .menu-promo h1{
+        padding-top: 0px;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #bakery-web .menu-promo p{
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
     

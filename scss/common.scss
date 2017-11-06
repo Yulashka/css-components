@@ -91,6 +91,14 @@
 	color: $brown-color;
 }
 
+.sand-color {
+	color: $sand-color;
+}
+
+.dirty-gray {
+	color: $dirty-gray-color;
+}
+
 /*Borders*/
 .none-border {
 	border: none;
@@ -104,6 +112,10 @@
     border-radius: 50px;
 }
 
+.border {
+	border: 1px solid black;
+}
+
 /*Text*/
 .text-center { 
 	text-align: center;
@@ -115,6 +127,10 @@
 
 .font-2 {
 	font-size: 2em;
+}
+
+.letter-space2 {
+	letter-spacing: 2px;
 }
 
 /*Display*/

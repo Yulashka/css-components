@@ -70,6 +70,12 @@
 .brown {
   color: #A47D5E; }
 
+.sand-color {
+  color: #BDAD88; }
+
+.dirty-gray {
+  color: #C2BEBA; }
+
 /*Borders*/
 .none-border {
   border: none; }
@@ -80,6 +86,9 @@
 .round-border {
   border-radius: 50px; }
 
+.border {
+  border: 1px solid black; }
+
 /*Text*/
 .text-center {
   text-align: center; }
@@ -89,6 +98,9 @@
 
 .font-2 {
   font-size: 2em; }
+
+.letter-space2 {
+  letter-spacing: 2px; }
 
 /*Display*/
 .clear {
@@ -347,14 +359,23 @@
   #bakery-web .xs-mt0 {
     margin-top: 0px; }
   #bakery-web .about-food .carousel {
-    padding-bottom: 4em; } }
+    padding-bottom: 4em; }
+  #bakery-web .menu-promo img {
+    width: 70%; } }
 
 @media (max-width: 400px) {
   #bakery-web .about-food .mini-carousel {
     display: none; }
   #bakery-web .about-food .carousel-mobile {
     display: block;
-    margin-top: 2em; } }
+    margin-top: 2em; }
+  #bakery-web .menu-promo h1 {
+    padding-top: 0px;
+    padding-left: 1em;
+    padding-right: 1em; }
+  #bakery-web .menu-promo p {
+    padding-left: 1em;
+    padding-right: 1em; } }
 
 /*Carousel*/
 .wrapper {

@@ -267,7 +267,7 @@
 /*Bakery page*/
 #bakery-web p,
 #bakery-web a {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 #bakery-web .border-bottom-gray {
   border-bottom: 1px solid #D6D4C9; }
@@ -305,8 +305,7 @@
 #bakery-web .menu-page-bg {
   background-image: url(../img/bakery/menu-page.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 542px; }
+  background-size: cover; }
 
 /* Menu promo*/
 .menu-promo {
@@ -336,13 +335,26 @@
   #bakery-web .hero-image h1 {
     font-size: 3em; }
   #bakery-web .hero-image p {
-    font-size: 1em; } }
+    font-size: 1em; }
+  #bakery-web .sm-mt0 {
+    margin-top: 0px; }
+  #bakery-web .sm-pt2 {
+    padding-top: 2em; } }
 
 @media (max-width: 460px) {
   #bakery-web .xs-p0 {
     padding: 0px; }
   #bakery-web .xs-mt0 {
-    margin-top: 0px; } }
+    margin-top: 0px; }
+  #bakery-web .about-food .carousel {
+    padding-bottom: 4em; } }
+
+@media (max-width: 400px) {
+  #bakery-web .about-food .mini-carousel {
+    display: none; }
+  #bakery-web .about-food .carousel-mobile {
+    display: block;
+    margin-top: 2em; } }
 
 /*Carousel*/
 .wrapper {

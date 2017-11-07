@@ -370,7 +370,13 @@
     padding-right: 1em; }
   #bakery-web .menu-promo p {
     padding-left: 1em;
-    padding-right: 1em; } }
+    padding-right: 1em; }
+  #bakery-web footer a {
+    display: block; }
+  #bakery-web footer span {
+    display: none; }
+  #bakery-web .xs-mb1 {
+    margin-bottom: 1em; } }
 
 /*Carousel*/
 .wrapper {

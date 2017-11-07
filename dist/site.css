@@ -335,11 +335,6 @@
 .recipe {
   background-color: #F2F1E8; }
 
-.sandwich-bg {
-  background-image: url(../img/bakery/sandwich.png);
-  background-repeat: no-repeat;
-  background-size: cover; }
-
 /*Media Queries*/
 @media (max-width: 830px) {
   #bakery-web nav .sm-col-10 {

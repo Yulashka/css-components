@@ -302,6 +302,17 @@
   background-size: cover;
   background-color: lightgrey; }
 
+#bakery-web .dropdown a:hover,
+#bakery-web .dropdown a:focus,
+#bakery-web .dropdown a:active {
+  background: rgba(85, 83, 76, 0.6);
+  color: #FFFFFF; }
+
+#bakery-web .dropdown {
+  left: 0px;
+  right: 0px;
+  top: 109%; }
+
 /*About Chef*/
 #bakery-web .about-chef {
   background-image: url(../img/bakery/gradient-bg.png);
@@ -356,7 +367,9 @@
   #bakery-web .about-food .carousel {
     padding-bottom: 4em; }
   #bakery-web .menu-promo img {
-    width: 70%; } }
+    width: 70%; }
+  #bakery-web .hero-image p {
+    margin-bottom: 2em; } }
 
 @media (max-width: 400px) {
   #bakery-web .about-food .mini-carousel {
@@ -409,11 +422,6 @@
 
 .d-none {
   display: none; }
-
-.dropdown a {
-  display: block;
-  padding-top: 2em;
-  padding-bottom: 2em; }
 
 /*Tab Panel*/
 .tab-container {

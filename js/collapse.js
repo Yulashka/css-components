@@ -4,6 +4,7 @@ app.controller('collapseCtrl', function($scope, ) {
 			$("#bakery-web .dropdown").toggle();
 	});
 
+	//on resize reveal the collapsed nav
 	$(window).resize(function() {
 	  	if($(window).width() < 650){
 			$("#bakery-web .collapse").addClass("d-none");
@@ -39,40 +40,8 @@ app.controller('collapseCtrl', function($scope, ) {
 		addBakeryContent(images, imagesElement);
 	});
 
+
 	/*mobile carousel*/
-	/*var current = 0;
-
-	
-	$("#bakery-web .image-mobile").attr("src", images[current]);
-
-	
-	//click right
-	$("#bakery-web .carousel-mobile .fa-chevron-right").on("click", function() {
-		if(current >= 0) {
-			current = current + 1;
-			$("#bakery-web .image-mobile").attr("src", images[current]);
-			//console.log("click right" + " " + current);
-		}else if(current >= 5) {
-			current = 0;
-			$("#bakery-web .image-mobile").attr("src", images[current]);
-			console.log("end");
-		}
-		
-	});
-
-	//click left
-	$("#bakery-web .carousel-mobile .fa-chevron-left").on("click", function() {
-		if(current <= 5) {
-			current = current - 1;
-			$("#bakery-web .image-mobile").attr("src", images[current]);
-		}else if(current == 0){
-			current = 5;
-			$("#bakery-web .image-mobile").attr("src", images[current]);
-			console.log("start");
-		}
-			
-	});*/
-
 	function addCarContent(img, current) {
 		$("#bakery-web .carousel-mobile .image-mobile").attr('src', img[current]);
 	}
@@ -80,26 +49,33 @@ app.controller('collapseCtrl', function($scope, ) {
 	var length = images.length - 1;
 	var current = 0;
 
+	//display image
 	addCarContent(images, current);
 
+	//click right
 	$("#bakery-web .carousel-mobile .fa-chevron-right").on("click", function() {
 		current = current + 1;
+		//update the image
 		addCarContent(images, current);
 
 		if( current > length){
 			current = 0;
+			//update the image
 			addCarContent(images, current);
 		} 
 	});
 
+	//click left
 	$("#bakery-web .carousel-mobile .fa-chevron-left").on("click", function() {
 		if( current == 0 ){
 			current = length;
+			//update the image
 			addCarContent(images, current);
 		} else {
 			current = current - 1;
+			//update the image
 			addCarContent(images, current);;
 		}
 	});
-	alert('come on');
+
 });

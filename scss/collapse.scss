@@ -1,5 +1,4 @@
 /*Bakery page*/
-
 #bakery-web p,
 #bakery-web a {
 	font-family: 'Roboto', sans-serif;
@@ -12,6 +11,7 @@
 #bakery-web .border-top-gray {
 	border-top: 1px solid #D6D4C9;
 }
+
 /*Navigation*/
 #bakery-web .hero-image h1 {
 	font-size: 5rem;
@@ -33,7 +33,7 @@
 #bakery-web .dropdown a:hover,
 #bakery-web .dropdown a:focus,
 #bakery-web .dropdown a:active {
-    background: rgba(85, 83, 76, 0.6);
+    background: rgba(85, 83, 76, 0.6) !important;
     color: $white-color;
 }
 
@@ -98,7 +98,7 @@
     }
     #bakery-web .sm-pt2{
     	padding-top: 2em;
-    }   
+    }
 }
 
 @media (max-width: 460px) {

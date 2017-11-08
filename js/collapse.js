@@ -15,28 +15,91 @@ app.controller('collapseCtrl', function($scope, ) {
 	});
 
 	/*Carousel*/
-	var images = ["img/bakery/carousel-pic1.png", "img/bakery/carousel-pic2.png", "img/bakery/carousel-pic3.png", "img/bakery/carousel-pic2.png", "img/bakery/carousel-pic3.png", "img/bakery/carousel-pic1.png"];
+	var images = ["img/bakery/carousel-pic1.png", "img/bakery/carousel-pic2.png", "img/bakery/carousel-pic3.png", "img/bakery/carousel-pic2.png", "img/bakery/carousel-pic3.png", "img/bakery/carousel-pic2.png"];
 	var imagesElement = $("#bakery-web .image");
 	var endArray = images.slice(3, 7);
 
 	//display images function
-	function addBakeryContent(arr) {
+	function addBakeryContent(arr, el) {
 		for(var i = 0; i < arr.length; i++) {
-			$(imagesElement[i]).attr("src", arr[i]);
+			$(el[i]).attr("src", arr[i]);
 		}
 	}
 	
 	//default display
-	addBakeryContent(images);
+	addBakeryContent(images, imagesElement);
 
 	//click right
 	$("#bakery-web .fa-chevron-right").on("click", function() {
-		addBakeryContent(endArray);
+		addBakeryContent(endArray, imagesElement);
 	});
 
 	//click left
 	$("#bakery-web .fa-chevron-left").on("click", function() {
-		addBakeryContent(images);
+		addBakeryContent(images, imagesElement);
 	});
 
+	/*mobile carousel*/
+	/*var current = 0;
+
+	
+	$("#bakery-web .image-mobile").attr("src", images[current]);
+
+	
+	//click right
+	$("#bakery-web .carousel-mobile .fa-chevron-right").on("click", function() {
+		if(current >= 0) {
+			current = current + 1;
+			$("#bakery-web .image-mobile").attr("src", images[current]);
+			//console.log("click right" + " " + current);
+		}else if(current >= 5) {
+			current = 0;
+			$("#bakery-web .image-mobile").attr("src", images[current]);
+			console.log("end");
+		}
+		
+	});
+
+	//click left
+	$("#bakery-web .carousel-mobile .fa-chevron-left").on("click", function() {
+		if(current <= 5) {
+			current = current - 1;
+			$("#bakery-web .image-mobile").attr("src", images[current]);
+		}else if(current == 0){
+			current = 5;
+			$("#bakery-web .image-mobile").attr("src", images[current]);
+			console.log("start");
+		}
+			
+	});*/
+
+	function addCarContent(img, current) {
+		$("#bakery-web .carousel-mobile .image-mobile").attr('src', img[current]);
+	}
+
+	var length = images.length - 1;
+	var current = 0;
+
+	addCarContent(images, current);
+
+	$("#bakery-web .carousel-mobile .fa-chevron-right").on("click", function() {
+		current = current + 1;
+		addCarContent(images, current);
+
+		if( current > length){
+			current = 0;
+			addCarContent(images, current);
+		} 
+	});
+
+	$("#bakery-web .carousel-mobile .fa-chevron-left").on("click", function() {
+		if( current == 0 ){
+			current = length;
+			addCarContent(images, current);
+		} else {
+			current = current - 1;
+			addCarContent(images, current);;
+		}
+	});
+	alert('come on');
 });

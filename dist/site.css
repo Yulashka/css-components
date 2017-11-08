@@ -128,7 +128,7 @@
   padding-top: 1em;
   padding-bottom: 1em; }
 
-#surf-web nav a:hover {
+#surf-web .hero-img nav a:hover {
   color: #FFFFFF;
   background-color: #00AFFF; }
 
@@ -305,7 +305,7 @@
 #bakery-web .dropdown a:hover,
 #bakery-web .dropdown a:focus,
 #bakery-web .dropdown a:active {
-  background: rgba(85, 83, 76, 0.6);
+  background: rgba(85, 83, 76, 0.6) !important;
   color: #FFFFFF; }
 
 #bakery-web .dropdown {

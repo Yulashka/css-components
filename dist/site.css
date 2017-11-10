@@ -391,6 +391,13 @@
   #bakery-web .xs-mb1 {
     margin-bottom: 1em; } }
 
+/*Accordion component*/
+/*navigation*/
+#accordPage .dropdown {
+  top: 3em;
+  left: 0px;
+  right: 0px; }
+
 /*Carousel*/
 .wrapper {
   display: flex;

@@ -53,6 +53,32 @@ app.config(function($routeProvider) {
     });
 });
 
+/*Accordion */
+app.controller('accordCtrl', function($scope, ) {
+	$("#accordPage .accordion .accord-tab").on("click", function() {
+		$("#accordPage .accord-text").addClass("d-none");
+		$("#accordPage .accordion .accord-tab").removeClass("a-acc-tab");
+		$(this).addClass("a-acc-tab");
+		var attrAccord = $(this).attr("id");
+		$(attrAccord).removeClass("d-none");
+	});
+
+	/*collapse*/
+	$("#iconBarApp").unbind().click(function() {
+		$("#accordPage .dropdown").toggle();
+	});
+
+	//on resize reveal the collapsed nav
+	$(window).resize(function() {
+	  	if($(window).width() < 650){
+			$("#accordPage .collapse").addClass("d-none");
+			$("#accordPage .collapsed").removeClass("d-none");
+		}else {
+			$("#accordPage .collapse").removeClass("d-none");
+			$("#accordPage .collapsed").addClass("d-none");
+		}
+	});
+});
 /*Carousel*/
 app.controller('carCtrl', function($scope, $http) {
 	$http.get("carouselData.json").then(mySuccess, myError);
@@ -306,16 +332,7 @@ app.controller('carCtrl', function($scope, $http) {
 	});
 });
 
-/*Accordion */
-app.controller('accordCtrl', function($scope, ) {
-	$(".accordion .accord-tab").on("click", function() {
-		$(".accord-text").addClass("d-none");
-		$(".accordion .accord-tab").removeClass("a-acc-tab");
-		$(this).addClass("a-acc-tab");
-		var attrAccord = $(this).attr("id");
-		$(attrAccord).removeClass("d-none");
-	});
-});
+
 	
 //creating an object for surf-carousel for the further use
 function ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars) {

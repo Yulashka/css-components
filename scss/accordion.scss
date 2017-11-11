@@ -12,9 +12,48 @@
 	color: $white-color;
 }
 
+/*hero image section*/
+#accordPage .hero-bg {
+	background-image: url(../img/smallApps/hero.png);
+	background-repeat: no-repeat;
+	height: 500px;
+    background-size: cover;
+}
+
+#accordPage .hero-bg a {
+	border: 2px solid $ligh-blue;
+	background-color: $dark-blue;
+	border-radius: 50px;
+}
+
 /*media query*/
+@media (max-width:650px) {
+    #accordPage .hero-bg article {
+    	width: 100%;
+    }
+    #accordPage .hero-bg {
+	    height: 400px;
+    }
+}
+
+@media (max-width:827px) {
+     #accordPage .hero-bg article {
+    	padding-top: 2em;
+    }
+}
+
 @media (max-width:768px) {
     #accordPage .collapse a {
     	padding-right: 0.5em; 
     }
 }
+
+@media (min-width: 712px) and (max-width:1200px) {
+    #accordPage .hero-bg {
+    	background-image: url(../img/smallApps/hero.png);
+	    background-repeat: no-repeat;
+	    height: 321px;
+	    background-size: cover;
+    }
+}
+  

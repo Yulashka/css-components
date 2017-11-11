@@ -76,6 +76,9 @@
 .dirty-gray {
   color: #C2BEBA; }
 
+.light-blue {
+  color: #96C1CB; }
+
 /*Borders*/
 .none-border {
   border: none; }
@@ -101,6 +104,9 @@
 
 .letter-space2 {
   letter-spacing: 2px; }
+
+.font-normal {
+  font-weight: normal; }
 
 /*Display*/
 .clear {
@@ -402,10 +408,39 @@
   background-color: #5DC987;
   color: #FFFFFF; }
 
+/*hero image section*/
+#accordPage .hero-bg {
+  background-image: url(../img/smallApps/hero.png);
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: cover; }
+
+#accordPage .hero-bg a {
+  border: 2px solid #96C1CB;
+  background-color: #0D4761;
+  border-radius: 50px; }
+
 /*media query*/
+@media (max-width: 650px) {
+  #accordPage .hero-bg article {
+    width: 100%; }
+  #accordPage .hero-bg {
+    height: 400px; } }
+
+@media (max-width: 827px) {
+  #accordPage .hero-bg article {
+    padding-top: 2em; } }
+
 @media (max-width: 768px) {
   #accordPage .collapse a {
     padding-right: 0.5em; } }
+
+@media (min-width: 712px) and (max-width: 1200px) {
+  #accordPage .hero-bg {
+    background-image: url(../img/smallApps/hero.png);
+    background-repeat: no-repeat;
+    height: 321px;
+    background-size: cover; } }
 
 /*Carousel*/
 .wrapper {

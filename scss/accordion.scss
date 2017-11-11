@@ -7,3 +7,14 @@
     right: 0px;
 }
    
+#accordPage .dropdown a:hover {
+	background-color: $green-color;
+	color: $white-color;
+}
+
+/*media query*/
+@media (max-width:768px) {
+    #accordPage .collapse a {
+    	padding-right: 0.5em; 
+    }
+}

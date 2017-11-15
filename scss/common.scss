@@ -111,6 +111,13 @@
 	background-color: $lighter-blue;
 }
 
+.dark-bg {
+	background-color: $dark-color;
+}
+
+.dark {
+	color: $dark-color !important;
+}
 /*Borders*/
 .none-border {
 	border: none;

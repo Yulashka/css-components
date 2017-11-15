@@ -85,6 +85,12 @@
 .lighter-blue-bg {
   background-color: #F1F8FD; }
 
+.dark-bg {
+  background-color: #2D302E; }
+
+.dark {
+  color: #2D302E !important; }
+
 /*Borders*/
 .none-border {
   border: none; }

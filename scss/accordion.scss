@@ -23,7 +23,8 @@
     background-size: cover;
 }
 
-#accordPage .hero-bg a {
+#accordPage .hero-bg a,
+#accordPage .lighter-blue-bg a {
 	border: 2px solid $ligh-blue;
 	background-color: $dark-blue;
 	border-radius: 50px;
@@ -53,6 +54,12 @@
     }
     #accordPage .accordion {
     	display: none;
+    }
+    #accordPage .lighter-blue-bg .md-col-6 {
+    	padding-top: 0px;
+    }
+    #accordPage .lighter-blue-bg p {
+    	margin-bottom: 1em;
     }
 }
 

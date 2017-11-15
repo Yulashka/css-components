@@ -1,1 +1,10 @@
 /* Styles that apply to the overall site*/
+.accordion .accord-tab:hover,
+.collapsed p,
+.button-drop:hover,
+.modal-btn,
+.pagination a,
+.tab-container a,
+.scroll-top {
+	cursor: pointer;
+}

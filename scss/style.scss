@@ -75,39 +75,8 @@
 	background-color: $red-color;
 }
 
-/*Accordion*/
-.accordion {
-	border: 1px solid $black-color;
-}
 
-.accordion .accord-tab:hover,
-.collapsed p,
-.button-drop:hover,
-.modal-btn,
-.pagination a,
-.tab-container a,
-.scroll-top {
-	cursor: pointer;
-}
 
-.accord-tab {
-	padding-top: 1em;
-	padding-bottom: 1em;
-	text-decoration: none;
-	color: #000;
-	text-align: center;
-	display: block;
-}
-
-.accord-tab:hover {
-	text-decoration: none;
-	border: 1px solid $red-color;
-}
-
-.a-acc-tab {
-	background-color: $red-color;
-	color: $white-color;
-}
 
 /*Dropdown button*/
 .dropdown-btn {

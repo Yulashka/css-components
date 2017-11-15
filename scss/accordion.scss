@@ -1,4 +1,7 @@
 /*Accordion component*/
+#accordPage  {
+	font-family: 'Roboto', sans-serif;
+}
 
 /*navigation*/
 #accordPage .dropdown {
@@ -26,19 +29,30 @@
 	border-radius: 50px;
 }
 
+#accordPage .a-acc-tab {
+	color: $green-color;
+}
+
+.accord-tab {
+	padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#accordPage .accordion .col-4 ul {
+	padding-right: 20%;
+    border-right: 1px solid $green-color;
+}
+
 /*media query*/
 @media (max-width:650px) {
     #accordPage .hero-bg article {
     	width: 100%;
     }
-    #accordPage .hero-bg {
-	    height: 400px;
+    #accordPage .accordion-mobile {
+    	display: block;
     }
-}
-
-@media (max-width:827px) {
-     #accordPage .hero-bg article {
-    	padding-top: 2em;
+    #accordPage .accordion {
+    	display: none;
     }
 }
 
@@ -46,14 +60,23 @@
     #accordPage .collapse a {
     	padding-right: 0.5em; 
     }
+    #accordPage .hero-bg h1 {
+    	font-size: 1.5em;
+    }
 }
 
-@media (min-width: 712px) and (max-width:1200px) {
+
+
+@media (max-width:1200px) {
     #accordPage .hero-bg {
     	background-image: url(../img/smallApps/hero.png);
 	    background-repeat: no-repeat;
-	    height: 321px;
+	    height: 301px;
 	    background-size: cover;
     }
+     #accordPage .hero-bg article {
+    	padding-top: 1em;
+    }
+
 }
   

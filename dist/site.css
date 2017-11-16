@@ -440,7 +440,7 @@
 
 /*hero image section*/
 #accordPage .hero-bg {
-  background-image: url(../img/smallApps/hero.png);
+  background-image: url(../img/smallApps/hero.jpg);
   background-repeat: no-repeat;
   height: 500px;
   background-size: cover; }
@@ -483,7 +483,7 @@
 
 @media (max-width: 1200px) {
   #accordPage .hero-bg {
-    background-image: url(../img/smallApps/hero.png);
+    background-image: url(../img/smallApps/hero.jpg);
     background-repeat: no-repeat;
     height: 301px;
     background-size: cover; }

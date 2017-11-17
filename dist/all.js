@@ -73,22 +73,6 @@ app.controller('accordCtrl', function($scope, ) {
 		$(attrAccord).removeClass("d-none");
 		$(attrAccord + " i").addClass("a-acc-tab");
 	});
-
-	/*collapse*/
-	$("#iconBarApp").unbind().click(function() {
-		$("#accordPage .dropdown").toggle();
-	});
-
-	//on resize reveal the collapsed nav
-	$(window).resize(function() {
-	  	if($(window).width() < 650){
-			$("#accordPage .collapse").addClass("d-none");
-			$("#accordPage .collapsed").removeClass("d-none");
-		}else {
-			$("#accordPage .collapse").removeClass("d-none");
-			$("#accordPage .collapsed").addClass("d-none");
-		}
-	});
 });
 /*Carousel*/
 app.controller('carCtrl', function($scope, $http) {
@@ -117,10 +101,10 @@ app.controller('carCtrl', function($scope, $http) {
 	//takes a number and shows that many stars rating to the client
 	// @param num - number to translate 
 	function translateRating(num) {
-		$(".star-rate").removeClass("dark-yellow");
+		$(".star-rate").removeClass("prime-color");
 		var starArray = $(".star-rate");
 		for(var i = 0; i < num; i++) {
-			$(starArray[i]).addClass("dark-yellow");
+			$(starArray[i]).addClass("prime-color");
 		}
 	}
 
@@ -323,24 +307,6 @@ app.controller('carCtrl', function($scope, $http) {
 	function myError2(response) {
 		console.log("Error: " + response);
 	}
-
-	//navigation dropdown toggle
-	$("#iconBar-surf").unbind().click(function() {
-		$("#surf-web .dropdown").toggle();
-	});
-
-	//on resize hide/show collapsed nav
-	$(window).resize(function() {
-	  	if($(window).width() < 650){
-			$("#surf-web .collapse").addClass("display-none");
-			$("#surf-web .collapsed").removeClass("display-none");
-			$("#surf-web nav").addClass("display-none");
-		}else {
-			$("#surf-web .collapse ").removeClass("display-none");
-			$("#surf-web .collapsed").addClass("display-none");
-			$("#surf-web nav").removeClass("display-none");
-		}
-	});
 });
 
 

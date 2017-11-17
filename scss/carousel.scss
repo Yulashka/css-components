@@ -1,32 +1,6 @@
 /*Surfing page*/
-
-/*Navigation*/
-.expanded-nav {
-    width: 100%;
-    margin-left: -16px;
-    margin-right: -16px;
-}
-
-#surf-web .collapsed .dropdown a {
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
-
-#surf-web .hero-img nav a:hover {
-	color: $white-color;
-	background-color: $blue-color;
-}
-
-/*Hero image section*/
-#surf-web .hero-img {
-	background-image: url(../img/surfersCo/Surfing.png);
-	background-repeat: no-repeat;
-	height: 500px;
-    background-size: cover;
-}
-
-#surf-web .background-blue {
-	background-image: url(../img/surfersCo/blue.png);
+#surf-web .background-gray {
+	background-image: url(../img/surfersCo/gray.png);
 	background-repeat: no-repeat;
 	background-position: bottom;
     background-size: cover;
@@ -34,7 +8,7 @@
 }
 
 #surf-web .tab-active {
-	border-bottom: 3px solid $blue-color;
+	border-bottom: 3px solid $primary-color;
 	color: $black-color;
 }
 
@@ -43,8 +17,7 @@
 }
 
 #surf-web .thumbnails img:hover {
-	border: 2px solid $blue-color;
-	background-color: #00AFFF;
+	border: 2px solid $primary-color;
 }
 
 #surf-web .thumbnails img {
@@ -52,7 +25,7 @@
 }
 
 #surf-web .surf-tab {
-	border-bottom: 1px solid $gray-color;
+	border-bottom: 1px solid $primary-color;
 }
 
 #surf-web .surf-tab a:hover,
@@ -61,32 +34,7 @@
 }
 
 #surf-web .view-all {
-	border-bottom: 2px solid $blue-color;
-}
-
-#surf-web h1,
-#surf-web .hero-img .hero-text,
-#surf-web .about p {
-	font-family: 'Lobster Two', cursive;
-	font-weight: 100;
-	letter-spacing: 1px;
-}  
-
-#surf-web h1 {
-	font-size: 3rem;
-}
-
-#surf-web {
-	font-family: 'Roboto', sans-serif;
-}
-
-/*About section*/
-#surf-web .about-bg {
-	background-image: url(../img/surfersCo/photo.png);
-	background-repeat: no-repeat;
-	background-position: bottom;
-    background-size: cover;
-    height: 500px;
+	border-bottom: 2px solid $primary-color;
 }
 
 /*Team section*/
@@ -98,7 +46,7 @@
 }
 
 #surf-web .team-card:hover {
-	background-color: $blue-color;
+	background-color: $primary-color;
 }
 
 #surf-web .team-card:hover > p,
@@ -109,31 +57,14 @@
 
 #surf-web .team .carousel .fa-stack,
 #surf-web .team .carousel-mobile .fa-stack {
-    border: 1px solid #00AFFF !important;
+    border: 1px solid $primary-color !important;
     border-radius: 50px;
 }
 
-.border-blue {
-	border: 1px solid #00AFFF;
+.border-prime {
+	border: 1px solid $primary-color;
 }
 
-/*Updates*/
-#surf-web .round-border{
-	border: 1px solid $white-color;
-    border-radius: 50px;
-}
-
-#surf-web .updates .sm-col-4 .w-70:hover {
-	-webkit-box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
-	-moz-box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
-	box-shadow: 0px 0px 40px 10px rgba(235,235,235,0.53);
-	color: #00AFFF;
-}
-
-/*footer*/
-.mailList {
-	width: 14em;
-}
 
 /*media queries*/
 @media (max-width: 900px) {
@@ -143,26 +74,12 @@
 }
 
 @media (max-width: 829px) {
-	#surf-web .about-bg .clearfix .sm-col:first-child {
-		padding-bottom: 3em;
-		margin-top: 3em;
-	}
-	#surf-web .about img,
-	#surf-web .team .max-width-3 img,
-	#surf-web .media .mt6{
+	#surf-web .team .max-width-3 img{
 		margin-top: 3em;
 	}
 	#surf-web .thumbnails img {
 		display: inline-block;
 		margin-bottom: .5rem;
-	}
-	#surf-web .media .insta-pic {
-	    margin-left: auto;
-	    margin-right: auto;
-	    margin-top: 0em;
-	}
-	#surf-web .media .white-bg {
-		text-align: center;
 	}
 }
 
@@ -182,17 +99,8 @@
 }
 
 @media (max-width: 650px) {
-    #surf-web .hero-img h1 {
-    	padding-top: 1em;
-	}
-	#surf-web .about .white-bg {
-		padding-left: 16px;
-	}
 	 #surf-web .team {
 		 margin-top: 9em;
-	}
-	#surf-web .updates {
-		margin-top: 3em !important;
 	}
 }
 

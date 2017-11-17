@@ -18,20 +18,4 @@ app.controller('accordCtrl', function($scope, ) {
 		$(attrAccord).removeClass("d-none");
 		$(attrAccord + " i").addClass("a-acc-tab");
 	});
-
-	/*collapse*/
-	$("#iconBarApp").unbind().click(function() {
-		$("#accordPage .dropdown").toggle();
-	});
-
-	//on resize reveal the collapsed nav
-	$(window).resize(function() {
-	  	if($(window).width() < 650){
-			$("#accordPage .collapse").addClass("d-none");
-			$("#accordPage .collapsed").removeClass("d-none");
-		}else {
-			$("#accordPage .collapse").removeClass("d-none");
-			$("#accordPage .collapsed").addClass("d-none");
-		}
-	});
 });

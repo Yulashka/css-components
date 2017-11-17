@@ -1,37 +1,6 @@
 /*Accordion component*/
-#accordPage  {
-	font-family: 'Roboto', sans-serif;
-}
-
-/*navigation*/
-#accordPage .dropdown {
-	top: 3em;
-    left: 0px;
-    right: 0px;
-}
-   
-#accordPage .dropdown a:hover {
-	background-color: $green-color;
-	color: $white-color;
-}
-
-/*hero image section*/
-#accordPage .hero-bg {
-	background-image: url(../img/smallApps/hero.jpg);
-	background-repeat: no-repeat;
-	height: 500px;
-    background-size: cover;
-}
-
-#accordPage .hero-bg a,
-#accordPage .lighter-blue-bg a {
-	border: 2px solid $ligh-blue;
-	background-color: $dark-blue;
-	border-radius: 50px;
-}
-
 #accordPage .a-acc-tab {
-	color: $green-color;
+	color: $primary-color;
 }
 
 .accord-tab {
@@ -41,49 +10,15 @@
 
 #accordPage .accordion .col-4 ul {
 	padding-right: 20%;
-    border-right: 1px solid $green-color;
+    border-right: 1px solid $primary-color;
 }
 
 /*media query*/
 @media (max-width:650px) {
-    #accordPage .hero-bg article {
-    	width: 100%;
-    }
     #accordPage .accordion-mobile {
     	display: block;
     }
     #accordPage .accordion {
     	display: none;
     }
-    #accordPage .lighter-blue-bg .md-col-6 {
-    	padding-top: 0px;
-    }
-    #accordPage .lighter-blue-bg p {
-    	margin-bottom: 1em;
-    }
 }
-
-@media (max-width:768px) {
-    #accordPage .collapse a {
-    	padding-right: 0.5em; 
-    }
-    #accordPage .hero-bg h1 {
-    	font-size: 1.5em;
-    }
-}
-
-
-
-@media (max-width:1200px) {
-    #accordPage .hero-bg {
-    	background-image: url(../img/smallApps/hero.jpg);
-	    background-repeat: no-repeat;
-	    height: 301px;
-	    background-size: cover;
-    }
-     #accordPage .hero-bg article {
-    	padding-top: 1em;
-    }
-
-}
-  

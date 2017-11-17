@@ -31,23 +31,11 @@
   margin-top: 18em; }
 
 /*Colors*/
-.dark-yellow {
-  color: #F1D700; }
-
-.dark-yellow-bg {
-  background-color: #F1D700; }
-
-.dark-gray {
-  color: #4D4D4D; }
-
-.dark-gray-bg {
-  background-color: #4D4D4D; }
-
 .black {
-  color: #000000; }
+  color: #111; }
 
 .black-bg {
-  background-color: #000000; }
+  background-color: #111; }
 
 .white-bg {
   background-color: #FFFFFF; }
@@ -55,41 +43,11 @@
 .white {
   color: #FFFFFF; }
 
-.gray {
-  color: #C9C9C9; }
+.prime-color {
+  color: #FF9673 !important; }
 
-.gray-bg {
-  background-color: #C9C9C9; }
-
-.blue {
-  color: #00AFFF !important; }
-
-.blue-bg {
-  background-color: #00AFFF; }
-
-.brown {
-  color: #A47D5E; }
-
-.sand-color {
-  color: #BDAD88; }
-
-.dirty-gray {
-  color: #C2BEBA; }
-
-.light-blue {
-  color: #96C1CB; }
-
-.green {
-  color: #5DC987; }
-
-.lighter-blue-bg {
-  background-color: #F1F8FD; }
-
-.dark-bg {
-  background-color: #2D302E; }
-
-.dark {
-  color: #2D302E !important; }
+.prime-color-bg {
+  background-color: #FF9673; }
 
 /*Borders*/
 .none-border {
@@ -127,6 +85,9 @@
 .clear {
   clear: both; }
 
+.d-none {
+  display: none; }
+
 /*Width/Height*/
 .w-70 {
   width: 70%; }
@@ -151,78 +112,35 @@
   cursor: pointer; }
 
 /*Surfing page*/
-/*Navigation*/
-.expanded-nav {
-  width: 100%;
-  margin-left: -16px;
-  margin-right: -16px; }
-
-#surf-web .collapsed .dropdown a {
-  padding-top: 1em;
-  padding-bottom: 1em; }
-
-#surf-web .hero-img nav a:hover {
-  color: #FFFFFF;
-  background-color: #00AFFF; }
-
-/*Hero image section*/
-#surf-web .hero-img {
-  background-image: url(../img/surfersCo/Surfing.png);
-  background-repeat: no-repeat;
-  height: 500px;
-  background-size: cover; }
-
-#surf-web .background-blue {
-  background-image: url(../img/surfersCo/blue.png);
+#surf-web .background-gray {
+  background-image: url(../img/surfersCo/gray.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   padding: 2em; }
 
 #surf-web .tab-active {
-  border-bottom: 3px solid #00AFFF;
-  color: #000000; }
+  border-bottom: 3px solid #FF9673;
+  color: #111; }
 
 #surf-web #carousel-surf h3 {
   height: 3em; }
 
 #surf-web .thumbnails img:hover {
-  border: 2px solid #00AFFF;
-  background-color: #00AFFF; }
+  border: 2px solid #FF9673; }
 
 #surf-web .thumbnails img {
   border: 2px solid #FFFFFF; }
 
 #surf-web .surf-tab {
-  border-bottom: 1px solid #C9C9C9; }
+  border-bottom: 1px solid #FF9673; }
 
 #surf-web .surf-tab a:hover,
 #surf-web #iconBar-surf:hover {
   cursor: pointer; }
 
 #surf-web .view-all {
-  border-bottom: 2px solid #00AFFF; }
-
-#surf-web h1,
-#surf-web .hero-img .hero-text,
-#surf-web .about p {
-  font-family: 'Lobster Two', cursive;
-  font-weight: 100;
-  letter-spacing: 1px; }
-
-#surf-web h1 {
-  font-size: 3rem; }
-
-#surf-web {
-  font-family: 'Roboto', sans-serif; }
-
-/*About section*/
-#surf-web .about-bg {
-  background-image: url(../img/surfersCo/photo.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  height: 500px; }
+  border-bottom: 2px solid #FF9673; }
 
 /*Team section*/
 #surf-web .team-card {
@@ -232,7 +150,7 @@
   box-shadow: 17px 22px 101px -6px #b3b1b3; }
 
 #surf-web .team-card:hover {
-  background-color: #00AFFF; }
+  background-color: #FF9673; }
 
 #surf-web .team-card:hover > p,
 #surf-web .team-card:hover > h4,
@@ -241,26 +159,11 @@
 
 #surf-web .team .carousel .fa-stack,
 #surf-web .team .carousel-mobile .fa-stack {
-  border: 1px solid #00AFFF !important;
+  border: 1px solid #FF9673 !important;
   border-radius: 50px; }
 
-.border-blue {
-  border: 1px solid #00AFFF; }
-
-/*Updates*/
-#surf-web .round-border {
-  border: 1px solid #FFFFFF;
-  border-radius: 50px; }
-
-#surf-web .updates .sm-col-4 .w-70:hover {
-  -webkit-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
-  -moz-box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
-  box-shadow: 0px 0px 40px 10px rgba(235, 235, 235, 0.53);
-  color: #00AFFF; }
-
-/*footer*/
-.mailList {
-  width: 14em; }
+.border-prime {
+  border: 1px solid #FF9673; }
 
 /*media queries*/
 @media (max-width: 900px) {
@@ -268,22 +171,11 @@
     font-size: 1em; } }
 
 @media (max-width: 829px) {
-  #surf-web .about-bg .clearfix .sm-col:first-child {
-    padding-bottom: 3em;
-    margin-top: 3em; }
-  #surf-web .about img,
-  #surf-web .team .max-width-3 img,
-  #surf-web .media .mt6 {
+  #surf-web .team .max-width-3 img {
     margin-top: 3em; }
   #surf-web .thumbnails img {
     display: inline-block;
-    margin-bottom: .5rem; }
-  #surf-web .media .insta-pic {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0em; }
-  #surf-web .media .white-bg {
-    text-align: center; } }
+    margin-bottom: .5rem; } }
 
 @media (max-width: 768px) {
   #surf-web .thumbnails {
@@ -296,14 +188,8 @@
     display: block; } }
 
 @media (max-width: 650px) {
-  #surf-web .hero-img h1 {
-    padding-top: 1em; }
-  #surf-web .about .white-bg {
-    padding-left: 16px; }
   #surf-web .team {
-    margin-top: 9em; }
-  #surf-web .updates {
-    margin-top: 3em !important; } }
+    margin-top: 9em; } }
 
 @media (max-width: 365px) {
   .surf-tab a {
@@ -425,34 +311,8 @@
     margin-bottom: 1em; } }
 
 /*Accordion component*/
-#accordPage {
-  font-family: 'Roboto', sans-serif; }
-
-/*navigation*/
-#accordPage .dropdown {
-  top: 3em;
-  left: 0px;
-  right: 0px; }
-
-#accordPage .dropdown a:hover {
-  background-color: #5DC987;
-  color: #FFFFFF; }
-
-/*hero image section*/
-#accordPage .hero-bg {
-  background-image: url(../img/smallApps/hero.jpg);
-  background-repeat: no-repeat;
-  height: 500px;
-  background-size: cover; }
-
-#accordPage .hero-bg a,
-#accordPage .lighter-blue-bg a {
-  border: 2px solid #96C1CB;
-  background-color: #0D4761;
-  border-radius: 50px; }
-
 #accordPage .a-acc-tab {
-  color: #5DC987; }
+  color: #FF9673; }
 
 .accord-tab {
   padding-top: 1.5rem;
@@ -460,35 +320,14 @@
 
 #accordPage .accordion .col-4 ul {
   padding-right: 20%;
-  border-right: 1px solid #5DC987; }
+  border-right: 1px solid #FF9673; }
 
 /*media query*/
 @media (max-width: 650px) {
-  #accordPage .hero-bg article {
-    width: 100%; }
   #accordPage .accordion-mobile {
     display: block; }
   #accordPage .accordion {
-    display: none; }
-  #accordPage .lighter-blue-bg .md-col-6 {
-    padding-top: 0px; }
-  #accordPage .lighter-blue-bg p {
-    margin-bottom: 1em; } }
-
-@media (max-width: 768px) {
-  #accordPage .collapse a {
-    padding-right: 0.5em; }
-  #accordPage .hero-bg h1 {
-    font-size: 1.5em; } }
-
-@media (max-width: 1200px) {
-  #accordPage .hero-bg {
-    background-image: url(../img/smallApps/hero.jpg);
-    background-repeat: no-repeat;
-    height: 301px;
-    background-size: cover; }
-  #accordPage .hero-bg article {
-    padding-top: 1em; } }
+    display: none; } }
 
 /*Carousel*/
 .wrapper {
@@ -514,10 +353,10 @@
 .css-compon nav a,
 .css-compon nav a:hover {
   text-decoration: none;
-  color: #42f483; }
+  color: #FF9673; }
 
 .css-compon nav a:hover {
-  border-bottom: 1px solid #000000; }
+  border-bottom: 1px solid #111; }
 
 .d-none {
   display: none; }
@@ -525,7 +364,7 @@
 /*Tab Panel*/
 .tab-container {
   height: 300px;
-  border: 1px solid #000000; }
+  border: 1px solid #111; }
 
 .flex-tab {
   display: flex;
@@ -540,19 +379,19 @@
   padding: 1.5em; }
 
 .flex-tab a:hover {
-  border-bottom: 1px solid #000000; }
+  border-bottom: 1px solid #111; }
 
 .tab-text {
   padding: 1em; }
 
 .active {
-  border: 1px solid #FF0000 !important;
-  background-color: #FF0000; }
+  border: 1px solid red !important;
+  background-color: red; }
 
 /*Dropdown button*/
 .dropdown-btn {
   width: 4em;
-  border: 1px solid #000000; }
+  border: 1px solid #111; }
 
 .button-drop {
   text-align: center;
@@ -571,10 +410,10 @@
   text-align: center; }
 
 .border-b {
-  border-bottom: 1px solid #000000; }
+  border-bottom: 1px solid #111; }
 
 .border-t {
-  border-top: 1px solid #000000; }
+  border-top: 1px solid #111; }
 
 /*Modal*/
 body {
@@ -598,7 +437,7 @@ body {
   /*opacity: 0.1;*/
   filter: alpha(opacity=10);
   /* For IE8 and earlier */
-  background-color: #000000; }
+  background-color: #111; }
 
 .modal-header {
   padding-top: 0.5em;
@@ -613,7 +452,7 @@ body {
 
 .modal-btn {
   padding: 0.8em;
-  border: 1px solid #000000;
+  border: 1px solid #111;
   background-color: green; }
 
 .modal-body {
@@ -643,14 +482,14 @@ form div {
   padding: 1em;
   background-color: red;
   text-transform: uppercase;
-  border: 1px solid #000000; }
+  border: 1px solid #111; }
 
 .pop-text {
   position: absolute;
   left: 60%;
   top: 0;
   padding: 1.5em 1em 1.5em 1em;
-  border: 1px solid #000000; }
+  border: 1px solid #111; }
 
 /*Scrollspy*/
 .scroll-nav {
@@ -694,7 +533,7 @@ form div {
   margin-bottom: 1em; }
 
 .pagination li a {
-  border: 1px solid #000000;
+  border: 1px solid #111;
   padding: 1em;
   margin-right: 1em; }
 

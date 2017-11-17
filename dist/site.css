@@ -1,4 +1,5 @@
 /*Colors*/
+/*#FF9673;*/
 /* Styles that apply to all pages */
 /*Padding*/
 @import url(../bower_components/basscss/css/basscss.min.css);
@@ -44,10 +45,10 @@
   color: #FFFFFF; }
 
 .prime-color {
-  color: #FF9673 !important; }
+  color: #BBBBBB !important; }
 
 .prime-color-bg {
-  background-color: #FF9673; }
+  background-color: #BBBBBB; }
 
 /*Borders*/
 .none-border {
@@ -120,27 +121,27 @@
   padding: 2em; }
 
 #surf-web .tab-active {
-  border-bottom: 3px solid #FF9673;
+  border-bottom: 3px solid #BBBBBB;
   color: #111; }
 
 #surf-web #carousel-surf h3 {
   height: 3em; }
 
 #surf-web .thumbnails img:hover {
-  border: 2px solid #FF9673; }
+  border: 2px solid #BBBBBB; }
 
 #surf-web .thumbnails img {
   border: 2px solid #FFFFFF; }
 
 #surf-web .surf-tab {
-  border-bottom: 1px solid #FF9673; }
+  border-bottom: 1px solid #BBBBBB; }
 
 #surf-web .surf-tab a:hover,
 #surf-web #iconBar-surf:hover {
   cursor: pointer; }
 
 #surf-web .view-all {
-  border-bottom: 2px solid #FF9673; }
+  border-bottom: 2px solid #BBBBBB; }
 
 /*Team section*/
 #surf-web .team-card {
@@ -150,7 +151,7 @@
   box-shadow: 17px 22px 101px -6px #b3b1b3; }
 
 #surf-web .team-card:hover {
-  background-color: #FF9673; }
+  background-color: #BBBBBB; }
 
 #surf-web .team-card:hover > p,
 #surf-web .team-card:hover > h4,
@@ -159,11 +160,11 @@
 
 #surf-web .team .carousel .fa-stack,
 #surf-web .team .carousel-mobile .fa-stack {
-  border: 1px solid #FF9673 !important;
+  border: 1px solid #BBBBBB !important;
   border-radius: 50px; }
 
 .border-prime {
-  border: 1px solid #FF9673; }
+  border: 1px solid #BBBBBB; }
 
 /*media queries*/
 @media (max-width: 900px) {
@@ -312,7 +313,7 @@
 
 /*Accordion component*/
 #accordPage .a-acc-tab {
-  color: #FF9673; }
+  color: #BBBBBB; }
 
 .accord-tab {
   padding-top: 1.5rem;
@@ -320,7 +321,7 @@
 
 #accordPage .accordion .col-4 ul {
   padding-right: 20%;
-  border-right: 1px solid #FF9673; }
+  border-right: 1px solid #BBBBBB; }
 
 /*media query*/
 @media (max-width: 650px) {
@@ -353,7 +354,7 @@
 .css-compon nav a,
 .css-compon nav a:hover {
   text-decoration: none;
-  color: #FF9673; }
+  color: #BBBBBB; }
 
 .css-compon nav a:hover {
   border-bottom: 1px solid #111; }

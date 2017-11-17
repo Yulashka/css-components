@@ -1,244 +1,65 @@
 <!-- Collapse component -->
-
-<!-- Bakery page -->
 <div id="bakery-web" ng-controller="collapseCtrl">
-  <!-- Font family -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-  <!-- Hero Image -->
-  <section class="hero-image center">
+  <section class="hero-image center mt4">
     <!-- Navigation -->
-    <nav class="clearfix max-width-4 mx-auto px2 pt2 relative">
-      <div class="sm-col sm-col-6 md-col-2 collapse">
-        <img src="img/bakery/logo.png" class="fit left" alt="bakery logo">
-      </div>
-      <div class="sm-col sm-col-10 md-col-9 collapse">
-        <div class="pt2">
-          <a href="#" class="font-uppercase text-decoration-none white">Welcome</a>
-          <span class="px1 white">~</span>
-          <a href="#" class="font-uppercase text-decoration-none white">Menu</a>
-          <span class="px1 white">~</span>
-          <a href="#" class="font-uppercase text-decoration-none white">Reservations</a>
-          <span class="px1 white">~</span>
-          <a href="#" class="font-uppercase text-decoration-none white">News</a>
-          <span class="px1 white">~</span>
-          <a href="#" class="font-uppercase text-decoration-none white">Contact</a>
+    <nav class="prime-color-bg py2 relative">
+      <div class="clearfix max-width-4 mx-auto px2">
+        <div class="sm-col sm-col-6 md-col-2 collapse">
+          <img src="img/bakery/logo.png" class="fit left" alt="bakery logo">
         </div>
-      </div>
-      <!-- icons -->
-      <div class="sm-col sm-col-2 md-col-1 collapse">
-        <div class="d-inline-block right pt2">
-          <a href="#" class="white text-decoration-none">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="#" class="white text-decoration-none px1">
-           <i class="fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="#" class="white text-decoration-none">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
+        <div class="sm-col sm-col-10 md-col-9 collapse">
+          <div class="pt1">
+            <a href="#" class="font-uppercase text-decoration-none white">Welcome</a>
+            <span class="px1 white">~</span>
+            <a href="#" class="font-uppercase text-decoration-none white">Menu</a>
+            <span class="px1 white">~</span>
+            <a href="#" class="font-uppercase text-decoration-none white">Reservations</a>
+            <span class="px1 white">~</span>
+            <a href="#" class="font-uppercase text-decoration-none white">News</a>
+            <span class="px1 white">~</span>
+            <a href="#" class="font-uppercase text-decoration-none white">Contact</a>
+          </div>
         </div>
-      </div>
-      <!-- collapsed nav -->
-      <div class="col col-6 collapsed d-none">
-        <img src="img/bakery/logo.png" class="fit left" alt="bakery logo">
-      </div>
-      <div class="collapsed d-none col col-6">
-        <div class=" right-align">
-          <span class="inline-block">
-            <i class="fa fa-bars fa-2x" id="iconBarBake" aria-hidden="true"></i>
-          </span>
+        <!-- icons -->
+        <div class="sm-col sm-col-2 md-col-1 collapse">
+          <div class="d-inline-block right pt1">
+            <a href="#" class="white text-decoration-none">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="white text-decoration-none px1">
+             <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="white text-decoration-none">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="dropdown white-bg col col-12 d-none absolute">
-        <a href="#" class="font-uppercase text-decoration-none black py3 block">Welcome</a>
-        <a href="#" class="font-uppercase text-decoration-none black pb3 block">Menu</a>
-        <a href="#" class="font-uppercase text-decoration-none black pb3 block">Reservations</a>
-        <a href="#" class="font-uppercase text-decoration-none black pb3 block">News</a>
-        <a href="#" class="font-uppercase text-decoration-none black pb3 block">Contact</a>
+        <!-- collapsed nav -->
+        <div class="col col-6 collapsed d-none">
+          <img src="img/bakery/logo.png" class="fit left" alt="bakery logo">
+        </div>
+        <div class="collapsed d-none col col-6">
+          <div class=" right-align">
+            <span class="inline-block">
+              <i class="fa fa-bars fa-2x" id="iconBarBake" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div class="dropdown prime-color-bg col col-12 d-none absolute">
+          <a href="#" class="font-uppercase text-decoration-none black py3 block">Welcome</a>
+          <a href="#" class="font-uppercase text-decoration-none black pb3 block">Menu</a>
+          <a href="#" class="font-uppercase text-decoration-none black pb3 block">Reservations</a>
+          <a href="#" class="font-uppercase text-decoration-none black pb3 block">News</a>
+          <a href="#" class="font-uppercase text-decoration-none black pb3 block">Contact</a>
+        </div>
       </div>
     </nav>
-    <h1 class="white mb1 px2">Pastry with love</h1>
-    <img src="img/bakery/bread.png" class="fit block mx-auto px2" alt="bread">
-    <p class="white h2 px2">We're bringing you fresh ingredients every day in ways you can't resist.</p>
-    <a href="#" class="font-uppercase text-decoration-none white p2 main-btn">Our Menu</a>
-  </section>
-
-  <!-- About Chef Cook -->
-  <section class="about-chef py4 sm-pt2">
-    <div class="clearfix max-width-4 px2 mx-auto">
-      <div class="sm-col sm-col-12 md-col-6">
-        <h3 class="center font-2 mb0 xs-mt0">Art of cakes</h3>
-        <p class="font-uppercase center mt1 brown bold">We create delicious memories</p>
-        <p class="center my3">Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.</p>
-        <h3 class="center">Chef Cook</h3>
-        <div class="clearfix mb2">
-          <div class="col col-4">
-            <p class="right border-bottom-gray inline-block border-top-gray py2 mt3">Benito</p>
-          </div>
-          <div class="col col-4">
-            <img src="img/bakery/chef.png" class="fit block mx-auto" alt="chef photo">
-          </div>
-          <div class="col col-4">
-            <p class="left border-bottom-gray inline-block border-top-gray py2 mt3">Gasparo</p>
-          </div>
-        </div>
-        <div class="pl4 xs-p0">
-          <i class="fa fa-quote-left" aria-hidden="true"></i>
-        </div>
-        <div>
-          <img src="img/bakery/quote.png" class="fit mx-auto block" alt="chef's quote">
-        </div>
-        <div class="right-align pr4 xs-p0">
-          <i class="fa fa-quote-right" aria-hidden="true"></i>
-        </div>
-      </div>
-      <div class="sm-col sm-col-12 md-col-6">
-        <img src="img/bakery/food.png" class="fit pt3 mx-auto block" alt="food">
-      </div>
+    <div class="px3 mb2">
+      <h1 class="center h1 mt4">Collapse component</h1>
+      <p class="center mb4">Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu.</p>
+      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper tincidunt dolor. Donec id ex eu risus dignissim faucibus eu sed tellus. Integer et gravida urna. Quisque sed nulla eleifend, iaculis velit sit amet, aliquam elit. Ut ut molestie velit. Etiam volutpat vel dolor vel congue. Quisque sit amet dolor nunc. Mauris vel ante sed sem tristique placerat.</p>
+      <p class="left-align">Proin in neque non risus dapibus auctor lobortis a ipsum. Nunc ut fringilla dui. Praesent fermentum ac sapien et tristique. Nulla facilisi. Vestibulum pellentesque odio nec velit vehicula, ac molestie nisl auctor. Cras sapien ligula, egestas eu lectus ac, tincidunt bibendum magna. Sed finibus volutpat ultricies. Phasellus vitae velit in nibh gravida iaculis sit amet ac mi. Nulla facilisi. Curabitur lobortis finibus orci ut faucibus.</p>
+      <p class="left-align">Phasellus mauris metus, mattis sed porttitor porta, bibendum posuere dui. Mauris luctus tellus tempus auctor porttitor. Praesent luctus urna nisi, a aliquet ante congue iaculis. Vestibulum pulvinar varius orci, eget gravida orci posuere bibendum. Integer dui ligula, feugiat ac sagittis in, accumsan sed urna. Suspendisse vel pulvinar est. Fusce vitae diam ac eros dignissim bibendum. Praesent porta blandit nibh, ut condimentum orci gravida vitae.</p>
     </div>
-  </section>
-
-  <!-- About food -->
-  <section class="about-food py4">
-    <div class="px2">
-      <div class="menu-page-bg max-width-4 mx-auto carousel">
-        <div class="clearfix">
-          <div class="sm-col sm-col-12 md-col-6">
-            <img src="img/bakery/pancakes.png" class="fit mx-auto block" alt="pancakes">
-          </div>
-          <div class="sm-col sm-col-12 md-col-6">
-            <div class="clearfix">
-              <div class="col col-8">
-                <h1 class="pt3 pl2 font-2 mb0 sm-mt0">Tasty pancakes</h1>
-                <p class="font-uppercase pl2 mt1 brown bold">Season favourite</p>
-                <p class="pl2 mt3">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
-              </div>
-              <div class="col col-4">
-                <img src="img/bakery/cookTime.png" class="fit pt2 pr2 right sm-pt2" alt="cooktime">
-              </div>
-            </div>
-            <!-- Desktop/Tablet carousel -->
-            <div class="clearfix mini-carousel mt4 pb3">
-              <div class="col col-1">
-                <i class="fa fa-chevron-left pt2 right" aria-hidden="true"></i>
-              </div>
-              <div class="col col-10 center">
-                <img src="" class="fit inline-block image" alt="food">
-                <img src="" class="fit inline-block px1 image" alt="food">
-                <img src="" class="fit inline-block image" alt="food">
-              </div>
-              <div class="col col-1">
-                <i class="fa fa-chevron-right pt2" aria-hidden="true"></i>
-              </div>
-            </div>
-            <!-- End -->
-            <!-- Mobile carousel -->
-            <div class="clearfix carousel-mobile mt4 pb3 d-none">
-              <div class="col col-1">
-                <i class="fa fa-chevron-left pt2 right" aria-hidden="true"></i>
-              </div>
-              <div class="col col-10 center">
-                <img src="" class="fit inline-block image-mobile" alt="food">
-              </div>
-              <div class="col col-1">
-                <i class="fa fa-chevron-right pt2" aria-hidden="true"></i>
-              </div>
-            </div>
-            <!-- end of mobile carousel -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Menu promo -->
-  <section class="menu-promo">
-    <div class="max-width-4 mx-auto clearfix py4 px2">
-      <div class="sm-col sm-col-12 md-col-6 center">
-        <h1 class="white font-2 my0">Breakfast</h1>
-        <p class="font-uppercase brown bold mt0 mb4">7AM breakfast we are open</p>
-        <div class="mb4">
-          <h2 class="white mb1">Full breakfast</h2>
-          <p class="mt0 dirty-gray">Duis ut tortor, et risus, vulputate pretium</p>
-          <h2 class="sand-color letter-space2">$12.49</h2>
-        </div>
-        <div class="mb4">
-          <h2 class="white mb1">Toast and Jam</h2>
-          <p class="mt0 dirty-gray">Duis ut tortor, et risus, vulputate pretium</p>
-          <h2 class="sand-color letter-space2">$4.50</h2>
-        </div>
-        <div class="mb4">
-          <h2 class="white mb1">Muffins</h2>
-          <p class="mt0 dirty-gray">Duis ut tortor, et risus, vulputate pretium</p>
-          <h2 class="sand-color letter-space2">$3.99</h2>
-        </div>
-      </div>
-      <div class="sm-col sm-col-12 md-col-6 menus-bg center">
-        <div class="clearfix py3">
-          <div class="col col-6">
-            <p class="font-uppercase right-align pr2 bold">EST.</p>
-          </div>
-          <div class="col col-6">
-            <p class="font-uppercase pl2 bold left-align">1893</p>
-          </div>
-        </div>
-        <img src="img/bakery/pretzel.png" class="fit mx-auto block px2" alt="pretzel">
-        <h1 class="px4 center pt4 font-2">Your morning Escape with Flair</h1>
-        <p class="px4 center mb4">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.</p>
-        <a href="#" class="font-uppercase center brown text-decoration-none border px3 py1 bold">Read</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Recipe -->
-  <section class="recipe">
-    <div class="max-width-4 mx-auto px2">
-      <img src="img/bakery/windmill.png" class="fit mx-auto block pt1" alt="windmill">
-      <h1 class="center my0 font-2">The Jibarito sandwich</h1>
-      <p class="center mt0 brown bold">The best sandwich you've ever tasted</p>
-      <div class="clearfix">
-        <div class="sm-col sm-col-12 md-col-3">
-          <div class="center pb3">
-            <img src="img/bakery/grain-circle.png" class="fit" alt="grains">
-            <h2 class="brown my0">Class aptent</h2>
-            <p>Quot alienum persecuti ut eam, nam ad atqui primis nusquam.</p>
-          </div>
-          <div class="center pb3">
-            <img src="img/bakery/egg-circle.png" class="fit" alt="egg">
-            <h2 class="brown my0">Class aptent</h2>
-            <p>Quot alienum persecuti ut eam, nam ad atqui primis nusquam.</p>
-          </div>
-          <div class="center">
-            <img src="img/bakery/cheese-circle.png" class="fit" alt="cheese">
-            <h2 class="brown my0">Class aptent</h2>
-            <p>Quot alienum persecuti ut eam, nam ad atqui primis nusquam.</p>
-          </div>
-        </div>
-        <div class="sm-col sm-col-12 md-col-9 mt4">
-          <img src="img/bakery/sandwich.png" class="fit block mx-auto" alt="sandwich">
-        </div>
-      </div> 
-    </div>
-    <!-- Footer -->
-    <footer class="clearfix max-width-4 mx-auto px2 py4">
-      <div class="sm-col sm-col-12 md-col-5 border-bottom border-top center py2">
-        <a href="#" class="font-uppercase text-decoration-none black xs-mb1">Our menu</a>
-        <span class="px2">~</span>
-        <a href="#" class="font-uppercase text-decoration-none black xs-mb1">Gallery</a>
-        <span class="px2">~</span>
-        <a href="#" class="font-uppercase text-decoration-none black">Culture</a>
-      </div>
-      <div class="sm-col sm-col-12 md-col-2 center py1">
-        <img src="img/bakery/logo-dark.png" class="fit" alt="dark logo">
-      </div>
-      <div class="sm-col sm-col-12 md-col-5 border-bottom border-top center py2">
-        <a href="#" class="font-uppercase text-decoration-none black xs-mb1">Events</a>
-        <span class="px2">~</span>
-        <a href="#" class="font-uppercase text-decoration-none black xs-mb1">Catering</a>
-        <span class="px2">~</span>
-        <a href="#" class="font-uppercase text-decoration-none black">Visit us</a>
-      </div>
-    </footer>
   </section>
 </div>

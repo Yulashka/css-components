@@ -29,12 +29,6 @@ app.controller('collapseCtrl', function($scope, ) {
 	});
 });
 
-/*Dropdown button*/
-app.controller('dropdownCtrl', function($scope, ) {
-	$(".dropdown-btn .button-drop").on('click', function() {
-		$(".dropdown-text").toggle();
-	});
-});
 
 /*Modal*/
 app.controller('modalCtrl', function($scope, ) {

@@ -1,0 +1,38 @@
+/*common styles*/
+.dropdown-btn-up,
+.dropdown-btn-down {
+	cursor:pointer;
+}
+
+.dropdown-text {
+	display: none;
+	border: 1px solid #C1C1C1;
+	will-change: transform;
+	width: 8em;
+}
+
+.dropdown-border {
+	border: 2px solid #9E9E9E;
+}
+
+.dropdown-text p:hover,
+.dropdown-text a:hover {
+	color: $white-color !important;
+	background-color: $primary-color;
+}
+
+/*dropdown up*/
+.dropdown-text-up {
+	transform: translate3d(0px, -138px, 0px);
+    top: 0px;
+    left: 0px;  
+}
+
+/*dropdown down*/
+.dropdown-text-down {
+	transform: translate3d(0px, 36px, 0px);
+    top: 0px;
+    left: 0px; 
+}
+
+

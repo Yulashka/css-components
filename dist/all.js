@@ -340,12 +340,6 @@ app.controller('collapseCtrl', function($scope, ) {
 	});
 });
 
-/*Dropdown button*/
-app.controller('dropdownCtrl', function($scope, ) {
-	$(".dropdown-btn .button-drop").on('click', function() {
-		$(".dropdown-text").toggle();
-	});
-});
 
 /*Modal*/
 app.controller('modalCtrl', function($scope, ) {
@@ -577,6 +571,19 @@ app.controller('collapseCtrl', function($scope, ) {
 	});
 });
 
+/*Dropdown button*/
+app.controller('dropdownCtrl', function($scope, ) {
+	/*dropdown function*/
+	function clickDrop(el, elText) {
+		$(el).unbind().click(function() {
+			$(elText).toggle();
+		});
+	}
+	/*up*/
+	clickDrop(".dropdown-btn-up .button-drop-up", ".dropdown-text-up");
+	/*down*/
+	clickDrop(".dropdown-btn-down .button-drop-down", ".dropdown-text-down");
+});
 
 var Pages = [-1, 0, 1, 2, 3];
 

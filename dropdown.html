@@ -1,17 +1,40 @@
 <!-- Dropdown button -->
-<div class="dropdown-btn">
-  <div class="button-drop">
-    <p>Click me</p>
-  </div>
-  <div class="d-none dropdown-text">
-    <p class="border-b border-t">
-      <a href="#">1</a>
-    </p>
-    <p class="border-b">
-      <a href="#">2</a>
-    </p>
-    <p>
-      <a href="#">3</a>
-    </p>
+<div id="dropdown" ng-controller="dropdownCtrl">
+  <div class="px3 mb2">
+    <h1 class="center h1 mt4">Dropdown component</h1>
+    <p class="center mb4">Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu.</p>
+    <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper tincidunt dolor. Donec id ex eu risus dignissim faucibus eu sed tellus. Integer et gravida urna. Quisque sed nulla eleifend, iaculis velit sit amet, aliquam elit. Ut ut molestie velit. Etiam volutpat vel dolor vel congue. Quisque sit amet dolor nunc. Mauris vel ante sed sem tristique placerat.</p>
+    <div class="clearfix">
+      <div class="sm-col sm-col-12 md-col-3">
+        <!-- up -->
+        <div class="dropdown-btn-up inline-block py1 px2 prime-color-bg relative light-rounded mt3 dropdown-border">
+          <div class="button-drop-up">
+            <p class="m0 bold white">Click me 
+              <i class="fa fa-caret-up pl1" aria-hidden="true"></i>
+            </p>
+          </div>
+          <div class="dropdown-text-up absolute white-bg light-rounded dropdown-text">
+            <a href="#" class="text-decoration-none black px2 py1 my1 block">Option one</a>
+            <a href="#" class="text-decoration-none black px2 py1 my1 block">Option two</a>
+            <a href="#" class="text-decoration-none black px2 py1 my1 block">Option three</a>
+          </div>
+        </div>
+      </div>
+      <div class="sm-col sm-col-12 md-col-9">
+        <!-- down -->
+        <div class="dropdown-btn-down inline-block py1 px2 prime-color-bg relative light-rounded mt3 dropdown-border">
+          <div class="button-drop-down">
+            <p class="m0 bold white">Click me 
+              <i class="fa fa-caret-down pl1" aria-hidden="true"></i>
+            </p>
+          </div>
+          <div class="dropdown-text-down absolute white-bg light-rounded dropdown-text">
+            <a href="#" class="text-decoration-none black px2 py1 my1 block">Option one</a>
+            <a href="#" class="text-decoration-none black px2 py1 my1 block">Option two</a>
+            <a href="#" class="text-decoration-none black px2 py1 my1 block">Option three</a>
+          </div>
+        </div>
+      </div>
+    </div>   
   </div>
 </div>

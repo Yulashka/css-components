@@ -21,7 +21,8 @@ app.config(function($routeProvider) {
         controller: "dropdownCtrl"
     })
     .when("/form", {
-        templateUrl : "form.html"
+        templateUrl : "form.html",
+        controller: "formCtrl"
     })
     .when("/modal", {
         templateUrl : "modal.html",

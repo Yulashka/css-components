@@ -66,6 +66,9 @@
 .light-rounded {
   border-radius: .25rem; }
 
+.border-prime {
+  border: 1px solid #BBBBBB; }
+
 /*Text*/
 .text-center {
   text-align: center; }
@@ -265,6 +268,39 @@
   top: 0px;
   left: 0px; }
 
+/*form*/
+#form .myForm {
+  font-size: 1em;
+  border: 2px solid #BBBBBB; }
+
+#form .btn {
+  padding: 0.6em 0.8em;
+  background-color: #BBBBBB;
+  border: 2px solid #9E9E9E; }
+
+#form .submit {
+  padding: 1em 1.3em 1em 1.3em;
+  text-decoration: none; }
+
+#form .submit:hover {
+  text-decoration: none; }
+
+#form .btn,
+.submit:hover {
+  cursor: pointer; }
+
+#form input:focus {
+  outline: auto; }
+
+#form #name,
+#form #email {
+  padding: 0.3em; }
+
+/*media queries*/
+@media (min-width: 768px) {
+  .myForm {
+    width: 50%; } }
+
 /*Carousel*/
 .wrapper {
   display: flex;
@@ -366,9 +402,6 @@ body {
 
 .clear-r {
   clear: right; }
-
-form div {
-  margin-bottom: 2em; }
 
 .submit-btn {
   padding: 1em 1.3em 1em 1.3em;

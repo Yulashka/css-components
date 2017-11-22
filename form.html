@@ -1,15 +1,44 @@
-<form onSubmit="return false">
-  <div>
-    <div class="d-inline-block">
-      <p id="name-message">Write your name</p>
-      <input placeholder="Name" name="name" id="name" type="text">
+<div id="form" ng-controller="formCtrl" class="px2 mb3">
+  <h1 class="center h1 mt4">Dropdown component</h1>
+  <p class="center mb4">Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper tincidunt dolor. Donec id ex eu risus dignissim faucibus eu sed tellus. Integer et gravida urna. Quisque sed nulla eleifend, iaculis velit sit amet, aliquam elit. Ut ut molestie velit. Etiam volutpat vel dolor vel congue. Quisque sit amet dolor nunc. Mauris vel ante sed sem tristique placerat.</p>
+  <!-- Form -->
+  <div class="myForm px2 py3 light-rounded mt4">
+    <!-- Message on success submission -->
+    <div class="d-none success">
+      <h1 class="d-inline">Your form is successfully submitted!</h1>
+      <p class="inline-block right btn m0">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </p>
     </div>
-    <div class="d-inline-block right">
-      <p id="email-message">Write your email</p>
-      <input placeholder="Email" name="email" id="email" type="email">
+    <!-- Message on error submission -->
+    <div class="d-none error">
+      <h1 class="d-inline">Something went wrong! We appologize for a such inconvenience. Please try again!</h1>
+      <p class="inline-block right btn m0">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </p>
+    </div>
+    <!-- Form -->
+    <div class="header">
+      <h1 class="font-normal">Submit the form</h1>
+      <p class="">Lorem Ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
+    </div>
+    <div class="form-body">
+      <form onSubmit="return false">
+        <div class="mb3 clearfix">
+          <div class="sm-col sm-col-12 md-col-6">
+            <p id="name-message" class="mb0">Write your name</p>
+            <input placeholder="Name" name="name" id="name" type="text" class="mt1">
+          </div>
+          <div class="sm-col sm-col-12 md-col-6">
+            <p id="email-message" class="mb0">Write your email</p>
+            <input placeholder="Email" name="email" id="email" type="email" class="mt1">
+          </div>
+        </div>
+        <div class="">
+          <input type="submit" value="Submit" class="submit prime-color-bg bold"> 
+        </div>
+      </form>
     </div>
   </div>
-  <div class="right">
-    <input type="submit" value="Submit" class="submit-btn"> 
-  </div>
-</form>
+</div>

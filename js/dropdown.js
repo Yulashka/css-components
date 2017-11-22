@@ -7,7 +7,7 @@ app.controller('dropdownCtrl', function($scope, ) {
 		});
 	}
 	/*up*/
-	clickDrop(".dropdown-btn-up .button-drop-up", ".dropdown-text-up");
+	clickDrop(".dropdown-btn-up", ".dropdown-text-up");
 	/*down*/
-	clickDrop(".dropdown-btn-down .button-drop-down", ".dropdown-text-down");
+	clickDrop(".dropdown-btn-down", ".dropdown-text-down");
 });

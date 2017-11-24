@@ -69,71 +69,7 @@
 	background-color: red;
 }
 
-/*Modal*/
-body {
-	margin: 0px;
-}
 
-.d-inline {
-	display: inline;
-}
-
-.modal {
-	width: 50%;
-    z-index: 2;
-    position: fixed;
-    border: 1px solid #000000;
-    padding: 1em;
-    left: 25%;
-    top: 20%;
-    background-color: $white-color;
-    font-size: 1em;
-}
-
-.modal-bg {
-	/*opacity: 0.1;*/
-    filter: alpha(opacity=10); /* For IE8 and earlier */
-    background-color: $black-color;
-}
-
-.modal-header {
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-}
-
-.modal-header h1,
-.modal p {
-	margin: 0px;
-}
-
-.d-inline-block {
-	display: inline-block;
-}
-
-.modal-btn {
-	padding: 0.8em;
-	border: 1px solid $black-color;
-	background-color: green;
-}
-
-.modal-body {
-	margin-top: 2em;
-}
-
-.clear-r {
-	clear: right;
-}
-
-.submit-btn {
-	padding: 1em 1.3em 1em 1.3em;
-	background-color: red;
-	text-decoration: none;
-}
-
-.submit-btn:hover {
-	text-decoration: none;
-	text-shadow: 2px 2px #FF0000;
-}
 
 /*Popover*/
 .popover {

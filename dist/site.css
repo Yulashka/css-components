@@ -1,8 +1,12 @@
 /*Colors*/
 /*#FF9673;*/
 /* Styles that apply to all pages */
-/*Padding*/
 @import url(../bower_components/basscss/css/basscss.min.css);
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif; }
+
+/*Padding*/
 .pt6 {
   padding-top: 6em; }
 
@@ -301,6 +305,55 @@
   .myForm {
     width: 50%; } }
 
+/*modal style*/
+#modal .modal {
+  z-index: 2;
+  border: 1px solid #BBBBBB;
+  left: 0px;
+  top: 0px;
+  font-size: 1em;
+  width: 500px;
+  right: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  /*box shadow*/
+  -webkit-box-shadow: -1px 11px 26px 0px rgba(187, 187, 187, 0.76);
+  -moz-box-shadow: -1px 11px 26px 0px rgba(187, 187, 187, 0.76);
+  box-shadow: -1px 11px 26px 0px rgba(187, 187, 187, 0.76); }
+
+#modal .modal-header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+#modal .modal-btn {
+  padding: 0.8em; }
+
+#modal .modal-body {
+  margin-top: 2em; }
+
+#modal .clear-r {
+  clear: right; }
+
+#modal .submit-btn {
+  padding: 1em 1.3em 1em 1.3em;
+  text-decoration: none; }
+
+#modal .submit-btn:hover {
+  text-decoration: none; }
+
+#modal .submit-btn:hover {
+  cursor: pointer; }
+
+/*media query*/
+@media (max-width: 600px) {
+  #modal .modal {
+    max-width: 100%;
+    width: unset; }
+  #modal .modal-header {
+    margin-bottom: 0px; }
+  #modal .modal-body {
+    margin-top: 0px; } }
+
 /*Carousel*/
 .wrapper {
   display: flex;
@@ -356,61 +409,6 @@
 .active {
   border: 1px solid red !important;
   background-color: red; }
-
-/*Modal*/
-body {
-  margin: 0px; }
-
-.d-inline {
-  display: inline; }
-
-.modal {
-  width: 50%;
-  z-index: 2;
-  position: fixed;
-  border: 1px solid #000000;
-  padding: 1em;
-  left: 25%;
-  top: 20%;
-  background-color: #FFFFFF;
-  font-size: 1em; }
-
-.modal-bg {
-  /*opacity: 0.1;*/
-  filter: alpha(opacity=10);
-  /* For IE8 and earlier */
-  background-color: #111; }
-
-.modal-header {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em; }
-
-.modal-header h1,
-.modal p {
-  margin: 0px; }
-
-.d-inline-block {
-  display: inline-block; }
-
-.modal-btn {
-  padding: 0.8em;
-  border: 1px solid #111;
-  background-color: green; }
-
-.modal-body {
-  margin-top: 2em; }
-
-.clear-r {
-  clear: right; }
-
-.submit-btn {
-  padding: 1em 1.3em 1em 1.3em;
-  background-color: red;
-  text-decoration: none; }
-
-.submit-btn:hover {
-  text-decoration: none;
-  text-shadow: 2px 2px #FF0000; }
 
 /*Popover*/
 .popover {

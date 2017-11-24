@@ -1,4 +1,8 @@
 /* Styles that apply to all pages */
+body {
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+}
 
 /*Padding*/
 .pt6 {
@@ -120,6 +124,7 @@
 	display: none;
 }
 /*Width/Height*/
+
 .w-70 {
 	width: 70%;
 }

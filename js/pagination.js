@@ -1,10 +1,10 @@
-var Pages = [-1, 0, 1, 2, 3];
-$(function() {
-/*Another aproach to building a pagination*/
+app.controller('paginationCtrl', function($scope, ) {
+	var Pages = [-1, 0, 1, 2, 3];
+	/*Another aproach to building a pagination*/
 	var offsetMap = {
 		"back": -1, 
 		"prevprev": -2, 
-		"prev": -1, 
+		"prev": -1,
 		"cur": 0, 
 		"next": 1, 
 		"nextnext": 2, 
@@ -60,6 +60,8 @@ $(function() {
 
 		$(".pg").removeClass("active-pg2");
 		$(Ids[currentPage]).addClass("active-pg2");
+		var textDemo = $(Ids[currentPage]).text();
+		$("#demo").text("Number " + textDemo);
 	}
 
 	function applyAction(action) {

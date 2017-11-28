@@ -122,7 +122,7 @@ body {
 .scroll-top {
   cursor: pointer; }
 
-/*Surfing page*/
+/*carousel component csss*/
 #surf-web .background-gray {
   background-image: url(../img/surfersCo/gray.png);
   background-repeat: no-repeat;
@@ -206,6 +206,7 @@ body {
   .surf-tab a {
     display: block; } }
 
+/*collapse component css*/
 #bakery-web .dropdown a:hover,
 #bakery-web .dropdown a:focus,
 #bakery-web .dropdown a:active {
@@ -222,7 +223,7 @@ body {
   #bakery-web nav .sm-col-10 {
     text-align: left !important; } }
 
-/*Accordion component*/
+/*Accordion component css*/
 #accordPage .a-acc-tab {
   color: #BBBBBB; }
 
@@ -241,6 +242,7 @@ body {
   #accordPage .accordion {
     display: none; } }
 
+/*dropdown component css*/
 /*common styles*/
 .dropdown-btn-up,
 .dropdown-btn-down {
@@ -272,7 +274,7 @@ body {
   top: 0px;
   left: 0px; }
 
-/*form*/
+/*form component css*/
 #form .myForm {
   font-size: 1em;
   border: 2px solid #BBBBBB; }
@@ -353,6 +355,25 @@ body {
     margin-bottom: 0px; }
   #modal .modal-body {
     margin-top: 0px; } }
+
+/*pagination component css*/
+.active-pg2 {
+  background-color: #BBBBBB; }
+
+.pagination li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+.pagination li a {
+  border: 1px solid #111;
+  padding: 1em;
+  margin-right: 1em; }
+
+.pagination a {
+  text-decoration: none; }
 
 /*Carousel*/
 .wrapper {
@@ -460,25 +481,6 @@ body {
 
 .red {
   background-color: red; }
-
-/*Pagination*/
-.pagination li {
-  list-style: none;
-  display: inline-block;
-  text-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-.pagination li a {
-  border: 1px solid #111;
-  padding: 1em;
-  margin-right: 1em; }
-
-.pagination a {
-  text-decoration: none; }
-
-.active-pg {
-  background-color: orange; }
 
 /*scroll-top button*/
 .container {

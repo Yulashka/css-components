@@ -379,11 +379,11 @@ app.controller('scrollCtrl', function($scope, ) {
 });
 
 /*Pagination*/
-app.controller('paginationCtrl', function($scope, ) {
+/*app.controller('pagination2Ctrl', function($scope, ) {
 	var Pages = [-1, 0, 1, 2, 3];
-	$(function() {
+	$(function() {*/
 	/*Another aproach to building a pagination*/
-		var offsetMap = {
+		/*var offsetMap = {
 			"back": -1, 
 			"prevprev": -2, 
 			"prev": -1, 
@@ -436,14 +436,14 @@ app.controller('paginationCtrl', function($scope, ) {
 			$(".pg").removeClass("active-pg2");
 			$(Ids[currentPage]).addClass("active-pg2");
 		}
-		function applyAction(action) {
+		function applyAction(action) {*/
 			// check if action is valid
-			for(var i = 0; i < Pages.length; i++) {
+			/*for(var i = 0; i < Pages.length; i++) {
 				Pages[i] = Pages[i] + action;
 			}
 		}
 	});
-});
+});*/
 
 /*Popovers*/
 app.controller('popoverCtrl', function($scope, ) {
@@ -584,7 +584,7 @@ app.controller('formCtrl', function($scope, ) {
 	}
 });
 
-var Pages = [-1, 0, 1, 2, 3];
+//var Pages = [-1, 0, 1, 2, 3];
 
 $(function() {
 	
@@ -627,7 +627,7 @@ $(function() {
 
 	
 	/*Pagination*/
-	var pagesData = [];
+	/*var pagesData = [];
 	pagesData.length = 10;
 	var currentPage = 1;
 	//display current number
@@ -742,11 +742,7 @@ $(function() {
 
 			}
 		});
-	}
-
-	
-
-
+	}*/
 
 });   
 
@@ -822,13 +818,13 @@ app.controller('modalCtrl', function($scope, ) {
 		$(".error").removeClass('d-none');
 	}
 });
-var Pages = [-1, 0, 1, 2, 3];
-$(function() {
-/*Another aproach to building a pagination*/
+app.controller('paginationCtrl', function($scope, ) {
+	var Pages = [-1, 0, 1, 2, 3];
+	/*Another aproach to building a pagination*/
 	var offsetMap = {
 		"back": -1, 
 		"prevprev": -2, 
-		"prev": -1, 
+		"prev": -1,
 		"cur": 0, 
 		"next": 1, 
 		"nextnext": 2, 
@@ -884,6 +880,8 @@ $(function() {
 
 		$(".pg").removeClass("active-pg2");
 		$(Ids[currentPage]).addClass("active-pg2");
+		var textDemo = $(Ids[currentPage]).text();
+		$("#demo").text("Number " + textDemo);
 	}
 
 	function applyAction(action) {

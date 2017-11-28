@@ -1,5 +1,5 @@
 
-var Pages = [-1, 0, 1, 2, 3];
+//var Pages = [-1, 0, 1, 2, 3];
 
 $(function() {
 	
@@ -42,7 +42,7 @@ $(function() {
 
 	
 	/*Pagination*/
-	var pagesData = [];
+	/*var pagesData = [];
 	pagesData.length = 10;
 	var currentPage = 1;
 	//display current number
@@ -157,11 +157,7 @@ $(function() {
 
 			}
 		});
-	}
-
-	
-
-
+	}*/
 
 });   
 

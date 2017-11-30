@@ -375,6 +375,25 @@ body {
 .pagination a {
   text-decoration: none; }
 
+.disable {
+  pointer-events: none;
+  cursor: default;
+  color: #dbd3ce;
+  border: 1px solid #dbd3ce !important; }
+
+/*media query*/
+@media (min-width: 430px) and (max-width: 630px) {
+  .pagination li a {
+    font-size: .8em;
+    padding: .7em; } }
+
+@media (max-width: 430px) {
+  .pagination li a {
+    font-size: .5em;
+    padding: .7em; }
+  #pagination .mb4-sm {
+    margin-bottom: 0px; } }
+
 /*Carousel*/
 .wrapper {
   display: flex;

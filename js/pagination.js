@@ -47,15 +47,15 @@ app.controller('paginationCtrl', function($scope, ) {
 
 	function fixDomElements(){
 		if(Pages[min] === -1) {
-			$("#back").hide();
+			$("#back").addClass("disable");
 		} else {
-			$("#back").show();
+			$("#back").removeClass("disable");
 		}
 
 		if(Pages[2] === max) {
-			$("#forward").hide();
+			$("#forward").addClass("disable");
 		} else {
-			$("#forward").show();
+			$("#forward").removeClass("disable");
 		}
 
 		$(".pg").removeClass("active-pg2");

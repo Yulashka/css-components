@@ -122,6 +122,9 @@ body {
 .scroll-top {
   cursor: pointer; }
 
+#mySidenav a:focus {
+  color: white; }
+
 /*carousel component csss*/
 #surf-web .background-gray {
   background-image: url(../img/surfersCo/gray.png);
@@ -286,7 +289,11 @@ body {
 
 #form .submit {
   padding: 1em 1.3em 1em 1.3em;
-  text-decoration: none; }
+  text-decoration: none;
+  background-color: #BBBBBB;
+  border: none;
+  text-decoration: none;
+  cursor: pointer; }
 
 #form .submit:hover {
   text-decoration: none; }
@@ -338,13 +345,15 @@ body {
 
 #modal .submit-btn {
   padding: 1em 1.3em 1em 1.3em;
-  text-decoration: none; }
-
-#modal .submit-btn:hover {
-  text-decoration: none; }
-
-#modal .submit-btn:hover {
+  text-decoration: none;
+  background-color: #BBBBBB;
+  border: none;
+  text-decoration: none;
   cursor: pointer; }
+
+#modal .submit-btn:hover {
+  cursor: pointer;
+  text-decoration: none; }
 
 /*media query*/
 @media (max-width: 600px) {
@@ -449,24 +458,6 @@ body {
 .active {
   border: 1px solid red !important;
   background-color: red; }
-
-/*Popover*/
-.popover {
-  position: relative;
-  margin: 1em; }
-
-.popover button {
-  padding: 1em;
-  background-color: red;
-  text-transform: uppercase;
-  border: 1px solid #111; }
-
-.pop-text {
-  position: absolute;
-  left: 60%;
-  top: 0;
-  padding: 1.5em 1em 1.5em 1em;
-  border: 1px solid #111; }
 
 /*Scrollspy*/
 .scroll-nav {

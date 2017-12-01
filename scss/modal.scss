@@ -34,15 +34,16 @@
 
 #modal .submit-btn {
 	padding: 1em 1.3em 1em 1.3em;
-	text-decoration: none;
-}
-
-#modal .submit-btn:hover {
-	text-decoration: none;
+    text-decoration: none;
+    background-color: $primary-color;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #modal .submit-btn:hover {
 	cursor:pointer;
+    text-decoration: none;
 }
 
 /*media query*/

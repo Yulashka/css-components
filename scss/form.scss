@@ -13,6 +13,10 @@
 #form .submit {
 	padding: 1em 1.3em 1em 1.3em;
 	text-decoration: none;
+	background-color: $primary-color;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #form .submit:hover {

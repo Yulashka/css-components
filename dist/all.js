@@ -36,10 +36,6 @@ app.config(function($routeProvider) {
         templateUrl : "pagination.html",
         controller: "paginationCtrl"
     })
-    .when("/popover", {
-        templateUrl : "popover.html",
-        controller: "popoverCtrl"
-    })
     .when("/progress", {
         templateUrl : "progress.html",
         controller: "progressCtrl"
@@ -444,13 +440,6 @@ app.controller('scrollCtrl', function($scope, ) {
 		}
 	});
 });*/
-
-/*Popovers*/
-app.controller('popoverCtrl', function($scope, ) {
-	$(".popover button").on('click', function() {
-		$(".pop-text").toggle();
-	});
-});
 
 /*Progress bar*/
 app.controller('progressCtrl', function($scope, ) {
@@ -890,4 +879,11 @@ app.controller('paginationCtrl', function($scope, ) {
 			Pages[i] = Pages[i] + action;
 		}
 	}
+});
+
+/*Popovers*/
+app.controller('popoverCtrl', function($scope, ) {
+	$("#popover button").unbind().click(function() {
+		$(".pop-text").toggle();
+	});
 });

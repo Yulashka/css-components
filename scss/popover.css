@@ -1,0 +1,24 @@
+/*popover component css*/
+#popover {
+	background-color: aqua;
+}
+
+.popover {
+	position: relative;
+	margin: 1em;
+}
+
+.popover button {
+	padding: 1em;
+	background-color: $primary-color;
+	text-transform: uppercase;
+	border: 1px solid $black-color;
+}
+
+.pop-text {
+	position: absolute;
+	left: 60%;
+	top: 0;
+	padding: 1.5em 1em 1.5em 1em;
+	border: 1px solid $black-color;
+}

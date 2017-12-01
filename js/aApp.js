@@ -36,10 +36,6 @@ app.config(function($routeProvider) {
         templateUrl : "pagination.html",
         controller: "paginationCtrl"
     })
-    .when("/popover", {
-        templateUrl : "popover.html",
-        controller: "popoverCtrl"
-    })
     .when("/progress", {
         templateUrl : "progress.html",
         controller: "progressCtrl"

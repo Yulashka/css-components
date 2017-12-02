@@ -4,7 +4,8 @@ app.controller('scrollCtrl', function($scope, ) {
 	$(".scroll-nav a").on('click', function(e) {
 		var attr = $(this).attr("data-href");
 		var pos = $(attr).offset().top;
-		var navHeight = $(".scroll-nav").innerHeight();
+		// 40 is the height of the outer Sidenav button
+		var navHeight = $(".scroll-nav").innerHeight() + 40;
 		var sum = pos - navHeight;
 		//animate onclick
 		$("html, body").animate({
@@ -13,9 +14,11 @@ app.controller('scrollCtrl', function($scope, ) {
 	    e.preventDefault();
 	});
 
+	// update menu highlight
 	$(window).on('scroll', function() {
 		var navHeight = $(".scroll-nav").outerHeight();
-		var scrollie = $(window).scrollTop() + navHeight + 1;
+		// 40 is the height of the outer Sidenav button
+		var scrollie = $(window).scrollTop() + navHeight + 41;
 		var rows = $(".scroll-body .row");
 		for(var i = 0; i < rows.length;  i++){
 			//console.log(i);

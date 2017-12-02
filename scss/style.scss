@@ -70,53 +70,8 @@
 }
 
 
-
-
-/*Scrollspy*/
-
-.scroll-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	margin-bottom: 1em;
-	padding-bottom: 1.5em;
-	padding-top: 1.5em;
-	background-color: pink;
-  	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
-.scroll-nav a {
-	font-size: 2em;
-	font-weight: bold;
-	padding-bottom: 2px;
-	color: black;
-	text-decoration: none;
-}
-
-.scroll-nav a:hover{
-	color: red;
-}
-
-.margin-top {
-	margin-top: 7em;
-}
-
-.active-scroll {
-	background-color: $white-color;
-}
-
-.red {
-	background-color: red;
-}
-
   /*scroll-top button*/
-  .container {
-  	position: relative;
-  }
-
+  
   .scroll-top {
   	position: fixed;
   	right: 0px;

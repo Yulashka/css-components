@@ -6,6 +6,14 @@ body {
   margin: 0px;
   font-family: 'Roboto', sans-serif; }
 
+#sideBtn {
+  margin-bottom: 3em;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%; }
+
 /*Padding*/
 .pt6 {
   padding-top: 6em; }
@@ -403,6 +411,37 @@ body {
   #pagination .mb4-sm {
     margin-bottom: 0px; } }
 
+/*Scrollspy*/
+.scroll-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1em;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  background-color: #BBBBBB;
+  position: fixed;
+  top: 38px;
+  left: 0;
+  right: 0; }
+
+.scroll-nav a {
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 2px;
+  color: #111;
+  text-decoration: none; }
+
+.scroll-nav a:hover {
+  color: #FFFFFF;
+  cursor: pointer; }
+
+.active-scroll {
+  color: #FFFFFF !important; }
+
+.scroll-body {
+  margin-top: 8em; }
+
 /*Carousel*/
 .wrapper {
   display: flex;
@@ -459,43 +498,7 @@ body {
   border: 1px solid red !important;
   background-color: red; }
 
-/*Scrollspy*/
-.scroll-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 1em;
-  padding-bottom: 1.5em;
-  padding-top: 1.5em;
-  background-color: pink;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; }
-
-.scroll-nav a {
-  font-size: 2em;
-  font-weight: bold;
-  padding-bottom: 2px;
-  color: black;
-  text-decoration: none; }
-
-.scroll-nav a:hover {
-  color: red; }
-
-.margin-top {
-  margin-top: 7em; }
-
-.active-scroll {
-  background-color: #FFFFFF; }
-
-.red {
-  background-color: red; }
-
 /*scroll-top button*/
-.container {
-  position: relative; }
-
 .scroll-top {
   position: fixed;
   right: 0px;

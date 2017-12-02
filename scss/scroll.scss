@@ -1,0 +1,36 @@
+/*Scrollspy*/
+.scroll-nav {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+    background-color: $primary-color;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    right: 0;
+}
+
+.scroll-nav a {
+	font-size: 2em;
+	font-weight: bold;
+	padding-bottom: 2px;
+	color: $black-color;
+	text-decoration: none;
+}
+
+.scroll-nav a:hover{
+	color: $white-color;
+	cursor: pointer;
+}
+
+
+.active-scroll {
+	color: $white-color !important;
+}
+
+.scroll-body {
+	margin-top: 8em;
+}

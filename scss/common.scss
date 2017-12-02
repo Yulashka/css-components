@@ -4,6 +4,14 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+#sideBtn {
+	margin-bottom: 3em;
+    background-color: $white-color;
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 100%;
+}
 /*Padding*/
 .pt6 {
 	padding-top: 6em;

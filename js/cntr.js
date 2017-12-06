@@ -105,21 +105,6 @@ app.controller('progressCtrl', function($scope, ) {
 	console.log("Progress bar is in a process of developing!");
 });
 
-/*Tabs*/
-app.controller('tabsCtrl', function($scope, ) {
-	var text = $(".tab-text p");
-	$(".flex-tab a").on('click', function() {
-		$(".flex-tab a").removeClass('active');
-		$(".tab-text p").addClass('d-none');
-
-		for(var i = 0; i < text.length; i++){
-			if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
-				$(this).addClass('active');
-				$(text[i]).removeClass("d-none");
-			}
-		}
-	});
-});
 
 /*Top*/
 app.controller('topCtrl', function($scope, ) {
@@ -141,3 +126,14 @@ app.controller('topCtrl', function($scope, ) {
 	    }, 1000, "swing" );
 	});
 });
+
+/*Home Page - SIDE NAV*/
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}

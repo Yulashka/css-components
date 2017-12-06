@@ -9,6 +9,9 @@
 	cursor: pointer;
 }
 
-#mySidenav a:focus {
+#mySidenav a:focus,
+#mySidenav a:active {
 	color: white;
 }
+
+

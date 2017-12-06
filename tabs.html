@@ -1,15 +1,25 @@
-<!-- Tab panel -->
-<div class="tab-container">
-  <div class="flex-tab border-b">
-    <a data-href="#text1" class="active">Text1</a>
-    <a data-href="#text2" class="">Text2</a>
-    <a data-href="#text3" class="">Text3</a>
-    <a data-href="#text4" class="">Text4</a>
-  </div>
-  <div class="tab-text">
-    <p id="text1" class="">First!!!! Lorem Ipsum, here goes some funny text</p>
-    <p id="text2" class="d-none">Second!!!! Lorem Ipsum, here goes some funny text</p>
-    <p id="text3" class="d-none">Third!!!! Lorem Ipsum, here goes some funny text</p>
-    <p id="text4" class="d-none">Forth!!!! Lorem Ipsum, here goes some funny text</p>
-  </div>
+<!-- Tab panel component-->
+<div  id="tabsComp" ng-controller="tabsCtrl">
+  <section class="px2 mb2 max-width-4 mx-auto mt4 py3 mt1-sm">
+    <div class="mb2">
+      <h1 class="center h1">Tabs component</h1>
+      <p class="center mb0">Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu.</p>
+      <p class="center mt0">Vestibulum varius non dui at pulvinar. Ut egestas orci in quam sollicitudin aliquet.</p>
+    </div>
+    <!-- tabs -->
+    <div class="tab-container mt4 border-prime">
+      <div class="flex-tab border-b">
+        <a data-href="#text1" class="active">Text 1</a>
+        <a data-href="#text2" class="">Text 2</a>
+        <a data-href="#text3" class="">Text 3</a>
+        <a data-href="#text4" class="">Text 4</a>
+      </div>
+      <div class="tab-text">
+        <p id="text1" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium tortor a ornare ullamcorper. Nunc maximus nisi quis elit tristique, ut luctus ex pharetra. Fusce sed est sit amet est venenatis euismod. Nullam in feugiat quam, quis sagittis tortor. Pellentesque at libero turpis. In vehicula laoreet tincidunt. Duis tristique magna vel tellus malesuada, ut consectetur libero blandit. Duis tristique sagittis justo dapibus ultricies. Aliquam tristique condimentum dolor in condimentum. Vestibulum accumsan, erat ut finibus dapibus, augue sapien efficitur quam, eu fringilla metus arcu quis ligula. Nullam eget tortor bibendum, lobortis ipsum non, gravida velit.</p>
+        <p id="text2" class="d-none">Nullam egestas porta turpis eu volutpat. Phasellus a est fermentum, viverra massa ut, molestie quam. Vivamus vestibulum gravida quam. Sed tempor ex eget mi cursus vulputate. Aenean urna neque, pellentesque ut faucibus eget, mattis ac lorem. Praesent rutrum velit eu mattis mollis. Quisque bibendum eleifend vehicula. In a urna est.</p>
+        <p id="text3" class="d-none">Curabitur eu euismod augue. Ut pulvinar vel metus vitae tempus. Nullam pulvinar urna vitae arcu dictum gravida. Mauris a ante porttitor, molestie erat in, condimentum magna. Aliquam scelerisque lorem tincidunt purus ullamcorper, eu condimentum neque dignissim. Suspendisse potenti. Suspendisse accumsan arcu in nibh iaculis interdum. Duis id eros eget ipsum porttitor euismod eget eget ipsum. Integer in volutpat mauris. Praesent sed odio hendrerit, pellentesque leo nec, consectetur lectus. Integer malesuada felis consectetur nibh egestas, vel feugiat purus dapibus.</p>
+        <p id="text4" class="d-none">Donec hendrerit eros vitae dui vestibulum dignissim. In nec magna id tellus fringilla lobortis et ac nibh. Curabitur eros nibh, imperdiet eu mauris in, efficitur posuere purus. Morbi eget leo eu diam ultricies viverra. Etiam ultrices varius justo, id euismod dolor venenatis in. Nunc congue lorem sed neque faucibus lobortis. Nulla sed diam auctor, porta quam in, porta orci. Etiam ac purus enim. In posuere ex sed vestibulum accumsan. Sed ornare auctor nisl, sed luctus ligula viverra ut. Ut non turpis vel dui imperdiet finibus.</p>
+      </div>
+    </div>
+  </section>
 </div>

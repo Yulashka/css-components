@@ -413,21 +413,6 @@ app.controller('progressCtrl', function($scope, ) {
 	console.log("Progress bar is in a process of developing!");
 });
 
-/*Tabs*/
-app.controller('tabsCtrl', function($scope, ) {
-	var text = $(".tab-text p");
-	$(".flex-tab a").on('click', function() {
-		$(".flex-tab a").removeClass('active');
-		$(".tab-text p").addClass('d-none');
-
-		for(var i = 0; i < text.length; i++){
-			if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
-				$(this).addClass('active');
-				$(text[i]).removeClass("d-none");
-			}
-		}
-	});
-});
 
 /*Top*/
 app.controller('topCtrl', function($scope, ) {
@@ -449,6 +434,17 @@ app.controller('topCtrl', function($scope, ) {
 	    }, 1000, "swing" );
 	});
 });
+
+/*Home Page - SIDE NAV*/
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 
 /* Navigation */
 app.controller('collapseCtrl', function($scope, ) {
@@ -539,145 +535,6 @@ app.controller('formCtrl', function($scope, ) {
 		$(".error").removeClass('d-none');
 	}
 });
-
-//var Pages = [-1, 0, 1, 2, 3];
-
-$(function() {
-
-	
-	/*Pagination*/
-	/*var pagesData = [];
-	pagesData.length = 10;
-	var currentPage = 1;
-	//display current number
-	$("#current").text(currentPage);
-
-	//display current text
-	$("#demo").text("foo #" + currentPage);
-
-	if(currentPage < pagesData.length){
-		//display next button 
-		$("#nextNumber").removeClass("d-none");
-
-		//display maximum number
-		$("#max").text(pagesData.length);
-		$("#max").removeClass("d-none");
-
-		//display next page number
-		$("#next").text(currentPage + 1);
-		$("#next").removeClass("d-none");
-
-		//click next
-		$("#next").on("click", function() {
-			$(".pagination a").removeClass("active-pg");
-			$(this).addClass("active-pg");
-			var nextText = $(this).text();
-			$("#demo").text("foo #" + nextText);
-			if( $("#next").text() < pagesData.length) {
-				$("#max").removeClass("d-none");
-			}
-			
-		});
-
-		//click current
-		$("#current").on("click", function() {
-			$(".pagination a").removeClass("active-pg");
-			$(this).addClass("active-pg");
-			$("#demo").text("foo #" + currentPage);
-		});
-
-		//click max
-		$("#max").on("click", function() {
-			currentPage = $(this).text();
-			$("#current").text(currentPage);
-			$("#next").addClass("d-none");
-			$("#max").addClass("d-none");
-			$("#demo").text("foo #" + currentPage);
-			$(".pagination a").removeClass("active-pg");
-			$("#current").addClass("active-pg");
-			$("#prevNumber").removeClass("d-none");
-			$("#nextNumber").addClass("d-none");
-			$("#min").removeClass("d-none");
-		});
-
-		//click min button
-		$("#min").on("click", function() {
-			currentPage = 1;
-			//display current number
-			$("#current").text(currentPage);
-			//display current text
-			$("#demo").text("foo #" + currentPage);
-			$("#prevNumber").addClass("d-none");
-			//hide min
-			$("#min").addClass("d-none");
-			//display next number
-			$("#next").text(currentPage + 1);
-			$("#next").removeClass("d-none");
-			//display next number btn
-			$("#nextNumber").removeClass("d-none");
-		});
-
-
-		//click next number button
-		$("#nextNumber").on("click", function() {
-			currentPage = currentPage + 1;
-			//check if current page number is greater then 1
-			if(currentPage > 1){
-				//display the previous button
-				$("#prevNumber").removeClass("d-none");
-				$("#min").removeClass("d-none");
-				
-			}
-			$("#current").text(currentPage);
-			$("#demo").text("foo #" + currentPage);
-			$("#next").text(currentPage + 1);
-			$(".pagination a").removeClass("active-pg");
-			$("#current").addClass("active-pg");
-			if( $("#next").text() == pagesData.length) {
-				$("#max").addClass("d-none");
-			}else if( $("#current").text() == pagesData.length){
-				$("#next").addClass("d-none");
-				$("#nextNumber").addClass("d-none");
-			}
-
-		});
-
-		//click previous number button
-		$("#prevNumber").on("click", function() {
-			currentPage = currentPage - 1;
-			$("#current").text(currentPage);
-			$("#demo").text("foo #" + currentPage);
-			$("#next").text(currentPage + 1);
-			$(".pagination a").removeClass("active-pg");
-			$("#current").addClass("active-pg");
-			if(currentPage == 1){
-				$("#prevNumber").addClass("d-none");
-				$("#min").addClass("d-none");
-			}
-			if(currentPage < pagesData.length){
-				$("#nextNumber").removeClass("d-none");
-				$("#next").removeClass("d-none");
-				$("#max").removeClass("d-none");
-
-			}
-		});
-	}*/
-
-});   
-
-
-/*Home Page - SIDE NAV*/
-/* Set the width of the side navigation to 250px */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
-	
 /*Modal*/
 app.controller('modalCtrl', function($scope, ) {
 	setTimeout(function(){
@@ -845,5 +702,21 @@ app.controller('scrollCtrl', function($scope, ) {
 				$("a[data-href =" + "'" + currentAttr + "'" + "]").addClass("active-scroll");
 			}
 		}	
+	});
+});
+
+/*Tabs*/
+app.controller('tabsCtrl', function($scope, ) {
+	var text = $(".tab-text p");
+	$(".flex-tab a").on('click', function() {
+		$(".flex-tab a").removeClass('active');
+		$(".tab-text p").addClass('d-none');
+
+		for(var i = 0; i < text.length; i++){
+			if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
+				$(this).addClass('active');
+				$(text[i]).removeClass("d-none");
+			}
+		}
 	});
 });

@@ -1,0 +1,41 @@
+/*Tabs component*/
+.tab-container {
+	height: 300px;
+	overflow: auto;
+}
+
+.flex-tab {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.flex-tab a,
+.flex-tab a:hover {
+	color: $black-color;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 1.5em;
+}
+
+.flex-tab a:hover{
+	border-bottom: 2px solid $primary-color;
+}
+
+.tab-text {
+	padding: 1em;
+}
+
+#tabsComp .active {
+	border: 1px solid $primary-color !important;
+	background-color: $primary-color;
+}
+
+/*Media Queries*/
+@media (max-width: 400px) {
+    .flex-tab a, 
+    .flex-tab a:hover {
+    	padding: .8em;
+    }
+}
+

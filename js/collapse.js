@@ -1,17 +1,18 @@
 /* Navigation */
 app.controller('collapseCtrl', function($scope, ) {
-	$("#iconBarBake").unbind().click(function() {
-			$("#bakery-web .dropdown").toggle();
+	$("#iconCollapse").unbind().click(function() {
+		$("#collapseComp .dropdown").toggle();
 	});
-
+	console.log("Mutherfucker");
 	//on resize reveal the collapsed nav
 	$(window).resize(function() {
 	  	if($(window).width() < 650){
-			$("#bakery-web .collapse").addClass("d-none");
-			$("#bakery-web .collapsed").removeClass("d-none");
+			$("#collapseComp .collapse").addClass("d-none");
+			$("#collapseComp .collapsed").removeClass("d-none");
 		}else {
-			$("#bakery-web .collapse").removeClass("d-none");
-			$("#bakery-web .collapsed").addClass("d-none");
+			$("#collapseComp .collapse").removeClass("d-none");
+			$("#collapseComp .collapsed").addClass("d-none");
 		}
 	});
 });
+

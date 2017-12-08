@@ -1,12 +1,12 @@
 /*collapse component css*/
-#bakery-web .dropdown a:hover,
-#bakery-web .dropdown a:focus,
-#bakery-web .dropdown a:active {
+#collapseComp .dropdown a:hover,
+#collapseComp .dropdown a:focus,
+#collapseComp .dropdown a:active {
     background: rgba(85, 83, 76, 0.6) !important;
     color: $white-color;
 }
 
-#bakery-web .dropdown {
+#collapseComp .dropdown {
     left: 0px;
     right: 0px;
     top: 109%;
@@ -14,7 +14,7 @@
 
 /*Media Queries*/
 @media (max-width: 830px) {
-    #bakery-web nav .sm-col-10 {
+    #collapseComp  nav .sm-col-10 {
     	text-align: left !important;
     }
 }

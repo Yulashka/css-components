@@ -1,4 +1,16 @@
 /*Carousel*/
+//creating an object for surf-carousel for the further use
+function ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars) {
+	this.images= images;
+	this.titles=titles;
+	this.ratings=ratings; 
+	this.prices=prices; 
+	this.description= description;
+	this.features= features; 
+	this.dimensions = dimensions; 
+	this.stars =stars;
+}
+
 app.controller('carCtrl', function($scope, $http) {
 	$http.get("carouselData.json").then(mySuccess, myError);
 

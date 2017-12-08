@@ -280,20 +280,20 @@ body {
     display: block; } }
 
 /*collapse component css*/
-#bakery-web .dropdown a:hover,
-#bakery-web .dropdown a:focus,
-#bakery-web .dropdown a:active {
+#collapseComp .dropdown a:hover,
+#collapseComp .dropdown a:focus,
+#collapseComp .dropdown a:active {
   background: rgba(85, 83, 76, 0.6) !important;
   color: #FFFFFF; }
 
-#bakery-web .dropdown {
+#collapseComp .dropdown {
   left: 0px;
   right: 0px;
   top: 109%; }
 
 /*Media Queries*/
 @media (max-width: 830px) {
-  #bakery-web nav .sm-col-10 {
+  #collapseComp nav .sm-col-10 {
     text-align: left !important; } }
 
 /*Accordion component css*/
@@ -537,6 +537,15 @@ body {
   .flex-tab a:hover {
     padding: .8em; } }
 
+/*scroll-top button*/
+.scroll-top {
+  position: fixed;
+  right: 0px;
+  bottom: 10px;
+  padding: 1em;
+  background-color: #BBBBBB;
+  color: #111; }
+
 /*Carousel*/
 .wrapper {
   display: flex;
@@ -565,12 +574,3 @@ body {
 
 .css-compon nav a:hover {
   border-bottom: 1px solid #111; }
-
-/*scroll-top button*/
-.scroll-top {
-  position: fixed;
-  right: 0px;
-  bottom: 10px;
-  padding: 1em;
-  background-color: green;
-  color: #FFFFFF; }

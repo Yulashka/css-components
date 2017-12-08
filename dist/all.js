@@ -72,6 +72,18 @@ app.controller('accordCtrl', function($scope, ) {
 	});
 });
 /*Carousel*/
+//creating an object for surf-carousel for the further use
+function ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars) {
+	this.images= images;
+	this.titles=titles;
+	this.ratings=ratings; 
+	this.prices=prices; 
+	this.description= description;
+	this.features= features; 
+	this.dimensions = dimensions; 
+	this.stars =stars;
+}
+
 app.controller('carCtrl', function($scope, $http) {
 	$http.get("carouselData.json").then(mySuccess, myError);
 
@@ -308,20 +320,10 @@ app.controller('carCtrl', function($scope, $http) {
 
 
 	
-//creating an object for surf-carousel for the further use
-function ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars) {
-	this.images= images;
-	this.titles=titles;
-	this.ratings=ratings; 
-	this.prices=prices; 
-	this.description= description;
-	this.features= features; 
-	this.dimensions = dimensions; 
-	this.stars =stars;
-}
+
 
 /* Navigation */
-app.controller('collapseCtrl', function($scope, ) {
+/*app.controller('collapseCtrl', function($scope, ) {
 	$("#iconBar").on("click", function() {
 		$(".dropdown").toggle();
 	});
@@ -335,7 +337,7 @@ app.controller('collapseCtrl', function($scope, ) {
 			$(".collapsed").addClass("d-none");
 		}
 	});
-});
+});*/
 
 
 
@@ -414,26 +416,7 @@ app.controller('progressCtrl', function($scope, ) {
 });
 
 
-/*Top*/
-app.controller('topCtrl', function($scope, ) {
-	/*scroll-top button*/
-	var scrollTopButton = $(".scroll-top");
-	$(window).scroll(function() {
-		var scrollTopPosition = $(this).scrollTop();
-		if(scrollTopPosition > 400){
-			$(scrollTopButton).removeClass("d-none");
-		} else {
-			$(scrollTopButton).addClass("d-none");
-		}
-	}); 
-	//scroll up on click
-	$(scrollTopButton).on('click', function() {
-		//animate onclick
-		$("html, body").animate({
-	      scrollTop: 0
-	    }, 1000, "swing" );
-	});
-});
+
 
 /*Home Page - SIDE NAV*/
 /* Set the width of the side navigation to 250px */
@@ -448,21 +431,22 @@ function closeNav() {
 
 /* Navigation */
 app.controller('collapseCtrl', function($scope, ) {
-	$("#iconBarBake").unbind().click(function() {
-			$("#bakery-web .dropdown").toggle();
+	$("#iconCollapse").unbind().click(function() {
+		$("#collapseComp .dropdown").toggle();
 	});
-
+	console.log("Mutherfucker");
 	//on resize reveal the collapsed nav
 	$(window).resize(function() {
 	  	if($(window).width() < 650){
-			$("#bakery-web .collapse").addClass("d-none");
-			$("#bakery-web .collapsed").removeClass("d-none");
+			$("#collapseComp .collapse").addClass("d-none");
+			$("#collapseComp .collapsed").removeClass("d-none");
 		}else {
-			$("#bakery-web .collapse").removeClass("d-none");
-			$("#bakery-web .collapsed").addClass("d-none");
+			$("#collapseComp .collapse").removeClass("d-none");
+			$("#collapseComp .collapsed").addClass("d-none");
 		}
 	});
 });
+
 
 /*Dropdown button*/
 app.controller('dropdownCtrl', function($scope, ) {
@@ -718,5 +702,26 @@ app.controller('tabsCtrl', function($scope, ) {
 				$(text[i]).removeClass("d-none");
 			}
 		}
+	});
+});
+
+/*Top*/
+app.controller('topCtrl', function($scope, ) {
+	/*scroll-top button*/
+	var scrollTopButton = $(".scroll-top");
+	$(window).scroll(function() {
+		var scrollTopPosition = $(this).scrollTop();
+		if(scrollTopPosition > 400){
+			$(scrollTopButton).removeClass("d-none");
+		} else {
+			$(scrollTopButton).addClass("d-none");
+		}
+	}); 
+	//scroll up on click
+	$(scrollTopButton).on('click', function() {
+		//animate onclick
+		$("html, body").animate({
+	      scrollTop: 0
+	    }, 1000, "swing" );
 	});
 });

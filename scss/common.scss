@@ -5,6 +5,7 @@ body {
 }
 
 .accordion .accord-tab:hover,
+.accordion-mobile:hover .accord-tab,
 .collapsed p,
 .button-drop:hover,
 .modal-btn,
@@ -91,10 +92,6 @@ body {
 
 .border {
 	border: 1px solid black;
-}
-
-.light-rounded {
-	border-radius: .25rem;
 }
 
 .border-prime {

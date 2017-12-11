@@ -12,10 +12,6 @@
 	width: 8em;
 }
 
-.dropdown-border {
-	border: 2px solid #9E9E9E;
-}
-
 .dropdown-text p:hover,
 .dropdown-text a:hover {
 	color: $white-color !important;
@@ -32,7 +28,7 @@
 /*dropdown down*/
 .dropdown-text-down {
 	transform: translate3d(0px, 36px, 0px);
-    top: 0px;
+    top: 15px;
     left: 0px; 
 }
 

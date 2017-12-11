@@ -1,0 +1,19 @@
+/*Progress Bar Component CSS */
+#progressBtn {
+	background-color: $primary-color;
+	padding: 1em 1.3em 1em 1.3em;
+	outline: $black-color auto 5px;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: $primary-color;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: $black-color;
+  line-height: 30px;
+  color: $white-color;
+}

@@ -7,6 +7,7 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 .accordion .accord-tab:hover,
+.accordion-mobile:hover .accord-tab,
 .collapsed p,
 .button-drop:hover,
 .modal-btn,
@@ -75,9 +76,6 @@ body {
 
 .border {
   border: 1px solid black; }
-
-.light-rounded {
-  border-radius: .25rem; }
 
 .border-prime {
   border: 1px solid #BBBBBB; }
@@ -186,6 +184,18 @@ body {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s; }
+
+/*button*/
+.button {
+  padding: 1em 1.3em 1em 1.3em;
+  text-decoration: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer; }
+
+.button:hover {
+  text-decoration: none;
+  cursor: pointer; }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -326,9 +336,6 @@ body {
   will-change: transform;
   width: 8em; }
 
-.dropdown-border {
-  border: 2px solid #9E9E9E; }
-
 .dropdown-text p:hover,
 .dropdown-text a:hover {
   color: #FFFFFF !important;
@@ -343,7 +350,7 @@ body {
 /*dropdown down*/
 .dropdown-text-down {
   transform: translate3d(0px, 36px, 0px);
-  top: 0px;
+  top: 15px;
   left: 0px; }
 
 /*form component css*/
@@ -356,19 +363,7 @@ body {
   background-color: #BBBBBB;
   border: 2px solid #9E9E9E; }
 
-#form .submit {
-  padding: 1em 1.3em 1em 1.3em;
-  text-decoration: none;
-  background-color: #BBBBBB;
-  border: none;
-  text-decoration: none;
-  cursor: pointer; }
-
-#form .submit:hover {
-  text-decoration: none; }
-
-#form .btn,
-.submit:hover {
+#form .btn {
   cursor: pointer; }
 
 #form input:focus {
@@ -540,9 +535,7 @@ body {
 
 /*Progress Bar Component CSS */
 #progressBtn {
-  background-color: #BBBBBB;
-  padding: 1em 1.3em 1em 1.3em;
-  outline: #111 auto 5px; }
+  outline: none; }
 
 #myProgress {
   width: 100%;

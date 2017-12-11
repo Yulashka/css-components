@@ -58,6 +58,20 @@
     transition: margin-left .5s;
 }
    
+/*button*/
+.button {
+    padding: 1em 1.3em 1em 1.3em;
+    text-decoration: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    text-decoration: none;
+    cursor:pointer;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}

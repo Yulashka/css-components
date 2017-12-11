@@ -673,7 +673,7 @@ app.controller('scrollCtrl', function($scope, ) {
 		var attr = $(this).attr("data-href");
 		var pos = $(attr).offset().top;
 		// 40 is the height of the outer Sidenav button
-		var navHeight = $(".scroll-nav").innerHeight() + 40;
+		var navHeight = $(".scroll-nav").innerHeight() + 65;
 		var sum = pos - navHeight;
 		//animate onclick
 		$("html, body").animate({
@@ -686,7 +686,7 @@ app.controller('scrollCtrl', function($scope, ) {
 	$(window).on('scroll', function() {
 		var navHeight = $(".scroll-nav").outerHeight();
 		// 40 is the height of the outer Sidenav button
-		var scrollie = $(window).scrollTop() + navHeight + 41;
+		var scrollie = $(window).scrollTop() + navHeight + 66;
 		var rows = $(".scroll-body .row");
 		for(var i = 0; i < rows.length;  i++){
 			//console.log(i);

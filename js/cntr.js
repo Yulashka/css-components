@@ -90,11 +90,6 @@
 	});
 });*/
 
-/*Progress bar*/
-app.controller('progressCtrl', function($scope, ) {
-	console.log("Progress bar is in a process of developing!");
-});
-
 
 
 

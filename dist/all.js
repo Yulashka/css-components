@@ -72,6 +72,7 @@ app.controller('accordCtrl', function($scope, ) {
 	});
 });
 /*Carousel*/
+
 //creating an object for surf-carousel for the further use
 function ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars) {
 	this.images= images;
@@ -87,6 +88,7 @@ function ContentDTO(images, titles, ratings, prices, description, features, dime
 app.controller('carCtrl', function($scope, $http) {
 	$http.get("carouselData.json").then(mySuccess, myError);
 
+	//if json file has been successfully loaded, call this function
 	function mySuccess(response){
 		console.log("Success: " + response.status);
 		$scope.content = response.data;
@@ -100,9 +102,7 @@ app.controller('carCtrl', function($scope, $http) {
 		var stars = makeContent(response.data, "Stars");
 		var thumbnails = makeContent(response.data, "Thumbnails");
 		makeThumbnails(thumbnails);
-		//console.log(stars);
 		var contentDto = new ContentDTO(images, titles, ratings, prices, description, features, dimensions, stars, thumbnails);
-		//console.log(contentDto);
 		makeCarousel(contentDto);
 	}
 
@@ -117,19 +117,21 @@ app.controller('carCtrl', function($scope, $http) {
 		}
 	}
 
+	//if json file has NOT been successfully loaded, call this function
 	function myError(response) {
 		console.log("Error: " + response);
 	}
 	
+	//make content for the carousel
 	function makeContent(someJson, property) {
 		var arr = [];
 		for(var i = 0; i < someJson.length; i++) {
-			arr.push(someJson[i][property]);
-			//console.log(someJson[i][property]);		
+			arr.push(someJson[i][property]);	
 		}
 		return arr;
 	}
 
+	//make content for the thumbnails
 	function makeThumbnails(pics) {
 		var stuf = $(".thumbnails img");
 		for(var x = 0; x < pics.length; x++) {
@@ -143,17 +145,19 @@ app.controller('carCtrl', function($scope, $http) {
 	 * @param {Number} b
 	 * @return {Number} sum
 	 */
+	 //adding conent
 	function addContent(content, current) {
-		$(".main-img").attr('src', "img/surfersCo/" + content.images[current]);
-		$("#surf-web #carousel-surf h3").text(content.titles[current]);
-		$("#surf-web .rating .num").text(content.ratings[current]);
-		$("#surf-web .price").text(content.prices[current]);
-		$("#surf-web #text1").text(content.description[current]);
-		$("#surf-web #text2").text(content.features[current]);
-		$("#surf-web #text3").text(content.dimensions[current]);
+		$(".main-img").attr('src', "img/carousel/" + content.images[current]);
+		$("#carouselComp #carousel-surf h3").text(content.titles[current]);
+		$("#carouselComp .rating .num").text(content.ratings[current]);
+		$("#carouselComp .price").text(content.prices[current]);
+		$("#carouselComp #text1").text(content.description[current]);
+		$("#carouselComp #text2").text(content.features[current]);
+		$("#carouselComp #text3").text(content.dimensions[current]);
 		translateRating(content.stars[current]);
 	}
 
+	// displaying content on a page
 	function makeCarousel(content){
 		var length = content.images.length - 1;
 		var current = 0;
@@ -168,6 +172,8 @@ app.controller('carCtrl', function($scope, $http) {
 			} 
 		});
 
+		//when click on an arrow - slide
+		//making slideshow for the carousel
 		$("#carousel-surf .fa-long-arrow-left").on("click", function() {
 			if( current == 0 ){
 				current = length;
@@ -177,20 +183,7 @@ app.controller('carCtrl', function($scope, $http) {
 				addContent(content, current);
 			}
 		});
-		/*Navigation*/
-		$("#iconBar").on("click", function() {
-			$(".dropdown").toggle(".d-none");
-		});
 
-		$(window).resize(function() {
-		  	if($(window).width() < 650){
-				$(".collapse").addClass("d-none");
-				$(".collapsed").removeClass("d-none");
-			}else {
-				$(".collapse").removeClass("d-none");
-				$(".collapsed").addClass("d-none");
-			}
-		});
 		//tabs
 		var text = $(".surf-tab-text p");
 		$(".surf-tab a").on('click', function() {
@@ -205,6 +198,7 @@ app.controller('carCtrl', function($scope, $http) {
 			}
 		});
 	}
+	//////////////////////////////   TEAM CAROUSEL   ///////////////////////
 
 	//creating an object for team carousel
 	function TeamCarouselContent(teamImages, teamTitles, teamNickname, teamLocation) {
@@ -217,6 +211,7 @@ app.controller('carCtrl', function($scope, $http) {
 	/*carousel for team members*/
 	$http.get("teamData.json").then(mySuccess2, myError2);
 
+	//Success function
 	function mySuccess2(response){
 		console.log("Success: " + response.status);
 		$scope.content = response.data;
@@ -225,14 +220,12 @@ app.controller('carCtrl', function($scope, $http) {
 		var teamTitles = makeContent(response.data, "Title");
 		var teamNickname = makeContent(response.data, "Nickname");
 		var teamLocation = makeContent(response.data, "Location");
-		//console.log(teamImages);
 		var teamCarouselContent = new TeamCarouselContent(teamImages, teamTitles, teamNickname, teamLocation);
-		//console.log(teamCarouselContent);
 		makeTeamCarousel(teamCarouselContent);
 		makeTeamCarouselMobile(teamCarouselContent);
 	}
 
-
+	//adding content to the team carousel
 	function addTeamContent(obj, current, max) {
 		/*console.log(obj.teamImages[current]);*/
 		var imgs = $(".team-card .team-pic");
@@ -249,22 +242,22 @@ app.controller('carCtrl', function($scope, $http) {
 		}
 	}
 
-
+	//displaying content on the team carousel
 	function makeTeamCarousel(obj) {
 		var current = 0;
 		var max = 4;
 		addTeamContent(obj, current, max);
 
 		//click right
+		//making slideshow
 		$(".team .fa-arrow-right").on("click", function() {
 			current = 4;
 			max = 8;
 			addTeamContent(obj, current, max);
-			//console.log("Clicked right");
-			
 		});
 
 		//click left
+		//making slideshow
 		$(".team .fa-arrow-left").on("click", function() {
 			current = 0;
 			max = 4;
@@ -273,12 +266,12 @@ app.controller('carCtrl', function($scope, $http) {
 		});
 	}
 
-	/*mobile carousel*/
+	/*mobile team carousel*/
 	function addTeamContentMobile(obj, current, max) {
-		var imgs = $("#surf-web .team .carousel-mobile .team-card .team-pic");
-		var titles = $("#surf-web .team .carousel-mobile .team-card h4");
-		var nicknames = $("#surf-web .team .carousel-mobile .team-card .nickname");
-		var locations = $("#surf-web .team .carousel-mobile .team-card .location");
+		var imgs = $("#carouselComp .team .carousel-mobile .team-card .team-pic");
+		var titles = $("#carouselComp .team .carousel-mobile .team-card h4");
+		var nicknames = $("#carouselComp .team .carousel-mobile .team-card .nickname");
+		var locations = $("#carouselComp .team .carousel-mobile .team-card .location");
 
 		for(var i = 0; i < max; i++) {
 			$(imgs[i]).attr("src", obj.teamImages[current]);
@@ -289,11 +282,15 @@ app.controller('carCtrl', function($scope, $http) {
 		}
 	}
 	
+	//displaying content on the mobile team carousel
 	function makeTeamCarouselMobile(obj) {
 		var max = 7;
 		var current = 0;
 		addTeamContentMobile(obj, current, max);
-		$("#surf-web .team .carousel-mobile .fa-arrow-right").on("click", function() {
+
+		//click right
+		//making slideshow
+		$("#carouselComp .team .carousel-mobile .fa-arrow-right").on("click", function() {
 			current = current + 1;
 			addTeamContentMobile(obj, current, max);
 			if( current > max){
@@ -302,7 +299,9 @@ app.controller('carCtrl', function($scope, $http) {
 			} 
 		});
 
-		$("#surf-web .team .carousel-mobile .fa-arrow-left").on("click", function() {
+		//click left
+		//making slideshow
+		$("#carouselComp .team .carousel-mobile .fa-arrow-left").on("click", function() {
 			if( current == 0 ){
 				current = max;
 				addTeamContentMobile(obj, current, max);
@@ -313,6 +312,7 @@ app.controller('carCtrl', function($scope, $http) {
 		});
 	}
 
+	//error function for the team carousel json data loading
 	function myError2(response) {
 		console.log("Error: " + response);
 	}

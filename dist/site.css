@@ -205,53 +205,57 @@ body {
     font-size: 18px; } }
 
 /*carousel component csss*/
-#surf-web .background-gray {
-  background-image: url(../img/surfersCo/gray.png);
+#carouselComp .background-gray {
+  background-image: url(../img/carousel/gray.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   padding: 2em; }
 
-#surf-web .tab-active {
+#carouselComp .tab-active {
   border-bottom: 3px solid #BBBBBB;
   color: #111; }
 
-#surf-web #carousel-surf h3 {
+#carouselComp #carousel-surf h3 {
   height: 3em; }
 
-#surf-web .thumbnails img:hover {
+#carouselComp .thumbnails img:hover {
   border: 2px solid #BBBBBB; }
 
-#surf-web .thumbnails img {
+#carouselComp .thumbnails img {
   border: 2px solid #FFFFFF; }
 
-#surf-web .surf-tab {
+#carouselComp .surf-tab {
   border-bottom: 1px solid #BBBBBB; }
 
-#surf-web .surf-tab a:hover,
-#surf-web #iconBar-surf:hover {
+#carouselComp .surf-tab a:hover,
+#carouselComp #iconBar-surf:hover {
   cursor: pointer; }
 
-#surf-web .view-all {
+#carouselComp .view-all {
   border-bottom: 2px solid #BBBBBB; }
 
+.surf-tab-text {
+  height: 12em;
+  overflow: auto; }
+
 /*Team section*/
-#surf-web .team-card {
+#carouselComp .team-card {
   /*box-shadow*/
   -webkit-box-shadow: 17px 22px 101px -6px #b3b1b3;
   -moz-box-shadow: 17px 22px 101px -6px #b3b1b3;
   box-shadow: 17px 22px 101px -6px #b3b1b3; }
 
-#surf-web .team-card:hover {
+#carouselComp .team-card:hover {
   background-color: #BBBBBB; }
 
-#surf-web .team-card:hover > p,
-#surf-web .team-card:hover > h4,
-#surf-web .team-card:hover > p span {
+#carouselComp .team-card:hover > p,
+#carouselComp .team-card:hover > h4,
+#carouselComp .team-card:hover > p span {
   color: #FFFFFF !important; }
 
-#surf-web .team .carousel .fa-stack,
-#surf-web .team .carousel-mobile .fa-stack {
+#carouselComp .team .carousel .fa-stack,
+#carouselComp .team .carousel-mobile .fa-stack {
   border: 1px solid #BBBBBB !important;
   border-radius: 50px; }
 
@@ -260,28 +264,28 @@ body {
 
 /*media queries*/
 @media (max-width: 900px) {
-  #surf-web .hero-img .fa-lg {
+  #carouselComp .hero-img .fa-lg {
     font-size: 1em; } }
 
 @media (max-width: 829px) {
-  #surf-web .team .max-width-3 img {
+  #carouselComp .team .max-width-3 img {
     margin-top: 3em; }
-  #surf-web .thumbnails img {
+  #carouselComp .thumbnails img {
     display: inline-block;
     margin-bottom: .5rem; } }
 
 @media (max-width: 768px) {
-  #surf-web .thumbnails {
+  #carouselComp .thumbnails {
     padding-top: 0em; }
-  #surf-web .view-all {
+  #carouselComp .view-all {
     margin-top: 1em; }
-  #surf-web .team .carousel {
+  #carouselComp .team .carousel {
     display: none; }
-  #surf-web .team .carousel-mobile {
+  #carouselComp .team .carousel-mobile {
     display: block; } }
 
 @media (max-width: 650px) {
-  #surf-web .team {
+  #carouselComp .team {
     margin-top: 9em; } }
 
 @media (max-width: 365px) {

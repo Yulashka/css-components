@@ -1,50 +1,50 @@
 [
 	{
-		"Image": "img/surfersCo/teamPic1.png",
+		"Image": "img/carousel/teamPic1.png",
 		"Title": "Taj Burrow",
 		"Nickname": "@tajamos",
-		"Location": "Yallingup, Australia"
+		"Location": "Phoenix, AZ"
 	},
 	{
-		"Image": "img/surfersCo/teamPic2.png",
+		"Image": "img/carousel/teamPic2.png",
 		"Title": "Malia Manuel",
 		"Nickname": "@maliamanuel",
-		"Location": "Wailua, Hi"
+		"Location": "Richmond, VA"
 	},
 	{
-		"Image": "img/surfersCo/teamPic3.png",
+		"Image": "img/carousel/teamPic1.png",
 		"Title": "Ian Walsh",
 		"Nickname": "@ian.walsh",
-		"Location": "Maui, Hi"
+		"Location": "Dallas, TX"
 	},
 	{
-		"Image": "img/surfersCo/teamPic4.png",
+		"Image": "img/carousel/teamPic4.png",
 		"Title": "Macy Callaghan",
 		"Nickname": "@macyjanecallaghan",
 		"Location": "San Clemente, CA"
 	},
 	{
-		"Image": "img/surfersCo/teamPic2.png",
+		"Image": "img/carousel/teamPic2.png",
 		"Title": "Hanna Montana",
 		"Nickname": "@hannamontana",
 		"Location": "Denver, CO"
 	},
 	{
-		"Image": "img/surfersCo/teamPic1.png",
-		"Title": "David Leto",
-		"Nickname": "@davidleto",
+		"Image": "img/carousel/teamPic1.png",
+		"Title": "Logan Leto",
+		"Nickname": "@loganleto",
 		"Location": "Portland, OR"
 	},
 	{
-		"Image": "img/surfersCo/teamPic4.png",
+		"Image": "img/carousel/teamPic4.png",
 		"Title": "Natalie Portman",
 		"Nickname": "@natport",
 		"Location": "Seattle, WA"
 	},
 	{
-		"Image": "img/surfersCo/teamPic3.png",
-		"Title": "Steven Brown",
-		"Nickname": "@stevebrown",
-		"Location": "Moscow, Russia"
+		"Image": "img/carousel/teamPic1.png",
+		"Title": "Tracy Brown",
+		"Nickname": "@tracybrown",
+		"Location": "Los Angeles, CA"
 	}
 ]

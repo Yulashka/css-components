@@ -49,7 +49,23 @@ app.config(function($routeProvider) {
         controller: "topCtrl"
     });
 });
+app.run(function($rootScope, $location) {
+    $rootScope.$on("$locationChangeStart", function(event, next, current) { 
+        var current = $location.path().substring(1);
+        var currentId = "#nav-" + current;
+        if(current === "") {
+            currentId = "#nav-home";
+        }
+        var allNavItems = $("#mySidenav a");
+        
+        //remove highlight from all navs
+        allNavItems.removeClass("active-side");
 
+        // highlight the currently active item
+        $(currentId).addClass("active-side");
+        console.log(current);
+    });
+});
 /*Accordion */
 app.controller('accordCtrl', function($scope, ) {
 	$("#accordPage .accordion .accord-tab").on("click", function() {
@@ -319,13 +335,13 @@ app.controller('carCtrl', function($scope, $http) {
 });
 
 /*Home Page - SIDE NAV*/
-app.controller('mainCtrl', function($scope, ) {
+app.controller('mainCtrl', function($scope) {
 	/* Set the width of the side navigation to 250px */
 	$(".openbtn").on("click", function() {
 		document.getElementById("mySidenav").style.width = "250px";
 	});
 
-	/* Set the width of the side navigation to 0 */
+	/* Set the width of the side navigation to 0  */
 	$(".closebtn").on("click", function() {
 		document.getElementById("mySidenav").style.width = "0";
 	});

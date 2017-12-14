@@ -49,3 +49,20 @@ app.config(function($routeProvider) {
         controller: "topCtrl"
     });
 });
+app.run(function($rootScope, $location) {
+    $rootScope.$on("$locationChangeStart", function(event, next, current) { 
+        var current = $location.path().substring(1);
+        var currentId = "#nav-" + current;
+        if(current === "") {
+            currentId = "#nav-home";
+        }
+        var allNavItems = $("#mySidenav a");
+        
+        //remove highlight from all navs
+        allNavItems.removeClass("active-side");
+
+        // highlight the currently active item
+        $(currentId).addClass("active-side");
+        console.log(current);
+    });
+});

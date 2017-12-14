@@ -63,6 +63,5 @@ app.run(function($rootScope, $location) {
 
         // highlight the currently active item
         $(currentId).addClass("active-side");
-        console.log(current);
     });
 });

@@ -367,7 +367,12 @@ app.controller('dropdownCtrl', function($scope, ) {
 });
 /*form */
 app.controller('formCtrl', function($scope, ) {
-	$("#form .submit").on("click", function() {
+	//reseting form
+	function resetForm() {
+		document.getElementById("myFormId").reset();
+	}
+
+	$("#form .button").on("click", function() {
 	  		var email  = $("#form #email").val();
 	  		var name  = $("#form #name").val();
 	  		checkEmail(email);
@@ -376,7 +381,9 @@ app.controller('formCtrl', function($scope, ) {
 
 	/*button onClick*/
 	$(".btn").on('click', function() {
-		$(".myForm").addClass("d-none");
+		$(".form").removeClass("d-none");
+		$(".success").addClass('d-none');
+		$(".error").addClass('d-none');
 	});
 
 	/*checking email input*/
@@ -411,16 +418,16 @@ app.controller('formCtrl', function($scope, ) {
 
 	/*success mesage on form submit*/
 	function messageSucces(){
-		$(".header").addClass('d-none');
-		$(".form-body").addClass('d-none');
+		$(".form").addClass('d-none');
 		$(".success").removeClass('d-none');
+		resetForm();
 	}
 
 	/*error mesage on form submit*/
 	function messageError(){
-		$(".header").addClass('d-none');
-		$(".form-body").addClass('d-none');
+		$(".form").addClass('d-none');
 		$(".error").removeClass('d-none');
+		resetForm();
 	}
 });
 /*Modal*/

@@ -18,26 +18,28 @@
       </p>
     </div>
     <!-- Form -->
-    <div class="header">
-      <h1 class="font-normal">Submit the form</h1>
-      <p class="">Lorem Ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
-    </div>
-    <div class="form-body">
-      <form onSubmit="return false">
-        <div class="mb3 clearfix">
-          <div class="sm-col sm-col-12 md-col-6">
-            <p id="name-message" class="mb0">Write your name</p>
-            <input placeholder="Name" name="name" id="name" type="text" class="mt1">
+    <div class="form">
+      <div class="header">
+        <h1 class="font-normal">Submit the form</h1>
+        <p class="">Lorem Ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
+      </div>
+      <div class="form-body">
+        <form onSubmit="return false" id="myFormId">
+          <div class="mb3 clearfix">
+            <div class="sm-col sm-col-12 md-col-6">
+              <p id="name-message" class="mb0">Write your name</p>
+              <input placeholder="Name" name="name" id="name" type="text" class="mt1">
+            </div>
+            <div class="sm-col sm-col-12 md-col-6">
+              <p id="email-message" class="mb0">Write your email</p>
+              <input placeholder="Email" name="email" id="email" type="email" class="mt1">
+            </div>
           </div>
-          <div class="sm-col sm-col-12 md-col-6">
-            <p id="email-message" class="mb0">Write your email</p>
-            <input placeholder="Email" name="email" id="email" type="email" class="mt1">
+          <div class="">
+            <input type="submit" value="Submit" class="button black prime-color-bg bold"> 
           </div>
-        </div>
-        <div class="">
-          <input type="submit" value="Submit" class="button black prime-color-bg bold"> 
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </div>

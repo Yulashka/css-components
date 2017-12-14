@@ -16,6 +16,18 @@ body {
 .scroll-top {
   cursor: pointer; }
 
+/*button*/
+.button {
+  padding: 1em 1.3em 1em 1.3em;
+  text-decoration: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer; }
+
+.button:hover {
+  text-decoration: none;
+  cursor: pointer; }
+
 /*Padding*/
 .pt6 {
   padding-top: 6em; }
@@ -126,8 +138,9 @@ body {
 
 /* Styles that apply to the overall site*/
 #mySidenav a:focus,
-#mySidenav a:active {
-  color: white; }
+#mySidenav .active-side {
+  color: white;
+  outline: none; }
 
 #sideBtn {
   background-color: #FFFFFF;
@@ -145,14 +158,10 @@ body {
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
-  position: fixed;
-  /* Stay in place */
   z-index: 3;
   /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #111;
-  /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 60px;
@@ -187,18 +196,6 @@ body {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s; }
-
-/*button*/
-.button {
-  padding: 1em 1.3em 1em 1.3em;
-  text-decoration: none;
-  border: none;
-  text-decoration: none;
-  cursor: pointer; }
-
-.button:hover {
-  text-decoration: none;
-  cursor: pointer; }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

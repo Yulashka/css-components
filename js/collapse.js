@@ -3,7 +3,6 @@ app.controller('collapseCtrl', function($scope, ) {
 	$("#iconCollapse").unbind().click(function() {
 		$("#collapseComp .dropdown").toggle();
 	});
-	console.log("Mutherfucker");
 	//on resize reveal the collapsed nav
 	$(window).resize(function() {
 	  	if($(window).width() < 650){

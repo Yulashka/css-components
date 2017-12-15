@@ -1,65 +1,95 @@
 /*form */
 app.controller('formCtrl', function($scope, ) {
-	//reseting form
-	function resetForm() {
-		document.getElementById("myFormId").reset();
-	}
+	
+	//declaring variables
+	var nameId = "#name-message";
+	var emailId = "#email-message";
 
+	/*ontype event*/
+	$("#name").keyup(function(){
+		$(nameId).removeClass("hidden"); 
+		var theValue = $(this).val();
+		//checking the value
+        checkInput(theValue, nameId);
+    });
+
+    $("#email").keyup(function(){
+    	$(emailId).removeClass("hidden"); 
+		var theValue = $(this).val();
+		//checking the value
+        checkInput(theValue, emailId);
+    });
+
+
+	//on submit the form
 	$("#form .button").on("click", function() {
-	  		var email  = $("#form #email").val();
-	  		var name  = $("#form #name").val();
-	  		checkEmail(email);
-	  		checkName(name);
-	  	});
+  		var email  = $("#form #email").val();
+  		var name  = $("#form #name").val();
+  		var returnEmail = checkInput(email, emailId);
+  		var returnName = checkInput(name, nameId);
+  		if(returnEmail == true && returnEmail == true) {
+  			messageSucces();
+  		} else {
+  			console.log("Im sorry");
+  		}
+	});
 
-	/*button onClick*/
+	//close the message after the form was submitted
 	$(".btn").on('click', function() {
 		$(".form").removeClass("d-none");
 		$(".success").addClass('d-none');
 		$(".error").addClass('d-none');
 	});
 
-	/*checking email input*/
-	function checkEmail(x) {
-		if(x == 0){
-			$("#email-message").text("Dont leave it empty");
-		} else {
-			validate(x);
+
+	/*checking if input is valid or not*/
+	function checkInput(theValue, theId) {
+		if(theValue == 0){
+			$(theId).addClass("red");
+			$(theId).text("Dont leave it empty");
+		}else {
+			if( theId == "#email-message" ) {
+				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+				if(!emailReg.test(theValue)) {
+					$(theId).addClass("red");
+			        $(theId).text("Not valid input");
+			    } else {
+			    	$(theId).text("Valid");
+			    	$(theId).removeClass("red");
+			    	return true;
+			    }
+			}else if( theId == "#name-message" )  {
+				var textReg = /^[A-Za-z ]+$/;
+				if(!textReg.test(theValue)) {
+					$(theId).addClass("red");
+			        $(theId).text("Not valid input");
+				}else {
+					$(theId).removeClass("red");
+					$(theId).text("Valid");
+					return true;
+				}
+			}
 		}
 	}
 
-	/*checking name input*/
-	function checkName(y) {
-		if(y == 0){
-			$("#name-message").text("Dont leave it empty");
-		} else {
-			$("#name-message").text("Valid!");
-		}
-	}
-
-	/*validating the input*/
-	function validate(x) {
-		var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-		if(!emailReg.test(x)) {
-	        $("#email-message").text("Not valid input");
-	       
-	    } else {
-	    	$("#email-message").text("Valid");
-	    	messageSucces();
-	    }
-	}
-
-	/*success mesage on form submit*/
+	/*success message on form submit*/
 	function messageSucces(){
 		$(".form").addClass('d-none');
 		$(".success").removeClass('d-none');
 		resetForm();
 	}
 
-	/*error mesage on form submit*/
+	/*error message on form submit*/
 	function messageError(){
 		$(".form").addClass('d-none');
 		$(".error").removeClass('d-none');
 		resetForm();
+	}
+
+	//reseting form
+	function resetForm() {
+		document.getElementById("myFormId").reset();
+		$(nameId).addClass("hidden"); 
+		$(emailId).addClass("hidden"); 
 	}
 });

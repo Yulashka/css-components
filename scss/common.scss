@@ -91,6 +91,10 @@ body {
 .prime-color-bg {
 	background-color: $primary-color;
 }
+
+.red {
+	color: $red-color;
+}
 /*Borders*/
 .none-border {
 	border: none;
@@ -143,6 +147,14 @@ body {
 
 .d-none {
 	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
 }
 /*Width/Height*/
 

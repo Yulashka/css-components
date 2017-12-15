@@ -8,6 +8,9 @@
 	padding: 0.6em 0.8em;
     background-color: #BBBBBB;
     border: 2px solid #9E9E9E;
+    position: absolute;
+    top: 8px;
+    right: 15px;
 }
 
 #form .btn {
@@ -29,3 +32,10 @@
     	width: 65%; 
     }
 }
+
+@media (max-width:415px) {
+    .myForm h2 {
+        font-size: 1.3em;
+    }
+}
+

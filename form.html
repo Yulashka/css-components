@@ -2,17 +2,17 @@
   <h1 class="center h1">Form component</h1>
   <p class="center mb4">Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu.</p>
   <!-- Form -->
-  <div class="myForm px2 py3 light-rounded mt4">
+  <div class="myForm px2 py3 light-rounded mt4 mx-auto relative">
     <!-- Message on success submission -->
     <div class="d-none success">
-      <h1 class="inline">Your form is successfully submitted!</h1>
+      <h2 class="inline">Your form is submitted!</h1>
       <p class="inline-block right btn m0">
         <i class="fa fa-times" aria-hidden="true"></i>
       </p>
     </div>
     <!-- Message on error submission -->
     <div class="d-none error">
-      <h1 class="inline">Something went wrong! We appologize for a such inconvenience. Please try again!</h1>
+      <h2 class="inline">Something went wrong! Please try again!</h1>
       <p class="inline-block right btn m0">
         <i class="fa fa-times" aria-hidden="true"></i>
       </p>
@@ -23,16 +23,18 @@
         <h1 class="font-normal">Submit the form</h1>
         <p class="">Lorem Ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
       </div>
-      <div class="form-body">
+      <div class="form-body mt3">
         <form onSubmit="return false" id="myFormId">
-          <div class="mb3 clearfix">
+          <div class="clearfix">
             <div class="sm-col sm-col-12 md-col-6">
-              <p id="name-message" class="mb0">Write your name</p>
-              <input placeholder="Name" name="name" id="name" type="text" class="mt1">
+              <label for="name" class="block">Write your name</label>
+              <input placeholder="Name" name="name" id="name" type="text" class="mt1 input" autocomplete="off">
+              <p id="name-message" class="mt1 hidden mb3">Message goes here</p>
             </div>
             <div class="sm-col sm-col-12 md-col-6">
-              <p id="email-message" class="mb0">Write your email</p>
-              <input placeholder="Email" name="email" id="email" type="email" class="mt1">
+              <label for="name" class="block">Write your email</label>
+              <input placeholder="Email" name="email" id="email" type="email" class=" mt1 input" autocomplete="off">
+              <p id="email-message" class="mb3 mt1 hidden">Message goes here</p>
             </div>
           </div>
           <div class="">

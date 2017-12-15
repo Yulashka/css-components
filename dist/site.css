@@ -76,6 +76,9 @@ body {
 .prime-color-bg {
   background-color: #BBBBBB; }
 
+.red {
+  color: #f44e42; }
+
 /*Borders*/
 .none-border {
   border: none; }
@@ -117,6 +120,12 @@ body {
 
 .d-none {
   display: none; }
+
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
 
 /*Width/Height*/
 .w-70 {
@@ -365,7 +374,10 @@ body {
 #form .btn {
   padding: 0.6em 0.8em;
   background-color: #BBBBBB;
-  border: 2px solid #9E9E9E; }
+  border: 2px solid #9E9E9E;
+  position: absolute;
+  top: 8px;
+  right: 15px; }
 
 #form .btn {
   cursor: pointer; }
@@ -381,6 +393,10 @@ body {
 @media (min-width: 768px) {
   .myForm {
     width: 65%; } }
+
+@media (max-width: 415px) {
+  .myForm h2 {
+    font-size: 1.3em; } }
 
 /*modal style*/
 #modal .modal {

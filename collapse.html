@@ -2,7 +2,7 @@
 <div id="collapseComp" ng-controller="collapseCtrl">
   <section class="hero-image center mt4">
     <!-- Navigation -->
-    <nav class="prime-color-bg py2 relative">
+    <!-- <nav class="prime-color-bg py2 relative">
       <div class="clearfix max-width-4 mx-auto px2">
         <div class="sm-col sm-col-6 md-col-2 collapse">
           <img src="img/bakery/logo.png" class="fit left" alt="bakery logo">
@@ -20,7 +20,7 @@
             <a href="#" class="font-uppercase text-decoration-none white">Contact</a>
           </div>
         </div>
-        <!-- icons -->
+    
         <div class="sm-col sm-col-2 md-col-1 collapse">
           <div class="inline-block right pt1">
             <a href="#" class="white text-decoration-none">
@@ -34,7 +34,7 @@
             </a>
           </div>
         </div>
-        <!-- collapsed nav -->
+     
         <div class="col col-6 collapsed d-none">
           <img src="img/bakery/logo.png" class="fit left" alt="bakery logo">
         </div>
@@ -53,13 +53,67 @@
           <a href="#" class="font-uppercase text-decoration-none black py2 block">Contact</a>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <div class="px2 mb2 max-width-4 mx-auto">
       <h1 class="center h1 mt4 mb0">Collapse component</h1>
       <p class="center mb4">Duis bibendum diam non erat facilaisis tincidunt. Fusce leo neque, lacinia at tempor vitae, porta at arcu.</p>
-      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper tincidunt dolor. Donec id ex eu risus dignissim faucibus eu sed tellus. Integer et gravida urna. Quisque sed nulla eleifend, iaculis velit sit amet, aliquam elit. Ut ut molestie velit. Etiam volutpat vel dolor vel congue. Quisque sit amet dolor nunc. Mauris vel ante sed sem tristique placerat.</p>
-      <p class="left-align">Proin in neque non risus dapibus auctor lobortis a ipsum. Nunc ut fringilla dui. Praesent fermentum ac sapien et tristique. Nulla facilisi. Vestibulum pellentesque odio nec velit vehicula, ac molestie nisl auctor. Cras sapien ligula, egestas eu lectus ac, tincidunt bibendum magna. Sed finibus volutpat ultricies. Phasellus vitae velit in nibh gravida iaculis sit amet ac mi. Nulla facilisi. Curabitur lobortis finibus orci ut faucibus.</p>
-      <p class="left-align">Phasellus mauris metus, mattis sed porttitor porta, bibendum posuere dui. Mauris luctus tellus tempus auctor porttitor. Praesent luctus urna nisi, a aliquet ante congue iaculis. Vestibulum pulvinar varius orci, eget gravida orci posuere bibendum. Integer dui ligula, feugiat ac sagittis in, accumsan sed urna. Suspendisse vel pulvinar est. Fusce vitae diam ac eros dignissim bibendum. Praesent porta blandit nibh, ut condimentum orci gravida vitae.</p>
+      <div class="resize">
+        <nav class="prime-color-bg py2 relative">
+          <div class="clearfix max-width-4 mx-auto px2">
+            <div class="sm-col sm-col-6 md-col-2 collapse">
+              <img src="img/bakery/logo.png" class="fit left" alt="logo">
+            </div>
+            <div class="sm-col sm-col-10 md-col-9 collapse">
+              <div class="pt1">
+                <a href="#" class="font-uppercase text-decoration-none white">Welcome</a>
+                <span class="px1 white">~</span>
+                <a href="#" class="font-uppercase text-decoration-none white">Menu</a>
+                <span class="px1 white">~</span>
+                <a href="#" class="font-uppercase text-decoration-none white">Reservations</a>
+                <span class="px1 white">~</span>
+                <a href="#" class="font-uppercase text-decoration-none white">News</a>
+                <span class="px1 white">~</span>
+                <a href="#" class="font-uppercase text-decoration-none white">Contact</a>
+              </div>
+            </div>
+            <!-- icons -->
+            <div class="sm-col sm-col-2 md-col-1 collapse">
+              <div class="inline-block right pt1">
+                <a href="#" class="white text-decoration-none">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="white text-decoration-none px1">
+                 <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="white text-decoration-none">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <!-- collapsed nav -->
+            <div class="col col-6 collapsed d-none">
+              <img src="img/bakery/logo.png" class="fit left" alt="bakery logo">
+            </div>
+            <div class="collapsed d-none col col-6">
+              <div class=" right-align">
+                <span class="inline-block">
+                  <i class="fa fa-bars fa-2x" id="iconCollapse" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+            <div class="dropdown prime-color-bg col col-12 d-none absolute">
+              <a href="#" class="font-uppercase text-decoration-none black py2 block">Welcome</a>
+              <a href="#" class="font-uppercase text-decoration-none black py2 block">Menu</a>
+              <a href="#" class="font-uppercase text-decoration-none black py2 block">Reservations</a>
+              <a href="#" class="font-uppercase text-decoration-none black py2 block">News</a>
+              <a href="#" class="font-uppercase text-decoration-none black py2 block">Contact</a>
+            </div>
+          </div>
+        </nav>
+         <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper tincidunt dolor. Donec id ex eu risus dignissim faucibus eu sed tellus. Integer et gravida urna. Quisque sed nulla eleifend, iaculis velit sit amet, aliquam elit. Ut ut molestie velit. Etiam volutpat vel dolor vel congue. Quisque sit amet dolor nunc. Mauris vel ante sed sem tristique placerat.</p>
+        <p class="left-align">Proin in neque non risus dapibus auctor lobortis a ipsum. Nunc ut fringilla dui. Praesent fermentum ac sapien et tristique. Nulla facilisi. Vestibulum pellentesque odio nec velit vehicula, ac molestie nisl auctor. Cras sapien ligula, egestas eu lectus ac, tincidunt bibendum magna. Sed finibus volutpat ultricies. Phasellus vitae velit in nibh gravida iaculis sit amet ac mi. Nulla facilaisislisi. Curabitur lobortis finibus orci ut faucibus.</p>
+        <button id='collBtn' class="mt3 bold button prime-color-bg coll">Click to Toggle the menu</button> 
+      </div>
     </div>
   </section>
 </div>

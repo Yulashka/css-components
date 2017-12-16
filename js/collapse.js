@@ -13,5 +13,20 @@ app.controller('collapseCtrl', function($scope, ) {
 			$("#collapseComp .collapsed").addClass("d-none");
 		}
 	});
+		
+	/*$("#collBtn").on('click', function() {
+		
+	});*/
+
+	$("#collBtn").unbind().click(function() {
+		if( $("#collapseComp .collapsed").hasClass("d-none") ) {
+			$("#collapseComp .collapse").addClass("d-none");
+			$("#collapseComp .collapsed").removeClass("d-none");
+			
+		}else {
+			$("#collapseComp .collapse").removeClass("d-none");
+			$("#collapseComp .collapsed").addClass("d-none");
+		}
+	});
 });
 

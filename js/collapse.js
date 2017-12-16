@@ -13,11 +13,8 @@ app.controller('collapseCtrl', function($scope, ) {
 			$("#collapseComp .collapsed").addClass("d-none");
 		}
 	});
-		
-	/*$("#collBtn").on('click', function() {
-		
-	});*/
 
+	//onclick button collapse/uncollapse navigation
 	$("#collBtn").unbind().click(function() {
 		if( $("#collapseComp .collapsed").hasClass("d-none") ) {
 			$("#collapseComp .collapse").addClass("d-none");

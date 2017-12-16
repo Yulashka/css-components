@@ -426,9 +426,6 @@ body {
 #modal .modal-btn {
   padding: 0.8em; }
 
-#modal .modal-body {
-  margin-top: 2em; }
-
 #modal .clear-r {
   clear: right; }
 
@@ -444,15 +441,16 @@ body {
   cursor: pointer;
   text-decoration: none; }
 
+#modal input:focus {
+  outline: auto; }
+
 /*media query*/
 @media (max-width: 600px) {
   #modal .modal {
     max-width: 100%;
     width: unset; }
   #modal .modal-header {
-    margin-bottom: 0px; }
-  #modal .modal-body {
-    margin-top: 0px; } }
+    margin-bottom: 0px; } }
 
 /*pagination component css*/
 .active-pg2 {

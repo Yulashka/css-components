@@ -12,6 +12,12 @@
     top: 109%;
 }
 
+/*resize box*/
+.resize {
+	border: 2px solid $primary-color;
+    padding: 20px; 
+}
+
 /*Media Queries*/
 @media (max-width: 830px) {
     #collapseComp  nav .sm-col-10 {

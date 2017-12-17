@@ -489,6 +489,7 @@ app.controller('formCtrl', function($scope, ) {
 });
 /*Modal*/
 app.controller('modalCtrl', function($scope, ) {
+	//call modal
 	setTimeout(function(){
 	  modal();
 	}, 1000);
@@ -603,7 +604,7 @@ app.controller('progressCtrl', function($scope, ) {
 /*Scrollspy*/
 //scroll on click
 app.controller('scrollCtrl', function($scope, ) {
-	$(".scroll-nav a").on('click', function(e) {
+	$("#scroll a").on('click', function(e) {
 		var attr = $(this).attr("data-href");
 		var pos = $(attr).offset().top;
 		// 40 is the height of the outer Sidenav button
@@ -633,6 +634,7 @@ app.controller('scrollCtrl', function($scope, ) {
 				$(".scroll-nav a").removeClass("active-scroll");
 				$("a[data-href =" + "'" + currentAttr + "'" + "]").addClass("active-scroll");
 			}
+			
 		}	
 	});
 });

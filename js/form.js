@@ -5,6 +5,7 @@ app.controller('formCtrl', function($scope, ) {
 	var nameId = "#name-message";
 	var emailId = "#email-message";
 
+
 	/*ontype event*/
 	$("#name").keyup(function(){
 		$(nameId).removeClass("hidden"); 
@@ -13,6 +14,7 @@ app.controller('formCtrl', function($scope, ) {
         checkInput(theValue, nameId);
     });
 
+	/*ontype event*/
     $("#email").keyup(function(){
     	$(emailId).removeClass("hidden"); 
 		var theValue = $(this).val();
@@ -27,18 +29,19 @@ app.controller('formCtrl', function($scope, ) {
   		var name  = $("#form #name").val();
   		var returnEmail = checkInput(email, emailId);
   		var returnName = checkInput(name, nameId);
+  		//if email value is not valid
   		if (!returnEmail) {
   			$(emailId).removeClass("hidden");
   		}
-
+  		//if email value is not valid
   		if (!returnName) {
   			$(nameId).removeClass("hidden");
   		}
-
+  		//if name value is not valid
   		if(returnEmail == true && returnName == true) {
   			messageSucces();
   		} else {
-  			console.log("Im sorry");
+  			console.log("Something wrong! Debug.");
   		}
 	});
 
@@ -47,6 +50,8 @@ app.controller('formCtrl', function($scope, ) {
 		$(".form").removeClass("d-none");
 		$(".success").addClass('d-none');
 		$(".error").addClass('d-none');
+			$(nameId).addClass("hidden"); 
+	$(emailId).addClass("hidden");
 	});
 
 
@@ -91,13 +96,12 @@ app.controller('formCtrl', function($scope, ) {
 	function messageError(){
 		$(".form").addClass('d-none');
 		$(".error").removeClass('d-none');
+
 		resetForm();
 	}
 
 	//reseting form
 	function resetForm() {
 		document.getElementById("myFormId").reset();
-		$(nameId).addClass("hidden"); 
-		$(emailId).addClass("hidden"); 
 	}
 });

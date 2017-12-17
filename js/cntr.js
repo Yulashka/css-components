@@ -11,6 +11,7 @@ app.controller('mainCtrl', function($scope) {
 	});
 });
 
+//close the sideNav when click outside of it
 function openNav() {
 	document.getElementById("mySidenav").style.width = "0";
 };

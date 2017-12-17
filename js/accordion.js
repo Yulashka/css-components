@@ -1,6 +1,5 @@
 /*Accordion */
 app.controller('accordCtrl', function($scope, ) {
-	/*accordion*/
 	$("#accordPage .accordion .accord-tab").on("click", function() {
 		$("#accordPage .accordion .accord-text").addClass("d-none");
 		$("#accordPage .accordion .accord-tab").removeClass("a-acc-tab");

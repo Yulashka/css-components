@@ -49,6 +49,8 @@ app.config(function($routeProvider) {
         controller: "topCtrl"
     });
 });
+
+//sideNav navigation element is highlighted when appropriate page is displaying
 app.run(function($rootScope, $location) {
     $rootScope.$on("$locationChangeStart", function(event, next, current) { 
         var current = $location.path().substring(1);

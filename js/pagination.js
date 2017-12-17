@@ -18,10 +18,12 @@ app.controller('paginationCtrl', function($scope, ) {
 
 	displayPages();
 
+	//maximum number is 10
 	function getMaxPages() {
 		return 10;
 	}
 
+	//get the element's id
 	$(".pg").on('click', function() {
 		var id = $(this).attr("id");
 		var action = offsetMap[id];
@@ -29,6 +31,7 @@ app.controller('paginationCtrl', function($scope, ) {
 		displayPages(action);
 	});
 
+	//display the elements on the page
 	function displayPages(action) {
 		fixDomElements();
 		for(var i = 0; i < Ids.length; i++) {
@@ -45,6 +48,7 @@ app.controller('paginationCtrl', function($scope, ) {
 		}
 	}
 
+	//update Dom elements
 	function fixDomElements(){
 		if(Pages[min] === -1) {
 			$("#back").addClass("disable");

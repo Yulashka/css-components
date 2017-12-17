@@ -50,8 +50,8 @@ app.controller('formCtrl', function($scope, ) {
 		$(".form").removeClass("d-none");
 		$(".success").addClass('d-none');
 		$(".error").addClass('d-none');
-			$(nameId).addClass("hidden"); 
-	$(emailId).addClass("hidden");
+		$(nameId).addClass("hidden"); 
+		$(emailId).addClass("hidden");
 	});
 
 
@@ -96,7 +96,6 @@ app.controller('formCtrl', function($scope, ) {
 	function messageError(){
 		$(".form").addClass('d-none');
 		$(".error").removeClass('d-none');
-
 		resetForm();
 	}
 

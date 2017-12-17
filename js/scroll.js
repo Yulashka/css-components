@@ -14,7 +14,7 @@ app.controller('scrollCtrl', function($scope, ) {
 	    e.preventDefault();
 	});
 
-	// update menu highlight
+	// update the menu by highlighting the nav a
 	$(window).on('scroll', function() {
 		var navHeight = $(".scroll-nav").outerHeight();
 		// 40 is the height of the outer Sidenav button
@@ -31,7 +31,6 @@ app.controller('scrollCtrl', function($scope, ) {
 				$(".scroll-nav a").removeClass("active-scroll");
 				$("a[data-href =" + "'" + currentAttr + "'" + "]").addClass("active-scroll");
 			}
-			
 		}	
 	});
 });

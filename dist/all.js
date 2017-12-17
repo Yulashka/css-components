@@ -49,6 +49,8 @@ app.config(function($routeProvider) {
         controller: "topCtrl"
     });
 });
+
+//sideNav navigation element is highlighted when appropriate page is displaying
 app.run(function($rootScope, $location) {
     $rootScope.$on("$locationChangeStart", function(event, next, current) { 
         var current = $location.path().substring(1);
@@ -67,7 +69,6 @@ app.run(function($rootScope, $location) {
 });
 /*Accordion */
 app.controller('accordCtrl', function($scope, ) {
-	/*accordion*/
 	$("#accordPage .accordion .accord-tab").on("click", function() {
 		$("#accordPage .accordion .accord-text").addClass("d-none");
 		$("#accordPage .accordion .accord-tab").removeClass("a-acc-tab");
@@ -337,14 +338,17 @@ app.controller('mainCtrl', function($scope) {
 	});
 });
 
+//close the sideNav when click outside of it
 function openNav() {
 	document.getElementById("mySidenav").style.width = "0";
 };
 /* Navigation */
 app.controller('collapseCtrl', function($scope, ) {
+	//hide/show dropdown
 	$("#iconCollapse").unbind().click(function() {
 		$("#collapseComp .dropdown").toggle();
 	});
+
 	//on resize reveal the collapsed nav
 	$(window).resize(function() {
 	  	if($(window).width() < 650){
@@ -361,7 +365,6 @@ app.controller('collapseCtrl', function($scope, ) {
 		if( $("#collapseComp .collapsed").hasClass("d-none") ) {
 			$("#collapseComp .collapse").addClass("d-none");
 			$("#collapseComp .collapsed").removeClass("d-none");
-			
 		}else {
 			$("#collapseComp .collapse").removeClass("d-none");
 			$("#collapseComp .collapsed").addClass("d-none");
@@ -390,6 +393,7 @@ app.controller('formCtrl', function($scope, ) {
 	var nameId = "#name-message";
 	var emailId = "#email-message";
 
+
 	/*ontype event*/
 	$("#name").keyup(function(){
 		$(nameId).removeClass("hidden"); 
@@ -398,6 +402,7 @@ app.controller('formCtrl', function($scope, ) {
         checkInput(theValue, nameId);
     });
 
+	/*ontype event*/
     $("#email").keyup(function(){
     	$(emailId).removeClass("hidden"); 
 		var theValue = $(this).val();
@@ -412,18 +417,19 @@ app.controller('formCtrl', function($scope, ) {
   		var name  = $("#form #name").val();
   		var returnEmail = checkInput(email, emailId);
   		var returnName = checkInput(name, nameId);
+  		//if email value is not valid
   		if (!returnEmail) {
   			$(emailId).removeClass("hidden");
   		}
-
+  		//if email value is not valid
   		if (!returnName) {
   			$(nameId).removeClass("hidden");
   		}
-
+  		//if name value is not valid
   		if(returnEmail == true && returnName == true) {
   			messageSucces();
   		} else {
-  			console.log("Im sorry");
+  			console.log("Something wrong! Debug.");
   		}
 	});
 
@@ -432,6 +438,8 @@ app.controller('formCtrl', function($scope, ) {
 		$(".form").removeClass("d-none");
 		$(".success").addClass('d-none');
 		$(".error").addClass('d-none');
+			$(nameId).addClass("hidden"); 
+	$(emailId).addClass("hidden");
 	});
 
 
@@ -476,14 +484,13 @@ app.controller('formCtrl', function($scope, ) {
 	function messageError(){
 		$(".form").addClass('d-none');
 		$(".error").removeClass('d-none');
+
 		resetForm();
 	}
 
 	//reseting form
 	function resetForm() {
 		document.getElementById("myFormId").reset();
-		$(nameId).addClass("hidden"); 
-		$(emailId).addClass("hidden"); 
 	}
 });
 /*Modal*/
@@ -527,10 +534,12 @@ app.controller('paginationCtrl', function($scope, ) {
 
 	displayPages();
 
+	//maximum number is 10
 	function getMaxPages() {
 		return 10;
 	}
 
+	//get the element's id
 	$(".pg").on('click', function() {
 		var id = $(this).attr("id");
 		var action = offsetMap[id];
@@ -538,6 +547,7 @@ app.controller('paginationCtrl', function($scope, ) {
 		displayPages(action);
 	});
 
+	//display the elements on the page
 	function displayPages(action) {
 		fixDomElements();
 		for(var i = 0; i < Ids.length; i++) {
@@ -554,6 +564,7 @@ app.controller('paginationCtrl', function($scope, ) {
 		}
 	}
 
+	//update Dom elements
 	function fixDomElements(){
 		if(Pages[min] === -1) {
 			$("#back").addClass("disable");
@@ -587,6 +598,7 @@ app.controller('progressCtrl', function($scope, ) {
 		var elem = document.getElementById("myBar");   
 	  	var width = 10;
 	  	var id = setInterval(frame, 10);
+	  	//update the width of the bar
 		function frame() {
 			if (width >= 90) {
 				clearInterval(id);
@@ -616,7 +628,7 @@ app.controller('scrollCtrl', function($scope, ) {
 	    e.preventDefault();
 	});
 
-	// update menu highlight
+	// update the menu by highlighting the nav a
 	$(window).on('scroll', function() {
 		var navHeight = $(".scroll-nav").outerHeight();
 		// 40 is the height of the outer Sidenav button
@@ -633,7 +645,6 @@ app.controller('scrollCtrl', function($scope, ) {
 				$(".scroll-nav a").removeClass("active-scroll");
 				$("a[data-href =" + "'" + currentAttr + "'" + "]").addClass("active-scroll");
 			}
-			
 		}	
 	});
 });
@@ -644,7 +655,7 @@ app.controller('tabsCtrl', function($scope, ) {
 	$(".flex-tab a").on('click', function() {
 		$(".flex-tab a").removeClass('active');
 		$(".tab-text p").addClass('d-none');
-
+		//finding tab
 		for(var i = 0; i < text.length; i++){
 			if( $(this).attr('data-href') == ( "#" + $(text[i]).attr('id')) ) {
 				$(this).addClass('active');

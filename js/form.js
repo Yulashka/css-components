@@ -27,7 +27,15 @@ app.controller('formCtrl', function($scope, ) {
   		var name  = $("#form #name").val();
   		var returnEmail = checkInput(email, emailId);
   		var returnName = checkInput(name, nameId);
-  		if(returnEmail == true && returnEmail == true) {
+  		if (!returnEmail) {
+  			$(emailId).removeClass("hidden");
+  		}
+
+  		if (!returnName) {
+  			$(nameId).removeClass("hidden");
+  		}
+
+  		if(returnEmail == true && returnName == true) {
   			messageSucces();
   		} else {
   			console.log("Im sorry");

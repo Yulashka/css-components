@@ -37,10 +37,10 @@ app.controller('carCtrl', function($scope, $http) {
 	//takes a number and shows that many stars rating to the client
 	// @param num - number to translate 
 	function translateRating(num) {
-		$(".star-rate").removeClass("prime-color");
+		$(".star-rate").removeClass("yellow");
 		var starArray = $(".star-rate");
 		for(var i = 0; i < num; i++) {
-			$(starArray[i]).addClass("prime-color");
+			$(starArray[i]).addClass("yellow");
 		}
 	}
 

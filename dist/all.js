@@ -67,19 +67,10 @@ app.run(function($rootScope, $location) {
 });
 /*Accordion */
 app.controller('accordCtrl', function($scope, ) {
+	/*accordion*/
 	$("#accordPage .accordion .accord-tab").on("click", function() {
-		$("#accordPage .accord-text").addClass("d-none");
+		$("#accordPage .accordion .accord-text").addClass("d-none");
 		$("#accordPage .accordion .accord-tab").removeClass("a-acc-tab");
-		$(this).addClass("a-acc-tab");
-		var attrAccord = $(this).attr("id");
-		$(attrAccord).removeClass("d-none");
-		$(attrAccord + " i").addClass("a-acc-tab");
-	});
-
-	/*accordion mobile*/
-	$("#accordPage .accordion-mobile .accord-tab").on("click", function() {
-		$("#accordPage .accordion-mobile .accord-text").addClass("d-none");
-		$("#accordPage .accordion-mobile .accord-tab").removeClass("a-acc-tab");
 		$(this).addClass("a-acc-tab");
 		var attrAccord = $(this).attr("id");
 		$(attrAccord).removeClass("d-none");
@@ -125,10 +116,10 @@ app.controller('carCtrl', function($scope, $http) {
 	//takes a number and shows that many stars rating to the client
 	// @param num - number to translate 
 	function translateRating(num) {
-		$(".star-rate").removeClass("prime-color");
+		$(".star-rate").removeClass("yellow");
 		var starArray = $(".star-rate");
 		for(var i = 0; i < num; i++) {
-			$(starArray[i]).addClass("prime-color");
+			$(starArray[i]).addClass("yellow");
 		}
 	}
 
@@ -421,7 +412,15 @@ app.controller('formCtrl', function($scope, ) {
   		var name  = $("#form #name").val();
   		var returnEmail = checkInput(email, emailId);
   		var returnName = checkInput(name, nameId);
-  		if(returnEmail == true && returnEmail == true) {
+  		if (!returnEmail) {
+  			$(emailId).removeClass("hidden");
+  		}
+
+  		if (!returnName) {
+  			$(nameId).removeClass("hidden");
+  		}
+
+  		if(returnEmail == true && returnName == true) {
   			messageSucces();
   		} else {
   			console.log("Im sorry");

@@ -79,6 +79,9 @@ body {
 .red {
   color: #f44e42; }
 
+.yellow {
+  color: #f1f442; }
+
 /*Borders*/
 .none-border {
   border: none; }
@@ -134,6 +137,9 @@ body {
 .width-85 {
   width: 85%; }
 
+.w-60 {
+  width: 60%; }
+
 .w-50 {
   width: 50%; }
 
@@ -159,6 +165,10 @@ body {
   width: 100%;
   z-index: 2;
   padding-bottom: 2em; }
+
+.openbtn {
+  font-size: 30px;
+  cursor: pointer; }
 
 /*Home page - SIDE NAV*/
 /* The side navigation menu */
@@ -325,22 +335,17 @@ body {
 
 /*Accordion component css*/
 #accordPage .a-acc-tab {
-  color: #BBBBBB; }
+  font-weight: bold;
+  color: #111 !important; }
 
 .accord-tab {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
-#accordPage .accordion .col-4 ul {
-  padding-right: 20%;
-  border-right: 1px solid #BBBBBB; }
-
 /*media query*/
-@media (max-width: 650px) {
-  #accordPage .accordion-mobile {
-    display: block; }
-  #accordPage .accordion {
-    display: none; } }
+@media (max-width: 768px) {
+  #accordPage .w-60 {
+    width: 100% !important; } }
 
 /*dropdown component css*/
 /*common styles*/

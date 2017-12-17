@@ -1,6 +1,7 @@
 /*Accordion component css*/
 #accordPage .a-acc-tab {
-	color: $primary-color;
+	font-weight: bold;
+    color: $black-color !important;
 }
 
 .accord-tab {
@@ -8,17 +9,10 @@
     padding-bottom: 1.5rem;
 }
 
-#accordPage .accordion .col-4 ul {
-	padding-right: 20%;
-    border-right: 1px solid $primary-color;
+/*media query*/
+@media (max-width: 768px) {
+    #accordPage .w-60 {
+        width: 100% !important;
+    }
 }
 
-/*media query*/
-@media (max-width:650px) {
-    #accordPage .accordion-mobile {
-    	display: block;
-    }
-    #accordPage .accordion {
-    	display: none;
-    }
-}

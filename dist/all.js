@@ -349,6 +349,16 @@ app.controller('collapseCtrl', function($scope, ) {
 		$("#collapseComp .dropdown").toggle();
 	});
 
+	$(document).ready(function(){
+	    if($(window).width() < 650){
+			$("#collapseComp .collapse").addClass("d-none");
+			$("#collapseComp .collapsed").removeClass("d-none");
+		}else {
+			$("#collapseComp .collapse").removeClass("d-none");
+			$("#collapseComp .collapsed").addClass("d-none");
+		}
+	});
+
 	//on resize reveal the collapsed nav
 	$(window).resize(function() {
 	  	if($(window).width() < 650){
@@ -438,8 +448,8 @@ app.controller('formCtrl', function($scope, ) {
 		$(".form").removeClass("d-none");
 		$(".success").addClass('d-none');
 		$(".error").addClass('d-none');
-			$(nameId).addClass("hidden"); 
-	$(emailId).addClass("hidden");
+		$(nameId).addClass("hidden"); 
+		$(emailId).addClass("hidden");
 	});
 
 
@@ -484,7 +494,6 @@ app.controller('formCtrl', function($scope, ) {
 	function messageError(){
 		$(".form").addClass('d-none');
 		$(".error").removeClass('d-none');
-
 		resetForm();
 	}
 
